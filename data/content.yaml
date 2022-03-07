@@ -1,0 +1,247 @@
+BasicInfo:
+  FirstName: Suzano
+  LastName: Bitencourt
+  Photo: img/avatar.jpg
+  Contacts:
+    - Icon: fas fa-phone
+      Info: +55 (11) 9.6703-8527
+    - Icon: fas fa-envelope
+      Info: suzanobitencourt@gmail.com
+    - Icon: fas fa-globe
+      Info: https://suzano.github.io
+    - Icon: fas fa-map-marker-alt
+      Info: São Paulo - Brasil
+
+Profile:
+  Olá, eu sou o Suzano. Sou técnico em informática há mais de 10 anos no Departamento de Engenharia da Computação e Sistemas Digitais da Escola Politécnica na USP.
+  <br>
+  Me considero um profissional versátil com experiência bem diversificada na área de TI; desenvolvedor web, programação, banco de dados, infraestrutura, redes, suporte técnico e treinamentos. 
+  <br>
+  Se você está procurando um profissional confiável e trabalhador para elevar seus resultados na web, implementar interfaces de usuário e trabalhar em uníssono com suas equipes – do infraestrutura ao desenvolvimento – eu sou a pessoa que você procura.
+  <br>
+  Tem um projeto empolgante em que precisa de ajuda?
+    
+Experience:
+- Employer: PCS - Departamento de Engenharia de Computação e Sistemas Digitais da EP-USP
+  Place: São Paulo, SP
+  Positions:
+    - Title: Técnico em Informática
+      Date: Set 2010 - Presente
+      Details:
+        - Prestar suporte técnico aos usuários de microcomputadores, envolvendo utilização de softwares, aplicativos, serviços de informática e de redes em geral.
+        - Construção de sites dinâmicos, responsivos, sofisticados e de interface funcional para meu departamento e seus laboratórios.
+        - Acesso aos servidores da Internuvem USP, configuração do Apache, administração de usuários, Firewall e Fail2ban.
+        - Realizar trabalhos de transmissão e captação de imagem e som, operando equipamentos de áudio e vídeo, a partir de uma programação de trabalho previamente estabelecida.
+        - Trabalhar com elementos e equipamentos de projeção de slides e retroprojeção de aparelhos do tipo geradores de caracteres, de efeitos especiais e de computação gráfica.
+        - Fazer montagens de imagens captadas, eliminando partes desnecessárias.
+        - Diagnosticar problemas de hardware e software, a partir de solicitações recebidas dos usuários, buscando solução para os mesmos.
+        - Dar suporte técnico em apresentações de aulas, palestras, seminários etc., que requeiram o uso de equipamentos de informática.
+      Badges: ['Internuvem USP', 'Servidor Web', 'CMS', 'HTML', 'CSS', 'Javascript', 'SQL', 'Sistemas Embarcados', 'C++', 'Python', 'Redes', 'IPTV', 'OBS Studio', 'Videoconferência']
+- Employer: CDB - Centro de Diagnósticos Brasil
+  Place: São Paulo, SP
+  Positions:
+    - Title: Assistente de TI
+      Date: Mai 2010 - Ago 2010
+      Details:
+        - Prestar suporte técnico aos usuários no local ou através de telefone (unidades), no tocante ao uso de software básico, aplicativos, serviços de informática e de redes em geral.
+        - Diagnosticar problemas de hardware e software, a partir das solicitações, buscando solução para os mesmos ou solicitando apoio superior.
+        - Participar da implantação e manutenção de sistemas, bem como desenvolver trabalhos de montagem, simulação e testes de programas.
+        - Acompanhar o funcionamento dos sistemas em processamento, instalação, configuração de software e impressoras.
+      Badges: ['Suporte', 'Manutenção', 'Hardware', 'Redes', 'Impressoras', 'GLPI', 'Fusioninventory']
+- Employer: Microcamp - Educação Tecnológica
+  Place: São Paulo - SP
+  Positions:
+    - Title: Instrutor de Informática
+      Date: Jan 2020 - Presente
+      Details:
+        - Dotnet (Windows XP/Vista, Office XP)
+        - Linux (Desktop e Servidor Conectiva Linux 10, Samba, Iptables, OpenOffice)
+        - Hardware (Eletrônica básica, Hardware Teórico e Prático, MS-DOS 6.22, Windows XP/Vista, Conectiva Linux 10, Redes)            
+        - Curso de Webdesign (Windows XP/Vista, HTML, CSS, Corel Draw 13, Photoshop CS3, Fireworks CS3, Dreamweaver CS3, Lógica de Programação, Javascript, PHP, Mysql, ASP, Flash CS3)
+      Badges: ['DOS', 'Windows', 'Linux', 'Bash', 'Office', 'Eletrônica', 'Hardware', 'Desenvolvimento Web']
+- Employer: Data Byte - Formação Profissional
+  Place: Taboão da Serra - SP
+  Positions:
+    - Title: Instrutor de Informática
+      Date: Fev 2001 - Mar 2005
+      Details:
+        - Operador de Microcomputador (Windows XP, Office XP/2000, Publisher e FrontPage)
+        - Suporte Técnico Hardware e Redes (Hardware Redes e Manutenção Preventiva)
+        - Computação Gráfica (Photoshop 5, CorelDRAW 10, PageMaker 7 e InDesign)
+      Badges: ['Windows', 'Office', 'Hardware', 'Redes', 'Computação Gráfica']
+- Employer: Compuway - Ensino Interativo
+  Place: Taboão da Serra - SP
+  Positions:
+    - Title: Instrutor de Informática
+      Date: Mar 1999 - Dez 2000
+      Details:
+        - Tecnologia da Informação (Introdução à Informática, Windows 98, Office 97 e Internet)
+        - Programador de Sistemas (Lógica de Programação, Access 97 e Visual Basic 6)
+        - Produção Gráfica (Photoshop 5, CorelDRAW 8 e PageMaker 6)
+        - Montagem e Manutenção de  Computadores (Hardware Teórico e Prático)
+      Badges: ['Windows', 'Office', 'Basic', 'Produção Gráfica', 'Montagem e Manutenção']
+
+Education:
+  - Course: Superior de Tecnologia em Automação Industrial
+    Place: Faculdade de Tecnologia SENAI Mariano Ferraz
+    Date: Jul 2015 - Jul 2018
+    Details: 
+      Automação Hidráulica e Pneumática (Eletropneumática, Eletro-hidráulica, Hidráulica Proporcional); eletricidade; desenho técnico mecânico auxiliado por computador – CAD; arquitetura de Hardware e Software; algoritmos e programação estruturada; bancos de dados; sistemas operacionais; programação orientada a objetos; linguagem C++; Eletrônica; softwares SCADA; sistema supervisório; robótica; Programação CLP (Controladores lógicos programáveis); instruções de IHM (Interface Human Machine); controladores programáveis; máquinas e acionamentos elétricos; sistemas de regulação e controle (Compensador PID - Proportional Integral Derivative).
+      #Automação Hidráulica e Pneumática (Eletropneumática, Eletro-hidráulica, Hidráulica Proporcional)
+      #Eletricidade (Eletrostática, Eletrodinâmica)
+      #Tecnologia Mecânica (Desenho Técnico Mecânico auxiliado por computador – CAD, Tecnologia dos materiais, Processos industriais)
+      #Tecnologia da Informação (Arquitetura de Hardware e Software, PCI - Personal Computer Industry, Algoritmos e Programação Estruturada, #Bancos de dados, Sistemas operacionais, UML - Unified Modeling Language, Programação orientada a objetos, Linguagem C++)
+      #Eletrônica (Semicondutores, Osciloscópios, Sensorização, Multímetros)
+      #Arquitetura Integrada (Redes Corporativas, Redes industriais, Softwares SCADA, Sistema supervisório, Robótica, Programação, CLP - #Controladores lógicos programáveis, CNC - Comando Numérico Computadorizado, Instruções de IHM - Interface Human Machine, Sistema ERP - Enterprise Resource Planning)
+      #Controladores Programáveis (Circuitos lógicos combinacionais e sequenciais, Microcontroladores, Hardware e Software)
+      #Máquinas e Acionamentos Elétricos (Dispositivos de proteção e segurança, Transformadores, Motores Trifásicos, Motores de corrente contínua e alternada, Motores de passo, Servomotores, Inversores de freqüência, Soft-starter)
+      #Sistemas de Regulação e Controle (Compensador PID - Proportional Integral Derivative)
+
+  - Course: Técnico em Informática
+    Place: SENAC - Serviço Nacional de Aprendizagem Comercial
+    Date: Mar 2003 - Mar 2005
+    Details:
+      Planejar e executar a montagem e manutenção de redes locais e de computadores; planejar e executar a instalação de hardware, software e redes locais; executar teste e implantação de aplicativos computacionais; desenvolver algoritmos e banco de dados; planejar e executar a instalação, a configuração e o monitoramento de sistemas operacionais de redes locais (servidores); executar os processos de codificação, manutenção e documentação de aplicativos computacionais para desktop; manipular e otimizar imagens vetoriais, bitmaps gráficos e elementos visuais de navegação para web; desenvolver e organizar elementos estruturais de sites; executar os processos de codificação, manutenção e documentação de aplicativos computacionais para internet.
+      #Identificar o funcionamento e relacionamento entre oscompoentes de computadores e seus periféricos.
+      #Instalar e configurar computadores , isolados ou em redes, periféricos e softwares.
+      #Identificar a origem de falhas no funcionamento de computadores, periféricos e software avaliando seus efeitos.
+      #Analisar e operar os serviços e funções de sistemas operacionais.
+      #Selecionar programas de aplicação a partir da avaliação das necessidades do usuário.
+      #Desenvolver algoritmos através de divisão modular e refinamentos sucessivos. 
+      #Selecionar e utilizar estruturas de dados na resolução de problemas computacionais.
+      #Aplicar linguages e ambientes de programação no desenvolvimento de software.
+      #Identificar meios físicos, dispositivos e padrões de comunicação, reconhecendo as implicações de sua aplicação na ambiente de rede.
+      #Identificar os serviços de administração de sistemas operacionais de rede.
+      #Identificar arquitetura de redes, tipos, serviços e funções de servidores.
+      #Organizar a coleta e documentação de informações sobre o desenvolvimento de projetos.
+      #Avaliar e especificar necessidades de treinamento e de suporte técnico aos usuários.
+      #Montar, configurar e instalar dispositivos de hardware.
+      #Selecionar e utilizar equipamentos e recursos adequados para a implementação de projetos.
+      #Utilizar padrões de qualidade e normas nacionais e internacionais na prestação de serviços e no desenvolvimento de projetos e de novos produtos.
+      #Implementar, administrar e dar manutenção a redes de computadores, incluindo as tecnologias de cabeamento estruturado, protocolos, tecnologias de redes de serviços integrados, sistemas operacionais e segurança em rede.
+      #Dar suporte para a criação publicacação e manutenção de Web Sites e integrar diferentes sistemas de informação (banco de dados, sistemas operacionais, Internet e outros).
+      #Desenvolver aplicações voltadas à maniplação de Banco de Dados,utilizando fundamentos de linguagem de programação e outras ferramentas adequadas.
+      #Elaborar relatórios técnicos referentes a testes, ensaios, experiências, inspeções e progromações.
+      #Desenvolver trabalho em equipe, utilizando-se de princípios éticose e de cidadania, com relacionamento interpessoal adequado, raciocínio lógico e criatividade.
+      #Manter-se atualizado com relação às novas tendências da área e atuar frente às situações com flexibilidade, enfrentando desafios, buscando inovações e propondo soluções.
+
+References:
+  - Name: Wilian França Costa
+    Relation: Professor da Escola Politécnica da USP
+    Contacts:
+    - Icon: fas fa-phone
+      Info: +55 (11) 3091-5271
+    - Icon: fas fa-envelope
+      Info: wilianfc@gmail.com
+    - Icon: fas fa-map-marker-alt
+      Info: São Paulo - SP
+  - Name: Paulo Moreira da Costa Junior
+    Relation: Desenvolvedor Senior
+    Contacts:
+    - Icon: fas fa-phone
+      Info: +55 (11) 9.5396-7016
+    - Icon: fas fa-envelope
+      Info: juniorpt@gmail.com
+    - Icon: fas fa-map-marker-alt
+      Info: São Paulo - SP
+  - Name: Jaime Guimarães
+    Relation: CEO da TRC Soluções Digitais
+    Contacts:
+    - Icon: fas fa-phone
+      Info: +55 (11) 3091-5271
+    - Icon: fas fa-envelope
+      Info: jaime@cursosweb.com.br
+    - Icon: fas fa-map-marker-alt
+      Info: São Paulo - SP
+  - Name: Alex Marques
+    Relation: Técnico em Informática na USP
+    Contacts:
+    - Icon: fas fa-phone
+      Info: +55 (11) 9.9362-1924
+    - Icon: fas fa-envelope
+      Info: alexmarques@usp.br
+    - Icon: fas fa-map-marker-alt
+      Info: São Paulo - SP
+
+Skills:
+  - Family: Sistemas
+    Items:
+      - Linux
+      - Windows
+  - Family: Programação
+    Items:
+      - HTML
+      - CSS
+      #SASS
+      - JavaScript
+      #TypeScript
+      - MySQL
+      - MariaDB
+      #PostgreSQL
+      - Python
+      - C++
+      - Bash
+      - ShellScript
+  - Family: CMS
+    Items:
+      - WordPress
+      - Joomla
+      - Drupal
+  - Family: Frameworks
+    Items:
+      - Bootstrap
+      - Hugo
+      - Jekyll
+      #NextJS
+      #GatsbyJS
+  - Family: Developer Tools
+    Items:
+      - Git
+      - Github
+      - Gitlab
+      #Docker
+      #Kubernetes
+  - Family: Automação
+    Items:
+      - Eletrônica
+      - Sistemas Embarcados
+      - Controladores Programáveis
+      #Controle
+      - IoT
+  - Family: Outros
+    Items:
+      - LaTeX
+      #ReactJS
+      #Node.js
+      #Elixir
+      #React Native
+      #TypeScript
+      #vulnerabilidade comuns (cross-site scripting, path injection, NoSQL injection e SQL injection)
+      #programas Ignite e Discover da Rocketseat são para Devs
+      
+Languages:
+  - Name: Português
+    Level: ██████████
+  - Name: Inglês
+    Level: ███▒▒▒▒▒▒▒
+  - Name: Espanhol
+    Level: ████▒▒▒▒▒▒
+
+Diplomas:
+  - Linux Essentials - 4Linux (2011)
+  - Linux Systems Administration - 4Linux (2011)
+  - Google Analytics (GA) - JumpEducation (2011)
+  - Segurança da Informação para Usuários - CIRP-USP (2011)
+  - PHP com PostgreSQL Básico - CIRP-USP (2011)
+  #Linux Comandos - CIRP-USP (2011)
+  #Relações Interpessoais na Equipe - Bucater e Associados (2012)
+  #Introdução à Programação - IME-USP (2013)
+  #Brigada de Incêndio - Work Fire (2018)
+  #NR-10 Segurança em Instalação e Serviços com Eletricidade - EngeHall (2018)
+
+#Interests:
+  #Internet
+  #Tecnologia
+  #MPB
+  #Quadrinhos
+  #Cinema

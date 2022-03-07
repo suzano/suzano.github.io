@@ -1,0 +1,32 @@
+languageCode = "pt-br"
+defaultContentLanguage = "pt"
+enableRobotsTXT = true
+enableEmoji = true
+
+theme = "suzano-resume"
+disableKinds = ["page", "section", "taxonomy", "term", "RSS", "sitemap"]
+
+baseURL = "https://suzano.github.io"
+title = "Suzano Bitencourt"
+#googleAnalytics = ""
+
+[params]
+enableMetaTags = true
+colorLight = "#fff"
+colorDark = "#666"
+colorPageBackground = "#ddd"
+#colorPrimary = "#e3bfb8"
+colorPrimary = "#9C5C50"
+colorSecondary = "#aaa"
+colorIconPrimary = "#fff"
+#colorIconBackground = "#e3bfb8"
+colorIconBackground = "#9C5C50"
+colorRightColumnBackground = "#f5f5f5"
+colorRightColumnHeadingText = "#666"
+colorRightColumnBodyText = "#666"
+colorRightColumnIconPrimary = "#fff"
+#colorRightColumnIconBackground = "#e3bfb8"
+colorRightColumnIconBackground = "#9C5C50"
+pages = 1
+
+#46453E

@@ -1,0 +1,10 @@
+.education {
+    &__title {
+        color: $color-dark;
+        text-transform: uppercase;
+    }
+    
+    &__item {
+        @include avoid-break;
+    }
+}
