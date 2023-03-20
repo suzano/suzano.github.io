@@ -1,0 +1,10 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Suzano Bitencourt</title>
+        <link>https://suzano.github.io/</link>
+        <description>Este é o meu site</description>
+        <generator>Hugo -- gohugo.io</generator><language>pt-BR</language><managingEditor>suzanobitencourt@gmail.com (Suzano Bitencourt)</managingEditor>
+            <webMaster>suzanobitencourt@gmail.com (Suzano Bitencourt)</webMaster>
+            <atom:link href="https://suzano.github.io/index.xml" rel="self" type="application/rss+xml" />
+        </channel>
+</rss>
