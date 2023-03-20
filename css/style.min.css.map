@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "style.min.css",
-	"sourceRoot": "/home/suzano/Dropbox/Git/GitHub/suzano.github.io (HUGO)",
+	"sourceRoot": "/home/suzano/Dropbox/Git/GitHub/suzano.github.io-HUGO",
 	"sources": [
 		"themes/LoveIt/assets/css/style.scss",
 		"themes/LoveIt/assets/lib/normalize/normalize.css",
