@@ -5,6 +5,14 @@
         <description>Posts | Suzano Bitencourt</description>
         <generator>Hugo -- gohugo.io</generator><language>pt-BR</language><managingEditor>suzanobitencourt@gmail.com (Suzano Bitencourt)</managingEditor>
             <webMaster>suzanobitencourt@gmail.com (Suzano Bitencourt)</webMaster><lastBuildDate>Fri, 24 Mar 2023 12:00:00 &#43;0000</lastBuildDate><atom:link href="https://suzano.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Criando uma biblioteca para Arduino</title>
+    <link>https://suzano.github.io/biblioteca-arduino/</link>
+    <pubDate>Mon, 20 Mar 2023 12:00:00 &#43;0000</pubDate>
+    <author>Suzano</author>
+    <guid>https://suzano.github.io/biblioteca-arduino/</guid>
+    <description><![CDATA[<p>Criando uma biblioteca que tem a função de facilitar o código PISCA LED, com a biblioteca pronta e inserida no código, o led irá piscar com apenas 01 linha de programação!</p>]]></description>
+</item>
+<item>
     <title>Sintaxe Básica do Markdown</title>
     <link>https://suzano.github.io/sintaxe-markdown/</link>
     <pubDate>Mon, 20 Mar 2023 12:00:00 &#43;0000</pubDate>

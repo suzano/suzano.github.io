@@ -53,6 +53,3 @@ Acesso em: 22 mar. 2023.
 **VIVA O LINUX - Como deixar seus arquivos mp3 em ordem no mp3 player**  
 Disponível em: <https://www.vivaolinux.com.br/dica/Como-deixar-seus-arquivos-mp3-em-ordem-no-mp3-player>  
 Acesso em: 22 mar. 2023.
-
-https://pixabay.com/pt/photos/fones-de-ouvido-m%C3%BAsica-ouvindo-1230987/
-

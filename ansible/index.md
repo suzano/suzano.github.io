@@ -30,6 +30,12 @@ Arch Linux
 $ paru -Sy ansible libselinux-python
 ```
 
+OpenSUSE
+```shell
+$ sudo zypper refresh
+$ sudo zypper install ansible
+```
+
 RHEL/Centos 6+
 ```shell
 $ sudo yum install ansible libselinux-python -y
@@ -271,7 +277,7 @@ $ sudo ansible-playbook -i /etc/ansible/hosts-test playbook.yml -vvvv
 Disponível em: <https://pixabay.com/pt/photos/rede-servidor-sistema-2402637/>  
 Acesso em: 22 mar. 2023.
 
-## Referências
+## Fontes
 
 **ANSIBLE-BR - Documentação ANSIBLE-BR**  
 Disponível em: <http://ansible-br.org>  
