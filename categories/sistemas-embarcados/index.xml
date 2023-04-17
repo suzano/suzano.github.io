@@ -4,7 +4,16 @@
         <link>https://suzano.github.io/categories/sistemas-embarcados/</link>
         <description>Sistemas Embarcados - Categoria - Suzano Bitencourt</description>
         <generator>Hugo -- gohugo.io</generator><language>pt-BR</language><managingEditor>suzanobitencourt@gmail.com (Suzano Bitencourt)</managingEditor>
-            <webMaster>suzanobitencourt@gmail.com (Suzano Bitencourt)</webMaster><lastBuildDate>Mon, 17 Apr 2023 12:00:00 &#43;0000</lastBuildDate><atom:link href="https://suzano.github.io/categories/sistemas-embarcados/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>suzanobitencourt@gmail.com (Suzano Bitencourt)</webMaster><lastBuildDate>Mon, 17 Apr 2023 13:00:00 &#43;0000</lastBuildDate><atom:link href="https://suzano.github.io/categories/sistemas-embarcados/" rel="self" type="application/rss+xml" /><item>
+    <title>Construindo um Robô Arduino - Parte II</title>
+    <link>https://suzano.github.io/arduino-robo-ii/</link>
+    <pubDate>Mon, 17 Apr 2023 13:00:00 &#43;0000</pubDate>
+    <author>Suzano</author>
+    <guid>https://suzano.github.io/arduino-robo-ii/</guid>
+    <description><![CDATA[<p>Programando o Arduino</p>
+<p>Você conhecerá os fundamentos da programação de sensores, motores e outros dispositivos conectados ao Arduino, e também terá um entendimento de como um controle remoto sem fio pode se comunicar com a placa Arduino via Bluetooth.</p>]]></description>
+</item>
+<item>
     <title>Construindo um Robô Arduino - Parte I</title>
     <link>https://suzano.github.io/arduino-robo-i/</link>
     <pubDate>Mon, 17 Apr 2023 12:00:00 &#43;0000</pubDate>

@@ -179,6 +179,6 @@ Acesso em: 14 abr. 2023.
 Disponível em: <https://blog.arduinoomega.com/criando-uma-biblioteca-para-arduino/>  
 Acesso em: 14 mar. 2023.
 
-**Lobo da Robótica - Como criar bibliotecas para Arduino? (O GUIA DEFINITIVO)**  
+**LOBO DA ROBÓTICA - COMO CRIAR BLIBLIOTECAS PARA ARDUINO? (O GUIA DEFINITIVO)**  
 Disponível em: <https://www.youtube.com/watch?v=-tT0ZYQVRe4>
 Acesso em: 14 abr. 2023.
