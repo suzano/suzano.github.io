@@ -43,7 +43,7 @@ Se você estiver interessado em descobrir o que os pinos extras em sua placa faz
 
 ## Programando o Arduino com Sketches
 
-A maneira mais fácil de programar a placa é com o (software Arduino)<>, que é gratuito e de código aberto, disponível para usuários de Windows, Mac OS X e Linux.
+A maneira mais fácil de programar a placa é com o [**Software Arduino**](https://www.arduino.cc/en/software), que é gratuito e de código aberto, disponível para usuários de Windows, Mac OS X e Linux.
 
 Aqui está uma captura de tela do software Arduino:
 
@@ -67,7 +67,7 @@ O `Software Arduino` também possui uma barra de ferramentas, com os seguintes b
 
 Para começar, vamos escrever um programa muito simples que escreve uma mensagem na porta serial. Veremos esta mensagem no Serial Monitor.
 
-Primeiro instale o (`Software Arduino`)<https://www.arduino.cc/en/software>. As instruções de instalação são muito simples, você não deve ter nenhum problema com esta etapa.
+Primeiro instale o [**Software Arduino**](https://www.arduino.cc/en/software). As instruções de instalação são muito simples, você não deve ter nenhum problema com esta etapa.
 
 Inicie o software Arduino certificando-se de que a placa Arduino não esteja conectada ao seu computador. Abra o menu `Ferramentas` e, em seguida, o submenu `Porta`. Observe as opções que aparecem e feche o software Arduino.
 
@@ -112,7 +112,7 @@ Neste pequeno exemplo, a função `setup` inicializa a interface serial chamando
 
 ### Referência do Arduino
 
-Esta página de (**referência do Arduino**)<https://www.arduino.cc/reference/en/> contém uma referência rápida para C++ e a lista de todas as funções fornecidas pelo ambiente de desenvolvimento do Arduino.
+Esta página de [**referência do Arduino**](https://www.arduino.cc/reference/en/) contém uma referência rápida para C++ e a lista de todas as funções fornecidas pelo ambiente de desenvolvimento do Arduino.
 
 Por exemplo, digamos que você queira conhecer `todas as funções relacionadas às comunicações da porta serial`. Em seguida, você pode abrir o link `Serial` na seção `Communications`. Você encontrará a função `begin` usada acima. Observe que fora de qualquer contexto a função é chamada `Serial.begin`, mas quando o contexto está claramente na classe `Serial`, basta chamar a função `begin`. Se agora você quiser ver informações sobre os `argumentos` exigidos pela função `Serial.begin`, basta clicar nele para ir para a documentação do `Serial.begin`.
 
@@ -147,7 +147,7 @@ Digite o código acima na janela de código do software Arduino substituindo o s
 
 Se você entendeu o primeiro esboço, provavelmente poderá descobrir o que esta versão faz facilmente.
 
-Na função `setup`, além de inicializar a porta serial como antes, também esta inicializando o `pino 13` como um `pino de saída`. Lembre-se que os pinos digitais podem ser usados ​​como `entradas` ou `saídas`, então sempre que você precisar usar um pino, você deve configurá-lo para o uso pretendido. Nesse caso, estou tornando-o um pino de saída, o que significa que posso escrever um valor nesse pino, e o valor que escrevo afetará a corrente elétrica que sai dele. Consulte a documentação (**`pinMode**)<https://www.arduino.cc/reference/en/language/functions/digital-io/pinmode/> para obter detalhes sobre isso.
+Na função `setup`, além de inicializar a porta serial como antes, também esta inicializando o `pino 13` como um `pino de saída`. Lembre-se que os pinos digitais podem ser usados ​​como `entradas` ou `saídas`, então sempre que você precisar usar um pino, você deve configurá-lo para o uso pretendido. Nesse caso, estou tornando-o um pino de saída, o que significa que posso escrever um valor nesse pino, e o valor que escrevo afetará a corrente elétrica que sai dele. Consulte a documentação [**pinMode**](https://www.arduino.cc/reference/en/language/functions/digital-io/pinmode/) para obter detalhes sobre isso.
 
 A função `loop` imprime a mensagem para a porta serial como antes, mas então define o `pino 13` para um estado `HIGH` com a função `digitalWrite`. Na maioria das placas Arduino, isso acende o LED on-board. Em seguida, o programa faz uma pausa de 500 milissegundos ou meio segundo. Em seguida, o estado do `pino 13` é alterado para estado `LOW` para desligar o LED. Então o programa dorme por mais meio segundo.
 
@@ -161,7 +161,7 @@ Para a maioria dos dispositivos que se conectam à placa Arduino já existem `bi
 
 Na maioria dos casos, os `fabricantes de dispositivos` compatíveis com Arduino fornecem as bibliotecas necessárias para controlar seus produtos. Outras vezes, os desenvolvedores escrevem suas próprias bibliotecas e as disponibilizam como código aberto. A documentação do dispositivo é o primeiro lugar a ser consultado, mas, como sempre, em casos como esse, o Google é seu melhor amigo.
 
-A biblioteca (`arduino-new-ping`) <https://bitbucket.org/teckel12/arduino-new-ping/wiki/Home> parecia ser bem completa e usaremos no projeto. A biblioteca vem em um arquivo `zip`, disponível como um link para (**download**) <https://bitbucket.org/teckel12/arduino-new-ping/downloads/NewPing_v1.9.7.zip>. Para instalá-lo e disponibilizá-lo no software Arduino você só precisa descompactá-lo e copiar a pasta superior (chamada NewPing) dentro da pasta `libraries` em sua pasta de sketches do Arduino. A pasta de esboços do Arduino está em seu diretório inicial, consulte a documentação para obter detalhes.
+A biblioteca [**arduino-new-ping++](https://bitbucket.org/teckel12/arduino-new-ping/wiki/Home) parecia ser bem completa e usaremos no projeto. A biblioteca vem em um arquivo `zip`, disponível como um link para [**download**](https://bitbucket.org/teckel12/arduino-new-ping/downloads/NewPing_v1.9.7.zip). Para instalá-lo e disponibilizá-lo no software Arduino você só precisa descompactá-lo e copiar a pasta superior (chamada NewPing) dentro da pasta `libraries` em sua pasta de sketches do Arduino. A pasta de esboços do Arduino está em seu diretório inicial, consulte a documentação para obter detalhes.
 
 Depois de instalar a biblioteca `NewPing`, feche e reabra o software Arduino para que ele possa reconhecê-lo.
 
