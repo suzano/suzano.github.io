@@ -12,5 +12,13 @@
     <guid>https://suzano.github.io/markdown-sintaxe/</guid>
     <description><![CDATA[<p>Este artigo oferece uma amostra da sintaxe básica do Markdown que pode ser usada em arquivos de conteúdo do Hugo.</p>]]></description>
 </item>
+<item>
+    <title>Sintaxe Básica do Markdown</title>
+    <link>https://suzano.github.io/sintaxe-markdown/</link>
+    <pubDate>Mon, 20 Mar 2023 12:00:00 &#43;0000</pubDate>
+    <author>Suzano</author>
+    <guid>https://suzano.github.io/sintaxe-markdown/</guid>
+    <description><![CDATA[<p>Este artigo oferece uma amostra da sintaxe básica do Markdown que pode ser usada em arquivos de conteúdo do Hugo.</p>]]></description>
+</item>
 </channel>
 </rss>

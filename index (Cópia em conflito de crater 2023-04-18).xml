@@ -1,0 +1,69 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Suzano Bitencourt</title>
+        <link>https://suzano.github.io/</link>
+        <description>Este é o meu site</description>
+        <generator>Hugo -- gohugo.io</generator><language>pt-BR</language><managingEditor>suzanobitencourt@gmail.com (Suzano Bitencourt)</managingEditor>
+            <webMaster>suzanobitencourt@gmail.com (Suzano Bitencourt)</webMaster><lastBuildDate>Mon, 17 Apr 2023 13:00:00 &#43;0000</lastBuildDate>
+            <atom:link href="https://suzano.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+    <title>Construindo um Robô Arduino - Parte II</title>
+    <link>https://suzano.github.io/arduino-robo-ii/</link>
+    <pubDate>Mon, 17 Apr 2023 13:00:00 &#43;0000</pubDate>
+    <author>Suzano</author>
+    <guid>https://suzano.github.io/arduino-robo-ii/</guid>
+    <description><![CDATA[<p>Programando o Arduino</p>
+<p>Você conhecerá os fundamentos da programação de sensores, motores e outros dispositivos conectados ao Arduino, e também terá um entendimento de como um controle remoto sem fio pode se comunicar com a placa Arduino via Bluetooth.</p>]]></description>
+</item>
+<item>
+    <title>Construindo um Robô Arduino - Parte I</title>
+    <link>https://suzano.github.io/arduino-robo-i/</link>
+    <pubDate>Mon, 17 Apr 2023 12:00:00 &#43;0000</pubDate>
+    <author>Suzano</author>
+    <guid>https://suzano.github.io/arduino-robo-i/</guid>
+    <description><![CDATA[<p>Construindo um veículo robô controlado remotamente.</p>
+<p>Usando Arduino para a plataforma de hardware, por ser amplamente utilizada por criadores de hardware em todo o mundo, o que significa que há muitas informações e recursos disponíveis.</p>
+<p>Sendo fácil o suficiente para concluir em um período de tempo relativamente curto, mas difícil o suficiente para ser interessante e desafiador.</p>]]></description>
+</item>
+<item>
+    <title>Criando uma biblioteca para Arduino</title>
+    <link>https://suzano.github.io/arduino-biblioteca/</link>
+    <pubDate>Fri, 14 Apr 2023 12:00:00 &#43;0000</pubDate>
+    <author>Suzano</author>
+    <guid>https://suzano.github.io/arduino-biblioteca/</guid>
+    <description><![CDATA[<p>Criando uma biblioteca que tem a função de facilitar o código PISCA LED, com a biblioteca pronta e inserida no código, o led irá piscar com apenas 01 linha de programação!</p>]]></description>
+</item>
+<item>
+    <title>Sintaxe Básica do Markdown</title>
+    <link>https://suzano.github.io/markdown-sintaxe/</link>
+    <pubDate>Mon, 20 Mar 2023 12:00:00 &#43;0000</pubDate>
+    <author>Suzano</author>
+    <guid>https://suzano.github.io/markdown-sintaxe/</guid>
+    <description><![CDATA[<p>Este artigo oferece uma amostra da sintaxe básica do Markdown que pode ser usada em arquivos de conteúdo do Hugo.</p>]]></description>
+</item>
+<item>
+    <title>Ansible</title>
+    <link>https://suzano.github.io/ansible/</link>
+    <pubDate>Mon, 20 Mar 2023 12:00:00 &#43;0000</pubDate>
+    <author>Suzano</author>
+    <guid>https://suzano.github.io/ansible/</guid>
+    <description><![CDATA[<p>O objetivo é apresentar os conceitos básicos de Ansible e como usá-lo para gerenciar a configuração de servidores e aplicações. Comandos básicos, playbooks para automatizar tarefas de configuração de servidores e aplicações, e executar playbooks em diferentes ambientes.</p>]]></description>
+</item>
+<item>
+    <title>Fatsort</title>
+    <link>https://suzano.github.io/fatsort/</link>
+    <pubDate>Mon, 20 Mar 2023 12:00:00 &#43;0000</pubDate>
+    <author>Suzano</author>
+    <guid>https://suzano.github.io/fatsort/</guid>
+    <description><![CDATA[<p>O Fatsort é uma aplicação para organizar por ordem alfabética os mp3 em um pendrive ou aparelho de MP3 player.</p>]]></description>
+</item>
+<item>
+    <title>Ventoy</title>
+    <link>https://suzano.github.io/ventoy/</link>
+    <pubDate>Fri, 24 Mar 2023 12:00:00 &#43;0000</pubDate>
+    <author>Suzano</author>
+    <guid>https://suzano.github.io/ventoy/</guid>
+    <description><![CDATA[<p>Ventoy é uma ferramenta de código aberto para criar uma unidade USB inicializável para arquivos ISO/WIM/IMG/VHD(x)/EFI.</p>]]></description>
+</item>
+</channel>
+</rss>

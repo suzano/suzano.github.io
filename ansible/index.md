@@ -277,7 +277,7 @@ $ sudo ansible-playbook -i /etc/ansible/hosts-test playbook.yml -vvvv
 Disponível em: <https://pixabay.com/pt/photos/rede-servidor-sistema-2402637/>  
 Acesso em: 22 mar. 2023.
 
-## Fontes
+## Referências
 
 **ANSIBLE-BR - Documentação ANSIBLE-BR**  
 Disponível em: <http://ansible-br.org>  
