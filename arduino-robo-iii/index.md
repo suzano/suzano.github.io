@@ -92,29 +92,23 @@ Qualquer texto que apareça entre `/*` e `*/` é considerado um comentário, por
 
 A palavra-chave `namespace` agrupa todas as definições dentro `{` e `}` sob um nome definido pelo usuário. Isso é útil para evitar colisões de nomes com outros módulos, por isso é sempre uma boa ideia incluir seu próprio código em um `namespace`. Colocamos todo o código sob o namespace `Michelino`.
 
-A palavra-chave `class` define uma estrutura que agrupa dados e funções em uma entidade chamada objeto . Minha classe de driver de motor é chamada MotorDrivere contém apenas duas funções, que no contexto de uma classe são chamadas de métodos . Os métodos setSpeede getSpeedcontrolarão um motor, mas observe que, ao contrário da AF_Motorbiblioteca que usei antes, não estou definindo que tipo de controlador de motor é usado para a tarefa. O esboço principal apenas chamará esses métodos sem saber como eles são implementados, portanto, para alternar de um controlador para outro, basta reimplementar essas duas funções para o controlador selecionado.
+A palavra-chave `class` define uma estrutura que agrupa dados e funções em uma entidade chamada `objeto`. Minha classe de driver de motor é chamada `MotorDriver` e contém apenas duas funções, que no contexto de uma `classe` são chamadas de `métodos`. Os métodos `setSpeed` e `getSpeed` controlarão um motor, mas observe que, ao contrário da biblioteca `AF_Motor` que usamos antes, não estamos definindo que tipo de controlador de motor é usado para a tarefa. O esboço principal apenas chamará esses métodos sem saber como eles são implementados, portanto, para alternar de um controlador para outro, basta reimplementar essas duas funções para o controlador selecionado.
 
-A public:palavra-chave que aparece antes dos métodos indica que as declarações a seguir são acessíveis a qualquer pessoa. Você verá mais tarde que algumas classes têm conteúdos que estão escondidos do mundo exterior.
+A apalavra-chave `public:` que aparece antes dos métodos indica que as declarações a seguir são acessíveis a qualquer pessoa. Você verá mais tarde que algumas classes têm conteúdos que estão escondidos do mundo exterior.
 
-A virtualpalavra-chave que inicia cada declaração de método indica que esses métodos podem ser sobrescritos por uma subclasse , e no = 0final das declarações indica que os métodos não possuem uma implementação. Esses dois atributos combinados são usados ​​para garantir que a única maneira de fornecer uma implementação para esses métodos seja em uma subclasse . Vou mostrar o que isso significa em um momento.
+A palavra-chave `virtual` que inicia cada declaração de método indica que esses métodos podem ser sobrescritos por uma subclasse, e no final `= 0` das declarações indica que os métodos não possuem uma implementação. Esses dois atributos combinados são usados ​​para garantir que a única maneira de fornecer uma implementação para esses métodos seja em uma `subclasse`.
 
-Por fim, a constpalavra-chave que aparece no getSpeedmétodo indica que esse método é constante , ou seja, que esse método não altera o estado interno do objeto.
+Por fim, a palavra-chave `const` que aparece no método `getSpeed` indica que esse método é constante, ou seja, que esse método não altera o estado interno do objeto.
 
-Deixando de lado os detalhes técnicos de escrever uma classe C++, o ponto importante é que os drivers de dispositivo que adotam a interface acima devem ser capazes de controlar um motor DC com duas operações, setSpeed()e getSpeed(). Os valores de velocidade são dados na faixa de -255 a 255, com velocidades positivas movendo-se para frente, velocidades negativas movendo-se para trás e zero fazendo o motor parar.
+Deixando de lado os detalhes técnicos de escrever uma classe C++, o ponto importante é que os drivers de dispositivo que adotam a interface acima devem ser capazes de controlar um motor DC com duas operações, `setSpeed()` e `getSpeed()`. Os valores de velocidade são dados na faixa de `-255` a `255`, com velocidades positivas movendo-se para `frente`, velocidades negativas movendo-se para `trás` e `zero` fazendo o motor `parar`.
 
-## O driver de dispositivo de blindagem do motor Adafruit
+## O driver de motor Adafruit
 
-Agora tenho uma ideia muito clara do que os drivers de motor para meu robô precisam fazer, então estou pronto para escrever uma implementação específica para meu escudo de motor Adafruit.
+Escrevendo uma implementação específica para a shield de motor Adafruit.
 
-Vou armazenar o driver do escudo do motor Adafruit em um arquivo chamado adafruit_motor_driver.h. Aqui está o código:
+Vou armazenar o driver da shield do motor Adafruit em um arquivo chamado `adafruit_motor_driver.h`. Aqui está o código:
 
 ```cpp
-/**
- * @file adafruit_motor_driver.h
- * @brief Motor device driver for the Adafruit motor shield.
- * @author Miguel Grinberg
- */
-
 #include "motor_driver.h"
 
 namespace Michelino
@@ -123,8 +117,8 @@ namespace Michelino
     {
     public:
         /*
-         * @brief Class constructor.
-         * @param number the DC motor number to control, from 1 to 4.
+         * Class constructor.
+         * number the DC motor number to control, from 1 to 4.
          */
         Motor(int number)
             : MotorDriver(), motor(number), currentSpeed(0)
@@ -156,35 +150,35 @@ namespace Michelino
 };
 ```
 
-Então, o que há de novo aqui? Começo incluindo o arquivo de cabeçalho do driver do motor. O driver Adafruit deriva da definição de driver genérico que escrevi acima, de modo que a definição precisa ser acessível.
+Iniciamos incluindo o arquivo de cabeçalho do driver do motor. O driver Adafruit deriva da definição de driver genérico que escrevemos acima, de modo que a definição precisa ser acessível.
 
-A classdefinição neste arquivo parece um pouco diferente:
+A definição `class` neste arquivo parece um pouco diferente:
 
 ```cpp
 class Motor : public MotorDriver
 ```
 
-Isso diz que estou criando uma classe chamada Motorque deriva de class MotorDriver. Isso significa que a classe Motorseguirá o protocolo estabelecido pela classe MotorDriver.
+Isso diz que estamos criando uma classe chamada `Motor` que deriva da classe `MotorDriver`. Isso significa que a classe `Motor` seguirá o protocolo estabelecido pela classe `MotorDriver`.
 
-A classe tem uma publicseção que começa com constructor:
+A classe tem uma seção `public` que começa com constructor:
 
 ```cpp
 Motor(int number)
 ```
 
-Este é um método com o mesmo nome da classe ( Motorneste caso). Os métodos construtores são chamados quando um objeto é criado e destinam-se a definir o estado inicial do objeto. Este construtor usa o número do motor como um argumento.
+Este é um método com o mesmo nome da classe (Motor neste caso). Os métodos construtores são chamados quando um objeto é criado e destinam-se a definir o estado inicial do objeto. Este construtor usa o número do motor como um argumento.
 
-O Motorconstrutor tem uma lista de inicializadores :
+O construtor `Motor` tem uma lista de inicializadores:
 
 ```cpp
 : MotorDriver(), motor(number), currentSpeed(0)
 ```
 
-Esta é uma lista de itens que serão inicializados quando um objeto desta classe for criado. O primeiro item apenas invoca o construtor da classe pai, o driver genérico MotorDriver. Eu não incluí um construtor nesta classe, mas o compilador irá gerar um vazio para mim. É uma boa prática sempre inicializar a classe pai mesmo quando não houver um construtor, porque no futuro um construtor pode ser adicionado.
+Esta é uma lista de itens que serão inicializados quando um objeto desta classe for criado. O primeiro item apenas invoca o construtor da classe pai, o driver genérico `MotorDriver`. Eu não incluí um construtor nesta classe, mas o compilador irá gerar um vazio. É uma boa prática sempre inicializar a `classe pai` mesmo quando não houver um construtor, porque no futuro um construtor pode ser adicionado.
 
-Os dois itens restantes na lista de inicializadores são variáveis ​​de membro dessa classe. Se você olhar na parte inferior da classe, há um privatebloco que define duas variáveis ​​chamadas motore currentSpeed. A motorvariável é do tipo AF_DCMotor, a classe definida pela biblioteca de escudos do motor Adafruit. Para inicializar esta variável, tenho que invocar seu construtor, que, se você se lembra de um artigo anterior, usa o número do motor como argumento. Recebi o número do motor como um argumento para meu próprio construtor, então apenas o transmito aqui. A currentSpeedvariável é do tipo int, então apenas a inicializo com 0 para que ela tenha um valor inicial conhecido.
+Os dois itens restantes na lista de inicializadores são `variáveis` ​​de membro dessa classe. Se você olhar na parte inferior da classe, há um bloco `private` que define duas variáveis ​​chamadas `motor` e `currentSpeed`. A variável `motor` é do tipo `AF_DCMotor`, a classe definida pela biblioteca da shield do motor Adafruit. Para inicializar esta variável, tenho que invocar seu construtor, que, se você se lembra de um artigo anterior, usa o número do motor como argumento. Recebi o número do motor como um argumento para meu próprio construtor, então apenas o transmito aqui. A variável `currentSpeed` é do tipo int, então apenas a inicializo com `0` para que ela tenha um valor inicial conhecido.
 
-O corpo do Motorconstrutor está vazio, pois a única coisa que preciso é inicializar as variáveis ​​de membro.
+O corpo do construtor `Motor` está vazio, pois a única coisa que preciso é inicializar as variáveis ​​de membro.
 
 O que se segue é a implementação dos métodos setSpeede getSpeedpara este controlador de motor específico, usando a biblioteca AF_Motor de código aberto da Adafruit, que deve ser instalada separadamente (consulte meu artigo anterior para obter instruções). Esta biblioteca requer duas funções a serem chamadas para configurar um motor, uma para definir a velocidade e outra para definir o modo. Eu defini meu driver de motor para usar uma forma mais simples de configurar o motor, apenas com uma velocidade que pode ser positiva, negativa ou zero. A implementação de setSpeedtraduz meu formato para aquele exigido pela biblioteca de escudos do motor Adafruit. Eu também armazeno a velocidade atual em uma variável de membro, para que eu possa retorná-la em getSpeed.
 
@@ -194,7 +188,7 @@ Se você estiver usando um controlador de motor diferente do meu em seu robô, t
 
 ## Usando o driver de dispositivo
 
-Agora eu tenho um driver de dispositivo completo para minha blindagem de motor Adafruit. Mas como faço para usá-lo em um esboço?
+Agora eu tenho um driver de dispositivo completo para minha bplindagem de motor Adafruit. Mas como faço para usá-lo em um esboço?
 
 Isso é realmente mais simples do que você pode pensar. Aqui está um esboço de exemplo que inicia um motor em velocidade máxima usando o driver Adafruit que acabei de construir:
 
@@ -215,19 +209,19 @@ void loop()
 }
 ```
 
-O #includesno topo traz a biblioteca de motores Adafruit e meu driver para ela.
+O `#include` no topo traz a biblioteca de motores `Adafruit` e do `driver` para ela.
 
-Observe como o objeto motor é criado:
+Observe como o `objeto` motor é criado:
 
 ```cpp
 Michelino::Motor motor(MOTOR_INIT);
 ```
 
-A notação Michelino::Motordiz ao compilador para localizar a Motorclasse dentro do Michelinonamespace.
+A notação `Michelino::Motor` diz ao compilador para localizar a classe `Motor` dentro do namespace `Michelino`.
 
-Uma vez que o objeto do motor é criado, ele pode ser controlado usando as funções do driver setSpeede getSpeed.
+Uma vez que o objeto do motor é criado, ele pode ser controlado usando as funções do driver `setSpeed` e `getSpeed`.
 
-Agora vamos supor que mais tarde você queira fazer o esboço acima funcionar com outra blindagem do motor, digamos uma chamada "x", para a qual você escreveu um driver de dispositivo. Então você pode apenas adicionar algumas linhas de código ao sketch, como segue:
+Agora vamos supor que mais tarde você queira fazer o esboço acima funcionar com outra shield de motor, digamos uma chamada `"x"`, para a qual você escreveu um driver de dispositivo. Então você pode apenas adicionar algumas linhas de código ao sketch, como segue:
 
 ```cpp
 // enable one of the motor shields below
@@ -258,9 +252,9 @@ void loop()
 }
 ```
 
-No topo, estou definindo duas #defineconstantes, mas uma delas está comentada . Esta é uma maneira muito fácil de fornecer configuração, basta descomentar a única constante que corresponde à parte que você possui.
+No topo, estamos definindo duas constantes `#define`, mas uma delas está comentada. Esta é uma maneira muito fácil de fornecer configuração, basta descomentar a única constante que corresponde à parte que você possui.
 
-Um #ifdef ... #endifbloco só será visto pelo compilador se a constante que segue #ifdefestiver definida. Como apenas uma das constantes de blindagem do motor será definida, estou carregando efetivamente apenas um dos drivers de dispositivo no esboço.
+Um bloco `#ifdef ... #endif` só será visto pelo compilador se a constante que segue `#ifdef` estiver definida. Como apenas uma das constantes de blindagem do motor será definida, estou carregando efetivamente apenas um dos drivers de dispositivo no esboço.
 
 No exemplo acima, o esboço pode ser alternado entre a blindagem Adafruit usando o motor nº 1 e a blindagem do motor X usando o motor nº 2, apenas alterando qual das #defineinstruções na parte superior é usada!
 

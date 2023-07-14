@@ -17,7 +17,7 @@
 <meta name="application-name" content="Suzano Bitencourt">
 <meta name="apple-mobile-web-app-title" content="Suzano Bitencourt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://suzano.github.io/arduino-robo-iii/" /><link rel="prev" href="https://suzano.github.io/arduino-robo-ii/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://suzano.github.io/arduino-robo-iii/" /><link rel="prev" href="https://suzano.github.io/git-github/" /><link rel="next" href="https://suzano.github.io/arduino-robo-ii/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -32,8 +32,8 @@
                             "@type": "ImageObject",
                             "url": "https:\/\/suzano.github.io\/arduino-robo-iii\/featured-image.jpg",
                             "width":  1420 ,
-                            "height":  708 
-                        }],"genre": "posts","keywords": "Arduino, Robô, Bibliotecas","wordcount":  3846 ,
+                            "height":  430 
+                        }],"genre": "posts","keywords": "Arduino, Robô, Bibliotecas","wordcount":  3797 ,
         "url": "https:\/\/suzano.github.io\/arduino-robo-iii\/","datePublished": "2023-04-18T13:00:00+00:00","dateModified": "2023-04-18T13:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -107,8 +107,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Construindo um Robô Arduino - Parte III</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://suzano.github.io/sobre/" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Suzano</a></span>&nbsp;<span class="post-category">incluido em <a href="/categories/sistemas-embarcados/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Sistemas Embarcados</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-04-18">2023-04-18</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;3846 palavras&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;19 minutos&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-04-18">2023-04-18</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;3797 palavras&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;18 minutos&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -132,7 +132,7 @@
       </ul>
     </li>
     <li><a href="#escrevendo-um-driver-de-dispositivo">Escrevendo um driver de dispositivo!</a></li>
-    <li><a href="#o-driver-de-dispositivo-de-blindagem-do-motor-adafruit">O driver de dispositivo de blindagem do motor Adafruit</a></li>
+    <li><a href="#o-driver-de-motor-adafruit">O driver de motor Adafruit</a></li>
     <li><a href="#usando-o-driver-de-dispositivo">Usando o driver de dispositivo</a></li>
     <li><a href="#como-implementar-atrasos">Como implementar atrasos</a></li>
     <li><a href="#ilustrações">Ilustrações</a></li>
@@ -221,14 +221,14 @@
 </div><p>Se você não estiver familiarizado com C++, há várias coisas aqui que precisam de uma explicação.</p>
 <p>Qualquer texto que apareça entre <code>/*</code> e <code>*/</code> é considerado um comentário, portanto será ignorado pelo compilador C++. Existe um formato alternativo para comentários que você já deve ter visto, esses usam um prefixo <code>//</code> e vão até o final da linha. Ambos os formatos são válidos, mas neste caso, como estou escrevendo comentários de várias linhas, estou usando o formato <code>/* ... */</code>.</p>
 <p>A palavra-chave <code>namespace</code> agrupa todas as definições dentro <code>{</code> e <code>}</code> sob um nome definido pelo usuário. Isso é útil para evitar colisões de nomes com outros módulos, por isso é sempre uma boa ideia incluir seu próprio código em um <code>namespace</code>. Colocamos todo o código sob o namespace <code>Michelino</code>.</p>
-<p>A palavra-chave <code>class</code> define uma estrutura que agrupa dados e funções em uma entidade chamada objeto . Minha classe de driver de motor é chamada MotorDrivere contém apenas duas funções, que no contexto de uma classe são chamadas de métodos . Os métodos setSpeede getSpeedcontrolarão um motor, mas observe que, ao contrário da AF_Motorbiblioteca que usei antes, não estou definindo que tipo de controlador de motor é usado para a tarefa. O esboço principal apenas chamará esses métodos sem saber como eles são implementados, portanto, para alternar de um controlador para outro, basta reimplementar essas duas funções para o controlador selecionado.</p>
-<p>A public:palavra-chave que aparece antes dos métodos indica que as declarações a seguir são acessíveis a qualquer pessoa. Você verá mais tarde que algumas classes têm conteúdos que estão escondidos do mundo exterior.</p>
-<p>A virtualpalavra-chave que inicia cada declaração de método indica que esses métodos podem ser sobrescritos por uma subclasse , e no = 0final das declarações indica que os métodos não possuem uma implementação. Esses dois atributos combinados são usados ​​para garantir que a única maneira de fornecer uma implementação para esses métodos seja em uma subclasse . Vou mostrar o que isso significa em um momento.</p>
-<p>Por fim, a constpalavra-chave que aparece no getSpeedmétodo indica que esse método é constante , ou seja, que esse método não altera o estado interno do objeto.</p>
-<p>Deixando de lado os detalhes técnicos de escrever uma classe C++, o ponto importante é que os drivers de dispositivo que adotam a interface acima devem ser capazes de controlar um motor DC com duas operações, setSpeed()e getSpeed(). Os valores de velocidade são dados na faixa de -255 a 255, com velocidades positivas movendo-se para frente, velocidades negativas movendo-se para trás e zero fazendo o motor parar.</p>
-<h2 id="o-driver-de-dispositivo-de-blindagem-do-motor-adafruit">O driver de dispositivo de blindagem do motor Adafruit</h2>
-<p>Agora tenho uma ideia muito clara do que os drivers de motor para meu robô precisam fazer, então estou pronto para escrever uma implementação específica para meu escudo de motor Adafruit.</p>
-<p>Vou armazenar o driver do escudo do motor Adafruit em um arquivo chamado adafruit_motor_driver.h. Aqui está o código:</p>
+<p>A palavra-chave <code>class</code> define uma estrutura que agrupa dados e funções em uma entidade chamada <code>objeto</code>. Minha classe de driver de motor é chamada <code>MotorDriver</code> e contém apenas duas funções, que no contexto de uma <code>classe</code> são chamadas de <code>métodos</code>. Os métodos <code>setSpeed</code> e <code>getSpeed</code> controlarão um motor, mas observe que, ao contrário da biblioteca <code>AF_Motor</code> que usamos antes, não estamos definindo que tipo de controlador de motor é usado para a tarefa. O esboço principal apenas chamará esses métodos sem saber como eles são implementados, portanto, para alternar de um controlador para outro, basta reimplementar essas duas funções para o controlador selecionado.</p>
+<p>A apalavra-chave <code>public:</code> que aparece antes dos métodos indica que as declarações a seguir são acessíveis a qualquer pessoa. Você verá mais tarde que algumas classes têm conteúdos que estão escondidos do mundo exterior.</p>
+<p>A palavra-chave <code>virtual</code> que inicia cada declaração de método indica que esses métodos podem ser sobrescritos por uma subclasse, e no final <code>= 0</code> das declarações indica que os métodos não possuem uma implementação. Esses dois atributos combinados são usados ​​para garantir que a única maneira de fornecer uma implementação para esses métodos seja em uma <code>subclasse</code>.</p>
+<p>Por fim, a palavra-chave <code>const</code> que aparece no método <code>getSpeed</code> indica que esse método é constante, ou seja, que esse método não altera o estado interno do objeto.</p>
+<p>Deixando de lado os detalhes técnicos de escrever uma classe C++, o ponto importante é que os drivers de dispositivo que adotam a interface acima devem ser capazes de controlar um motor DC com duas operações, <code>setSpeed()</code> e <code>getSpeed()</code>. Os valores de velocidade são dados na faixa de <code>-255</code> a <code>255</code>, com velocidades positivas movendo-se para <code>frente</code>, velocidades negativas movendo-se para <code>trás</code> e <code>zero</code> fazendo o motor <code>parar</code>.</p>
+<h2 id="o-driver-de-motor-adafruit">O driver de motor Adafruit</h2>
+<p>Escrevendo uma implementação específica para a shield de motor Adafruit.</p>
+<p>Vou armazenar o driver da shield do motor Adafruit em um arquivo chamado <code>adafruit_motor_driver.h</code>. Aqui está o código:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -270,21 +270,9 @@
 </span><span class="lnt">37
 </span><span class="lnt">38
 </span><span class="lnt">39
-</span><span class="lnt">40
-</span><span class="lnt">41
-</span><span class="lnt">42
-</span><span class="lnt">43
-</span><span class="lnt">44
-</span><span class="lnt">45
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cm">/**
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * @file adafruit_motor_driver.h
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * @brief Motor device driver for the Adafruit motor shield.
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * @author Miguel Grinberg
-</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;motor_driver.h&#34;</span><span class="cp">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;motor_driver.h&#34;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp"></span>
 </span></span><span class="line"><span class="cl"><span class="k">namespace</span> <span class="n">Michelino</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
@@ -292,8 +280,8 @@
 </span></span><span class="line"><span class="cl">    <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">public</span><span class="o">:</span>
 </span></span><span class="line"><span class="cl">        <span class="cm">/*
-</span></span></span><span class="line"><span class="cl"><span class="cm">         * @brief Class constructor.
-</span></span></span><span class="line"><span class="cl"><span class="cm">         * @param number the DC motor number to control, from 1 to 4.
+</span></span></span><span class="line"><span class="cl"><span class="cm">         * Class constructor.
+</span></span></span><span class="line"><span class="cl"><span class="cm">         * number the DC motor number to control, from 1 to 4.
 </span></span></span><span class="line"><span class="cl"><span class="cm">         */</span>
 </span></span><span class="line"><span class="cl">        <span class="n">Motor</span><span class="p">(</span><span class="kt">int</span> <span class="n">number</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">            <span class="o">:</span> <span class="n">MotorDriver</span><span class="p">(),</span> <span class="n">motor</span><span class="p">(</span><span class="n">number</span><span class="p">),</span> <span class="n">currentSpeed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
@@ -325,8 +313,8 @@
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>Então, o que há de novo aqui? Começo incluindo o arquivo de cabeçalho do driver do motor. O driver Adafruit deriva da definição de driver genérico que escrevi acima, de modo que a definição precisa ser acessível.</p>
-<p>A classdefinição neste arquivo parece um pouco diferente:</p>
+</div><p>Iniciamos incluindo o arquivo de cabeçalho do driver do motor. O driver Adafruit deriva da definição de driver genérico que escrevemos acima, de modo que a definição precisa ser acessível.</p>
+<p>A definição <code>class</code> neste arquivo parece um pouco diferente:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -335,8 +323,8 @@
 <pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Motor</span> <span class="o">:</span> <span class="k">public</span> <span class="n">MotorDriver</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>Isso diz que estou criando uma classe chamada Motorque deriva de class MotorDriver. Isso significa que a classe Motorseguirá o protocolo estabelecido pela classe MotorDriver.</p>
-<p>A classe tem uma publicseção que começa com constructor:</p>
+</div><p>Isso diz que estamos criando uma classe chamada <code>Motor</code> que deriva da classe <code>MotorDriver</code>. Isso significa que a classe <code>Motor</code> seguirá o protocolo estabelecido pela classe <code>MotorDriver</code>.</p>
+<p>A classe tem uma seção <code>public</code> que começa com constructor:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -345,8 +333,8 @@
 <pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">Motor</span><span class="p">(</span><span class="kt">int</span> <span class="n">number</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>Este é um método com o mesmo nome da classe ( Motorneste caso). Os métodos construtores são chamados quando um objeto é criado e destinam-se a definir o estado inicial do objeto. Este construtor usa o número do motor como um argumento.</p>
-<p>O Motorconstrutor tem uma lista de inicializadores :</p>
+</div><p>Este é um método com o mesmo nome da classe (Motor neste caso). Os métodos construtores são chamados quando um objeto é criado e destinam-se a definir o estado inicial do objeto. Este construtor usa o número do motor como um argumento.</p>
+<p>O construtor <code>Motor</code> tem uma lista de inicializadores:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -355,14 +343,14 @@
 <pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="o">:</span> <span class="n">MotorDriver</span><span class="p">(),</span> <span class="n">motor</span><span class="p">(</span><span class="n">number</span><span class="p">),</span> <span class="n">currentSpeed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>Esta é uma lista de itens que serão inicializados quando um objeto desta classe for criado. O primeiro item apenas invoca o construtor da classe pai, o driver genérico MotorDriver. Eu não incluí um construtor nesta classe, mas o compilador irá gerar um vazio para mim. É uma boa prática sempre inicializar a classe pai mesmo quando não houver um construtor, porque no futuro um construtor pode ser adicionado.</p>
-<p>Os dois itens restantes na lista de inicializadores são variáveis ​​de membro dessa classe. Se você olhar na parte inferior da classe, há um privatebloco que define duas variáveis ​​chamadas motore currentSpeed. A motorvariável é do tipo AF_DCMotor, a classe definida pela biblioteca de escudos do motor Adafruit. Para inicializar esta variável, tenho que invocar seu construtor, que, se você se lembra de um artigo anterior, usa o número do motor como argumento. Recebi o número do motor como um argumento para meu próprio construtor, então apenas o transmito aqui. A currentSpeedvariável é do tipo int, então apenas a inicializo com 0 para que ela tenha um valor inicial conhecido.</p>
-<p>O corpo do Motorconstrutor está vazio, pois a única coisa que preciso é inicializar as variáveis ​​de membro.</p>
+</div><p>Esta é uma lista de itens que serão inicializados quando um objeto desta classe for criado. O primeiro item apenas invoca o construtor da classe pai, o driver genérico <code>MotorDriver</code>. Eu não incluí um construtor nesta classe, mas o compilador irá gerar um vazio. É uma boa prática sempre inicializar a <code>classe pai</code> mesmo quando não houver um construtor, porque no futuro um construtor pode ser adicionado.</p>
+<p>Os dois itens restantes na lista de inicializadores são <code>variáveis</code> ​​de membro dessa classe. Se você olhar na parte inferior da classe, há um bloco <code>private</code> que define duas variáveis ​​chamadas <code>motor</code> e <code>currentSpeed</code>. A variável <code>motor</code> é do tipo <code>AF_DCMotor</code>, a classe definida pela biblioteca da shield do motor Adafruit. Para inicializar esta variável, tenho que invocar seu construtor, que, se você se lembra de um artigo anterior, usa o número do motor como argumento. Recebi o número do motor como um argumento para meu próprio construtor, então apenas o transmito aqui. A variável <code>currentSpeed</code> é do tipo int, então apenas a inicializo com <code>0</code> para que ela tenha um valor inicial conhecido.</p>
+<p>O corpo do construtor <code>Motor</code> está vazio, pois a única coisa que preciso é inicializar as variáveis ​​de membro.</p>
 <p>O que se segue é a implementação dos métodos setSpeede getSpeedpara este controlador de motor específico, usando a biblioteca AF_Motor de código aberto da Adafruit, que deve ser instalada separadamente (consulte meu artigo anterior para obter instruções). Esta biblioteca requer duas funções a serem chamadas para configurar um motor, uma para definir a velocidade e outra para definir o modo. Eu defini meu driver de motor para usar uma forma mais simples de configurar o motor, apenas com uma velocidade que pode ser positiva, negativa ou zero. A implementação de setSpeedtraduz meu formato para aquele exigido pela biblioteca de escudos do motor Adafruit. Eu também armazeno a velocidade atual em uma variável de membro, para que eu possa retorná-la em getSpeed.</p>
 <p>Na parte inferior estão as duas variáveis ​​de membro privadas que esta classe usa. Essas variáveis ​​são declaradas como privadas porque não quero que sejam acessíveis de fora do objeto que as possui. Quero que qualquer alteração no motor ou em sua velocidade seja realizada por meio das funções públicas do driver (seguindo o princípio do encapsulamento ), portanto, uma boa maneira de evitar que eu use acidentalmente as variáveis ​​de membro diretamente é torná-las privadas. Uma variável de membro privado só pode ser modificada de métodos que pertencem ao objeto, mas não é acessível de nenhum outro lugar no código. Um bom motivo para ocultar essas variáveis ​​de membro é que outros drivers de motor precisarão de variáveis ​​diferentes, desde que o código fora dessa classe apenas chame setSpeed()egetSpeed()trocar este driver por outro não deve ser um problema.</p>
 <p>Se você estiver usando um controlador de motor diferente do meu em seu robô, tudo o que você precisa fazer é copiar o adafruit_motor_driver.harquivo &lt;your_controller&gt;_motor_driver.he implementar a classe conforme apropriado para seu controlador. O único requisito é que a nova classe também seja chamada Motore tenha as mesmas duas funções públicas. As duas classes serão então conceitualmente equivalentes, então o esboço principal pode usar qualquer uma delas.</p>
 <h2 id="usando-o-driver-de-dispositivo">Usando o driver de dispositivo</h2>
-<p>Agora eu tenho um driver de dispositivo completo para minha blindagem de motor Adafruit. Mas como faço para usá-lo em um esboço?</p>
+<p>Agora eu tenho um driver de dispositivo completo para minha bplindagem de motor Adafruit. Mas como faço para usá-lo em um esboço?</p>
 <p>Isso é realmente mais simples do que você pode pensar. Aqui está um esboço de exemplo que inicia um motor em velocidade máxima usando o driver Adafruit que acabei de construir:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -398,8 +386,8 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>O #includesno topo traz a biblioteca de motores Adafruit e meu driver para ela.</p>
-<p>Observe como o objeto motor é criado:</p>
+</div><p>O <code>#include</code> no topo traz a biblioteca de motores <code>Adafruit</code> e do <code>driver</code> para ela.</p>
+<p>Observe como o <code>objeto</code> motor é criado:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -408,9 +396,9 @@
 <pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">Michelino</span><span class="o">::</span><span class="n">Motor</span> <span class="n">motor</span><span class="p">(</span><span class="n">MOTOR_INIT</span><span class="p">);</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>A notação Michelino::Motordiz ao compilador para localizar a Motorclasse dentro do Michelinonamespace.</p>
-<p>Uma vez que o objeto do motor é criado, ele pode ser controlado usando as funções do driver setSpeede getSpeed.</p>
-<p>Agora vamos supor que mais tarde você queira fazer o esboço acima funcionar com outra blindagem do motor, digamos uma chamada &ldquo;x&rdquo;, para a qual você escreveu um driver de dispositivo. Então você pode apenas adicionar algumas linhas de código ao sketch, como segue:</p>
+</div><p>A notação <code>Michelino::Motor</code> diz ao compilador para localizar a classe <code>Motor</code> dentro do namespace <code>Michelino</code>.</p>
+<p>Uma vez que o objeto do motor é criado, ele pode ser controlado usando as funções do driver <code>setSpeed</code> e <code>getSpeed</code>.</p>
+<p>Agora vamos supor que mais tarde você queira fazer o esboço acima funcionar com outra shield de motor, digamos uma chamada <code>&quot;x&quot;</code>, para a qual você escreveu um driver de dispositivo. Então você pode apenas adicionar algumas linhas de código ao sketch, como segue:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -469,8 +457,8 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>No topo, estou definindo duas #defineconstantes, mas uma delas está comentada . Esta é uma maneira muito fácil de fornecer configuração, basta descomentar a única constante que corresponde à parte que você possui.</p>
-<p>Um #ifdef &hellip; #endifbloco só será visto pelo compilador se a constante que segue #ifdefestiver definida. Como apenas uma das constantes de blindagem do motor será definida, estou carregando efetivamente apenas um dos drivers de dispositivo no esboço.</p>
+</div><p>No topo, estamos definindo duas constantes <code>#define</code>, mas uma delas está comentada. Esta é uma maneira muito fácil de fornecer configuração, basta descomentar a única constante que corresponde à parte que você possui.</p>
+<p>Um bloco <code>#ifdef ... #endif</code> só será visto pelo compilador se a constante que segue <code>#ifdef</code> estiver definida. Como apenas uma das constantes de blindagem do motor será definida, estou carregando efetivamente apenas um dos drivers de dispositivo no esboço.</p>
 <p>No exemplo acima, o esboço pode ser alternado entre a blindagem Adafruit usando o motor nº 1 e a blindagem do motor X usando o motor nº 2, apenas alterando qual das #defineinstruções na parte superior é usada!</p>
 <p>O esboço principal
 Agora que tenho uma solução realmente boa para controlar minhas peças de hardware, preciso pensar em como o esboço principal será estruturado.</p>
@@ -812,7 +800,8 @@ Acesso em: 18 abr. 2023.</p></div><div class="post-footer" id="post-footer">
         </section>
     </div>
 
-    <div class="post-nav"><a href="/arduino-robo-ii/" class="prev" rel="prev" title="Construindo um Robô Arduino - Parte II"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Construindo um Robô Arduino - Parte II</a></div>
+    <div class="post-nav"><a href="/git-github/" class="prev" rel="prev" title="Git e GitHub"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Git e GitHub</a>
+            <a href="/arduino-robo-ii/" class="next" rel="next" title="Construindo um Robô Arduino - Parte II">Construindo um Robô Arduino - Parte II<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 </article></div>
             </main><footer class="footer">
