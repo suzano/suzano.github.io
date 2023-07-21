@@ -5,11 +5,27 @@
         <description>Tags - Tag - Suzano Bitencourt</description>
         <generator>Hugo -- gohugo.io</generator><language>pt-BR</language><managingEditor>suzanobitencourt@gmail.com (Suzano Bitencourt)</managingEditor>
             <webMaster>suzanobitencourt@gmail.com (Suzano Bitencourt)</webMaster><lastBuildDate>Mon, 17 Jul 2023 12:00:00 &#43;0000</lastBuildDate><atom:link href="https://suzano.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>Codificação</title>
+    <link>https://suzano.github.io/tags/codifica%C3%A7%C3%A3o/</link>
+    <pubDate>Mon, 17 Jul 2023 12:00:00 &#43;0000</pubDate>
+    <author>Suzano Bitencourt</author>
+    <guid>https://suzano.github.io/tags/codifica%C3%A7%C3%A3o/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>cURL</title>
     <link>https://suzano.github.io/tags/curl/</link>
     <pubDate>Mon, 17 Jul 2023 12:00:00 &#43;0000</pubDate>
     <author>Suzano Bitencourt</author>
     <guid>https://suzano.github.io/tags/curl/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Extensões</title>
+    <link>https://suzano.github.io/tags/extens%C3%B5es/</link>
+    <pubDate>Mon, 17 Jul 2023 12:00:00 &#43;0000</pubDate>
+    <author>Suzano Bitencourt</author>
+    <guid>https://suzano.github.io/tags/extens%C3%B5es/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
@@ -66,22 +82,6 @@
     <pubDate>Mon, 17 Jul 2023 12:00:00 &#43;0000</pubDate>
     <author>Suzano Bitencourt</author>
     <guid>https://suzano.github.io/tags/node.red/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>raptor2-utils</title>
-    <link>https://suzano.github.io/tags/raptor2-utils/</link>
-    <pubDate>Mon, 17 Jul 2023 12:00:00 &#43;0000</pubDate>
-    <author>Suzano Bitencourt</author>
-    <guid>https://suzano.github.io/tags/raptor2-utils/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>rasqal-utils</title>
-    <link>https://suzano.github.io/tags/rasqal-utils/</link>
-    <pubDate>Mon, 17 Jul 2023 12:00:00 &#43;0000</pubDate>
-    <author>Suzano Bitencourt</author>
-    <guid>https://suzano.github.io/tags/rasqal-utils/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>

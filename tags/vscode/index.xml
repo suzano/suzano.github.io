@@ -12,5 +12,13 @@
     <guid>https://suzano.github.io/hackathon/</guid>
     <description><![CDATA[<p><strong>Escola de Verão</strong> é um evento que reúne programadores e designers, cujo objetivo é desenvolver um software ou solução tecnológica que atenda a um fim específico.</p>]]></description>
 </item>
+<item>
+    <title>Extensões do VSCode</title>
+    <link>https://suzano.github.io/vscode/</link>
+    <pubDate>Mon, 17 Jul 2023 12:00:00 &#43;0000</pubDate>
+    <author>Suzano</author>
+    <guid>https://suzano.github.io/vscode/</guid>
+    <description><![CDATA[<p>Lista de extensões para VSCode que podem ajudar a economizar tempo e aumentar a eficiência da codificação.</p>]]></description>
+</item>
 </channel>
 </rss>
