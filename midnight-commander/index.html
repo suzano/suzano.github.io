@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Midnight Commander - Suzano Bitencourt</title><meta name="Description" content="Gerenciador de arquivos visual baseado em interfaces de texto."><meta property="og:title" content="Midnight Commander" />
+<meta property="og:description" content="Gerenciador de arquivos visual baseado em interfaces de texto." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://suzano.github.io/midnight-commander/" /><meta property="og:image" content="https://suzano.github.io/midnight-commander/featured-image.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-07-17T12:00:00+00:00" />
+<meta property="article:modified_time" content="2023-03-17T12:00:00+00:00" /><meta property="og:site_name" content="Suzano Bitencourt" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://suzano.github.io/midnight-commander/featured-image.jpg"/>
+<meta name="twitter:title" content="Midnight Commander"/>
+<meta name="twitter:description" content="Gerenciador de arquivos visual baseado em interfaces de texto."/>
+<meta name="application-name" content="Suzano Bitencourt">
+<meta name="apple-mobile-web-app-title" content="Suzano Bitencourt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://suzano.github.io/midnight-commander/" /><link rel="next" href="https://suzano.github.io/hackathon/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Midnight Commander",
+        "inLanguage": "pt-BR",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/suzano.github.io\/midnight-commander\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/suzano.github.io\/midnight-commander\/featured-image.jpg",
+                            "width":  1420 ,
+                            "height":  430 
+                        }],"genre": "posts","keywords": "GNU Midnight Commander, Gerenciador de Arquivos","wordcount":  590 ,
+        "url": "https:\/\/suzano.github.io\/midnight-commander\/","datePublished": "2023-07-17T12:00:00+00:00","dateModified": "2023-03-17T12:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Suzano"
+            },"description": "Gerenciador de arquivos visual baseado em interfaces de texto."
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Suzano Bitencourt"><span class="header-title-pre"><i class='fa-solid fa-mug-hot' aria-hidden='true'></i></span>Suzano Bitencourt</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categorias </a><a class="menu-item" href="/docs/"> Documentação </a><a class="menu-item" href="/about/"> Sobre </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Pesquisar títulos ou conteúdos ..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Pesquisa">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Limpar">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Suzano Bitencourt"><span class="header-title-pre"><i class='fa-solid fa-mug-hot' aria-hidden='true'></i></span>Suzano Bitencourt</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Pesquisar títulos ou conteúdos ..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Pesquisa">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Limpar">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancelar
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categorias</a><a class="menu-item" href="/docs/" title="">Documentação</a><a class="menu-item" href="/about/" title="">Sobre</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Conteúdos</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Midnight Commander</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://suzano.github.io/sobre/" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Suzano</a></span>&nbsp;<span class="post-category">incluido em <a href="/categories/linux/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Linux</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-07-17">2023-07-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;590 palavras&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutos&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/midnight-commander/featured-image.jpg"
+        data-srcset="/midnight-commander/featured-image.jpg, /midnight-commander/featured-image.jpg 1.5x, /midnight-commander/featured-image.jpg 2x"
+        data-sizes="auto"
+        alt="/midnight-commander/featured-image.jpg"
+        title="Gerenciador de arquivos visual baseado em interfaces de texto." /></div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Conteúdos</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#conceito">Conceito</a></li>
+    <li><a href="#instalação">Instalação</a></li>
+    <li><a href="#utilizando">Utilizando</a></li>
+    <li><a href="#ilustrações">Ilustrações</a></li>
+    <li><a href="#referências">Referências</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>O <strong>Midnight Commander</strong> é uma ferramenta muito poderosa. Permitindo você pode copiar, mover, renomear e excluir arquivos e diretórios.</p>
+<h2 id="conceito">Conceito</h2>
+<p>O <strong>GNU Midnight Commander</strong> é um gerenciador de arquivos visual, qualificado como Software Livre. É um aplicativo de modo texto de tela cheia rico em recursos que permite copiar, mover e excluir arquivos e árvores de diretórios inteiras, pesquisar arquivos e executar comandos na subshell.</p>
+<h2 id="instalação">Instalação</h2>
+<p>A instalação pode ser feita utilizando as ferramentas de gerenciamento de pacotes de acordo com a sua distruição linux.</p>
+<p>Debian, Ubuntu, e derivados:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sudo apt install mc
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Arch Linux e derivados:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sudo pacman -S mc
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Fedora, RHEL e derivados:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sudo dnf install mc
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>OpenSUSE:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sudo zypper install mc
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="utilizando">Utilizando</h2>
+<p>E para iniciar seu uso, basta utilizar o comando abaixo no terminal:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ mc
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Teclas de atalho <code>Ctrl</code> e <code>Shift</code> significam as mesmas teclas do teclado, Meta é metakey, no PC é <code>Alt</code> ou pressionamento único da tecla <code>Esc</code>. <code>Fn</code> (Onde N &gt; 10) significa <code>Shift-F(n-10)</code>, ou seja, <code>F19</code> é <code>Shift-F9</code>.</p>
+<ul>
+<li>F3	Visualizar arquivo.</li>
+<li>F4	Editar arquivo.</li>
+<li>F13	Exibir arquivo bruto sem extensão específica.</li>
+<li>F14	Criar novo arquivo.</li>
+<li>F19	Ative o último elemento de menu usado.</li>
+<li>F20	Saída tranquila, sem confirmação.</li>
+<li>Inserir	Selecione &lsquo;objeto atual&rsquo; 1</li>
+<li>
+<ul>
+<li>selecione um grupo de arquivos. (expressão regular pode ser usada)</li>
+</ul>
+</li>
+<li>\	Desmarque um grupo de arquivos. Isso é o oposto da tecla Mais.</li>
+<li>Meta+Enter	Insira &lsquo;objeto atual&rsquo; 1 na linha de comando.</li>
+<li>Meta+.	Mostrar/ocultar arquivos e diretórios ocultos (que começam com &lsquo;.&rsquo;).</li>
+<li>Meta+,	Altere o modo de visualização dividida do painel para vertical/horizontal.</li>
+<li>Meta+a ou Ctrl+x,p	Insira no caminho da linha de comando do painel ativo.</li>
+<li>Meta+c	Exibe a caixa de diálogo de alteração de diretório para o painel ativo.</li>
+<li>Meta+h	Exibe o histórico de comandos.</li>
+<li>Meta+i	Torne o diretório atual do painel atual também o diretório atual do outro painel. Coloque o outro painel no modo listagem, se necessário. Se o painel atual estiver em painel, o outro painel não ficará em painel.</li>
+<li>Meta+n ou Meta+p	Use essas teclas para navegar pelo histórico de comandos. Meta-p leva você para a última entrada, Meta-n leva você para a próxima.</li>
+<li>Meta+o	Se o arquivo atualmente selecionado for um diretório, carregue esse diretório no outro painel e mova a seleção para o próximo arquivo.</li>
+<li>Meta+g ou Meta+r ou Meta+j	Usado para selecionar o arquivo superior/meio/inferior em um painel, respectivamente</li>
+<li>Meta+t	Alterar visualização do painel (&lsquo;Completo&rsquo;,&lsquo;Breve&rsquo;,&lsquo;Longo&rsquo;)</li>
+<li>Meta+Shift+?	Achar arquivo.</li>
+<li>Meta+Shift+A ou Ctrl+x, Ctrl+p	Inserir no caminho do painel inativo da linha de comando.</li>
+<li>Meta+Shift+H	Exibe o histórico do diretório.</li>
+<li>Ctrl+\	Exibir lista de favoritos do diretório.</li>
+<li>Ctrl+l	Redefina todas as informações no comandante da meia-noite.</li>
+<li>Ctrl+o	Mostrar/ocultar painel.</li>
+<li>Ctrl+r	Releia o conteúdo do diretório atual.</li>
+<li>Ctrl+s	Pesquisa rápida.</li>
+<li>Ctrl+Espaço	Mostra o tamanho do diretório.</li>
+<li>Ctrl+x,a	Mostrar lista VFS ativa.</li>
+<li>Ctrl+x,c	Chmod (Alterar modo de arquivo) para arquivo ou diretório.</li>
+<li>Ctrl+x,i	Defina o outro modo de exibição do painel para informações.</li>
+<li>Ctrl+x,j	Mostrar trabalhos em segundo plano.</li>
+<li>Ctrl+x,l	Crie hardlink para arquivo ou diretório ativo.</li>
+<li>Ctrl+x,o	Chown (alterar proprietário) para arquivo ou diretório.</li>
+<li>Ctrl+x,q	Defina o outro modo de exibição do painel para visualização rápida.</li>
+<li>Ctrl+x,s	Crie um link simbólico para o arquivo ou diretório ativo.</li>
+<li>Ctrl+x,t	Insira os nomes selecionados na linha de comando.</li>
+<li>Ctrl+x, Ctrl+s	Editar link simbólico.</li>
+</ul>
+<h2 id="ilustrações">Ilustrações</h2>
+<p><strong>PIXABAY</strong><br>
+Disponível em: <a href="https://pixabay.com/vectors/windows-vista-folder-directory-open-149750/" target="_blank" rel="noopener noreffer ">https://pixabay.com/vectors/windows-vista-folder-directory-open-149750/</a><br>
+Acesso em: 24 jul. 2023.</p>
+<h2 id="referências">Referências</h2>
+<p><strong>TECLINUX - Midnight Commander: gerenciador de arquivos poderoso funciona no terminal do Linux</strong><br>
+Disponível em: <a href="https://teclinux.com/midnight-commander-gerenciador-de-arquivos-poderoso-funciona-no-terminal-do-linux/" target="_blank" rel="noopener noreffer ">https://teclinux.com/midnight-commander-gerenciador-de-arquivos-poderoso-funciona-no-terminal-do-linux/</a><br>
+Acesso em: 24 jul. 2023.</p>
+<p><strong>MIDNIGHT COMMANDER - Oficial</strong><br>
+Disponível em: <a href="http://midnight-commander.org/" target="_blank" rel="noopener noreffer ">http://midnight-commander.org/</a><br>
+Acesso em: 24 jul. 2023.</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Atualizado em 2023-03-17</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/midnight-commander/index.md" target="_blank">Leia em Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/gnu-midnight-commander/">GNU Midnight Commander</a>,&nbsp;<a href="/tags/gerenciador-de-arquivos/">Gerenciador de Arquivos</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Voltar</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+            <a href="/hackathon/" class="next" rel="next" title="Hackathon">Hackathon<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Suzano Bitencourt</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Voltar ao topo">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="Ver comentários">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.pt.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copiar para a área de transferência","maxShownLines":50},"comment":{},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"pt","maxResultLength":10,"noResultsFound":"Nenhum resultado encontrado","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

@@ -45,7 +45,7 @@ $ git config --global user.name "Seu Nome"
 
 ```shell
 $ ls -al ~/.ssh
-$ ssh-keygen -t ed25519 -C "suzanobitencourt@gmail.com"
+$ ssh-keygen -t ed25519 -C "seu_email@exemplo.com"
 $ cat ~/.ssh/id_ed25519.pub
 ```
 

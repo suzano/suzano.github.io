@@ -4,84 +4,84 @@
         <link>https://suzano.github.io/tags/</link>
         <description>Tags - Tag - Suzano Bitencourt</description>
         <generator>Hugo -- gohugo.io</generator><language>pt-BR</language><managingEditor>suzanobitencourt@gmail.com (Suzano Bitencourt)</managingEditor>
-            <webMaster>suzanobitencourt@gmail.com (Suzano Bitencourt)</webMaster><lastBuildDate>Thu, 13 Jul 2023 12:00:00 &#43;0000</lastBuildDate><atom:link href="https://suzano.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>suzanobitencourt@gmail.com (Suzano Bitencourt)</webMaster><lastBuildDate>Mon, 17 Jul 2023 12:00:00 &#43;0000</lastBuildDate><atom:link href="https://suzano.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>cURL</title>
+    <link>https://suzano.github.io/tags/curl/</link>
+    <pubDate>Mon, 17 Jul 2023 12:00:00 &#43;0000</pubDate>
+    <author>Suzano Bitencourt</author>
+    <guid>https://suzano.github.io/tags/curl/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Gerenciador de Arquivos</title>
+    <link>https://suzano.github.io/tags/gerenciador-de-arquivos/</link>
+    <pubDate>Mon, 17 Jul 2023 12:00:00 &#43;0000</pubDate>
+    <author>Suzano Bitencourt</author>
+    <guid>https://suzano.github.io/tags/gerenciador-de-arquivos/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>Git</title>
     <link>https://suzano.github.io/tags/git/</link>
-    <pubDate>Thu, 13 Jul 2023 12:00:00 &#43;0000</pubDate>
+    <pubDate>Mon, 17 Jul 2023 12:00:00 &#43;0000</pubDate>
     <author>Suzano Bitencourt</author>
     <guid>https://suzano.github.io/tags/git/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>GitHub</title>
-    <link>https://suzano.github.io/tags/github/</link>
-    <pubDate>Thu, 13 Jul 2023 12:00:00 &#43;0000</pubDate>
+    <title>GNU Midnight Commander</title>
+    <link>https://suzano.github.io/tags/gnu-midnight-commander/</link>
+    <pubDate>Mon, 17 Jul 2023 12:00:00 &#43;0000</pubDate>
     <author>Suzano Bitencourt</author>
-    <guid>https://suzano.github.io/tags/github/</guid>
+    <guid>https://suzano.github.io/tags/gnu-midnight-commander/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>Arduino</title>
-    <link>https://suzano.github.io/tags/arduino/</link>
-    <pubDate>Tue, 18 Apr 2023 13:00:00 &#43;0000</pubDate>
+    <title>GNU Nano</title>
+    <link>https://suzano.github.io/tags/gnu-nano/</link>
+    <pubDate>Mon, 17 Jul 2023 12:00:00 &#43;0000</pubDate>
     <author>Suzano Bitencourt</author>
-    <guid>https://suzano.github.io/tags/arduino/</guid>
+    <guid>https://suzano.github.io/tags/gnu-nano/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>Bibliotecas</title>
-    <link>https://suzano.github.io/tags/bibliotecas/</link>
-    <pubDate>Tue, 18 Apr 2023 13:00:00 &#43;0000</pubDate>
+    <title>Gradle</title>
+    <link>https://suzano.github.io/tags/gradle/</link>
+    <pubDate>Mon, 17 Jul 2023 12:00:00 &#43;0000</pubDate>
     <author>Suzano Bitencourt</author>
-    <guid>https://suzano.github.io/tags/bibliotecas/</guid>
+    <guid>https://suzano.github.io/tags/gradle/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>Robô</title>
-    <link>https://suzano.github.io/tags/rob%C3%B4/</link>
-    <pubDate>Tue, 18 Apr 2023 13:00:00 &#43;0000</pubDate>
+    <title>Node.js</title>
+    <link>https://suzano.github.io/tags/node.js/</link>
+    <pubDate>Mon, 17 Jul 2023 12:00:00 &#43;0000</pubDate>
     <author>Suzano Bitencourt</author>
-    <guid>https://suzano.github.io/tags/rob%C3%B4/</guid>
+    <guid>https://suzano.github.io/tags/node.js/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>Boot</title>
-    <link>https://suzano.github.io/tags/boot/</link>
-    <pubDate>Fri, 24 Mar 2023 12:00:00 &#43;0000</pubDate>
+    <title>Node.RED</title>
+    <link>https://suzano.github.io/tags/node.red/</link>
+    <pubDate>Mon, 17 Jul 2023 12:00:00 &#43;0000</pubDate>
     <author>Suzano Bitencourt</author>
-    <guid>https://suzano.github.io/tags/boot/</guid>
+    <guid>https://suzano.github.io/tags/node.red/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>Linux</title>
-    <link>https://suzano.github.io/tags/linux/</link>
-    <pubDate>Fri, 24 Mar 2023 12:00:00 &#43;0000</pubDate>
+    <title>raptor2-utils</title>
+    <link>https://suzano.github.io/tags/raptor2-utils/</link>
+    <pubDate>Mon, 17 Jul 2023 12:00:00 &#43;0000</pubDate>
     <author>Suzano Bitencourt</author>
-    <guid>https://suzano.github.io/tags/linux/</guid>
+    <guid>https://suzano.github.io/tags/raptor2-utils/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>Pendrive</title>
-    <link>https://suzano.github.io/tags/pendrive/</link>
-    <pubDate>Fri, 24 Mar 2023 12:00:00 &#43;0000</pubDate>
+    <title>rasqal-utils</title>
+    <link>https://suzano.github.io/tags/rasqal-utils/</link>
+    <pubDate>Mon, 17 Jul 2023 12:00:00 &#43;0000</pubDate>
     <author>Suzano Bitencourt</author>
-    <guid>https://suzano.github.io/tags/pendrive/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Ansible</title>
-    <link>https://suzano.github.io/tags/ansible/</link>
-    <pubDate>Mon, 20 Mar 2023 12:00:00 &#43;0000</pubDate>
-    <author>Suzano Bitencourt</author>
-    <guid>https://suzano.github.io/tags/ansible/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Automação</title>
-    <link>https://suzano.github.io/tags/automa%C3%A7%C3%A3o/</link>
-    <pubDate>Mon, 20 Mar 2023 12:00:00 &#43;0000</pubDate>
-    <author>Suzano Bitencourt</author>
-    <guid>https://suzano.github.io/tags/automa%C3%A7%C3%A3o/</guid>
+    <guid>https://suzano.github.io/tags/rasqal-utils/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>

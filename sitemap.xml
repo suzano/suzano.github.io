@@ -10,14 +10,28 @@
             <loc>https://suzano.github.io/arduino-robo-i/</loc><lastmod>2023-04-17T12:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://suzano.github.io/arduino-robo-ii/</loc><lastmod>2023-04-17T13:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://suzano.github.io/arduino-robo-iii/</loc><lastmod>2023-04-18T13:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://suzano.github.io/git-github/</loc><lastmod>2023-07-13T12:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://suzano.github.io/categories/</loc><lastmod>2023-07-13T12:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://suzano.github.io/tags/git/</loc><lastmod>2023-07-13T12:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://suzano.github.io/categories/git/</loc><lastmod>2023-07-13T12:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://suzano.github.io/tags/github/</loc><lastmod>2023-07-13T12:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://suzano.github.io/posts/</loc><lastmod>2023-07-13T12:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://suzano.github.io/</loc><lastmod>2023-07-13T12:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://suzano.github.io/tags/</loc><lastmod>2023-07-13T12:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://suzano.github.io/git-github/</loc><lastmod>2023-07-13T12:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://suzano.github.io/hackathon/</loc><lastmod>2023-03-17T12:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://suzano.github.io/midnight-commander/</loc><lastmod>2023-03-17T12:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://suzano.github.io/categories/</loc><lastmod>2023-07-13T12:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://suzano.github.io/tags/curl/</loc><lastmod>2023-03-17T12:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://suzano.github.io/categories/eventos/</loc><lastmod>2023-03-17T12:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://suzano.github.io/tags/gerenciador-de-arquivos/</loc><lastmod>2023-03-17T12:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://suzano.github.io/tags/git/</loc><lastmod>2023-07-13T12:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://suzano.github.io/tags/gnu-midnight-commander/</loc><lastmod>2023-03-17T12:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://suzano.github.io/tags/gnu-nano/</loc><lastmod>2023-03-17T12:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://suzano.github.io/tags/gradle/</loc><lastmod>2023-03-17T12:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://suzano.github.io/categories/linux/</loc><lastmod>2023-03-17T12:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://suzano.github.io/tags/node.js/</loc><lastmod>2023-03-17T12:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://suzano.github.io/tags/node.red/</loc><lastmod>2023-03-17T12:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://suzano.github.io/posts/</loc><lastmod>2023-07-13T12:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://suzano.github.io/tags/raptor2-utils/</loc><lastmod>2023-03-17T12:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://suzano.github.io/tags/rasqal-utils/</loc><lastmod>2023-03-17T12:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://suzano.github.io/</loc><lastmod>2023-07-13T12:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://suzano.github.io/tags/</loc><lastmod>2023-07-13T12:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://suzano.github.io/tags/vscode/</loc><lastmod>2023-03-17T12:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://suzano.github.io/categories/developer/</loc><lastmod>2023-07-13T12:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://suzano.github.io/tags/github/</loc><lastmod>2023-07-13T12:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
             <loc>https://suzano.github.io/tags/arduino/</loc><lastmod>2023-04-18T13:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://suzano.github.io/tags/bibliotecas/</loc><lastmod>2023-04-18T13:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://suzano.github.io/tags/rob%C3%B4/</loc><lastmod>2023-04-18T13:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -29,9 +43,8 @@
             <loc>https://suzano.github.io/tags/ansible/</loc><lastmod>2023-03-22T12:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://suzano.github.io/categories/%C3%A1udio/</loc><lastmod>2023-03-22T12:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://suzano.github.io/tags/automa%C3%A7%C3%A3o/</loc><lastmod>2023-03-22T12:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://suzano.github.io/categories/automa%C3%A7%C3%A3o/</loc><lastmod>2023-03-22T12:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://suzano.github.io/tags/entretenimento/</loc><lastmod>2023-03-22T12:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://suzano.github.io/tags/html/</loc><lastmod>2023-03-22T12:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://suzano.github.io/categories/linguagem/</loc><lastmod>2023-03-22T12:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://suzano.github.io/tags/markdown/</loc><lastmod>2023-03-22T12:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://suzano.github.io/categories/markdown/</loc><lastmod>2023-03-22T12:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://suzano.github.io/tags/mp3/</loc><lastmod>2023-03-22T12:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url></urlset>
