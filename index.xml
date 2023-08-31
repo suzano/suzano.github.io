@@ -1,0 +1,95 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Suzano Bitencourt</title>
+        <link>https://suzano.github.io/</link>
+        <description>Este é o meu site</description>
+        <generator>Hugo -- gohugo.io</generator><language>pt-BR</language><managingEditor>suzanobitencourt@gmail.com (Suzano Bitencourt)</managingEditor>
+            <webMaster>suzanobitencourt@gmail.com (Suzano Bitencourt)</webMaster><lastBuildDate>Tue, 29 Aug 2023 12:00:00 &#43;0000</lastBuildDate>
+            <atom:link href="https://suzano.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+    <title>Raspberry Pi - Softwares</title>
+    <link>https://suzano.github.io/raspberry-softwares/</link>
+    <pubDate>Tue, 29 Aug 2023 12:00:00 &#43;0000</pubDate>
+    <author>Suzano</author>
+    <guid>https://suzano.github.io/raspberry-softwares/</guid>
+    <description><![CDATA[<p>Este artigo oferece sugestões de softwares para o Raspberry Pi.</p>]]></description>
+</item>
+<item>
+    <title>Raspberry Pi</title>
+    <link>https://suzano.github.io/raspberry/</link>
+    <pubDate>Fri, 25 Aug 2023 12:00:00 &#43;0000</pubDate>
+    <author>Suzano</author>
+    <guid>https://suzano.github.io/raspberry/</guid>
+    <description><![CDATA[<p>Este artigo oferece informações de como começar com o Raspberry Pi.</p>]]></description>
+</item>
+<item>
+    <title>Extensões do VSCode</title>
+    <link>https://suzano.github.io/vscode/</link>
+    <pubDate>Mon, 17 Jul 2023 12:00:00 &#43;0000</pubDate>
+    <author>Suzano</author>
+    <guid>https://suzano.github.io/vscode/</guid>
+    <description><![CDATA[<p>Lista de extensões para VSCode que podem ajudar a economizar tempo e aumentar a eficiência da codificação.</p>]]></description>
+</item>
+<item>
+    <title>Hackathon</title>
+    <link>https://suzano.github.io/hackathon/</link>
+    <pubDate>Mon, 17 Jul 2023 12:00:00 &#43;0000</pubDate>
+    <author>Suzano</author>
+    <guid>https://suzano.github.io/hackathon/</guid>
+    <description><![CDATA[<p><strong>Escola de Verão</strong> é um evento que reúne programadores e designers, cujo objetivo é desenvolver um software ou solução tecnológica que atenda a um fim específico.</p>]]></description>
+</item>
+<item>
+    <title>Midnight Commander</title>
+    <link>https://suzano.github.io/midnight-commander/</link>
+    <pubDate>Mon, 17 Jul 2023 12:00:00 &#43;0000</pubDate>
+    <author>Suzano</author>
+    <guid>https://suzano.github.io/midnight-commander/</guid>
+    <description><![CDATA[<p>O <strong>Midnight Commander</strong> é uma ferramenta muito poderosa. Permitindo você pode copiar, mover, renomear e excluir arquivos e diretórios.</p>]]></description>
+</item>
+<item>
+    <title>Git e GitHub</title>
+    <link>https://suzano.github.io/git-github/</link>
+    <pubDate>Thu, 13 Jul 2023 12:00:00 &#43;0000</pubDate>
+    <author>Suzano</author>
+    <guid>https://suzano.github.io/git-github/</guid>
+    <description><![CDATA[<p>Sistema de controle de versão que ajuda a acompanhar as mudanças feitas no código base.</p>]]></description>
+</item>
+<item>
+    <title>Construindo um Robô Arduino - Parte III</title>
+    <link>https://suzano.github.io/arduino-robo-iii/</link>
+    <pubDate>Tue, 18 Apr 2023 13:00:00 &#43;0000</pubDate>
+    <author>Suzano</author>
+    <guid>https://suzano.github.io/arduino-robo-iii/</guid>
+    <description><![CDATA[<p>Um Firmware de Robô Básico (Não Tão)</p>
+<p>Esboço do Arduino que faz o robô correr para frente.</p>
+<p>A idéia é escrever o esboço de forma que me permita adicionar funcionalidades mais complexas posteriormente sem ter que começar do zero. Estabelecendo uma base sólida sobre a qual empilharemos as peças mais complexas posteriormente.</p>]]></description>
+</item>
+<item>
+    <title>Construindo um Robô Arduino - Parte II</title>
+    <link>https://suzano.github.io/arduino-robo-ii/</link>
+    <pubDate>Mon, 17 Apr 2023 13:00:00 &#43;0000</pubDate>
+    <author>Suzano</author>
+    <guid>https://suzano.github.io/arduino-robo-ii/</guid>
+    <description><![CDATA[<p>Programando o Arduino</p>
+<p>Você conhecerá os fundamentos da programação de sensores, motores e outros dispositivos conectados ao Arduino, e também terá um entendimento de como um controle remoto sem fio pode se comunicar com a placa Arduino via Bluetooth.</p>]]></description>
+</item>
+<item>
+    <title>Construindo um Robô Arduino - Parte I</title>
+    <link>https://suzano.github.io/arduino-robo-i/</link>
+    <pubDate>Mon, 17 Apr 2023 12:00:00 &#43;0000</pubDate>
+    <author>Suzano</author>
+    <guid>https://suzano.github.io/arduino-robo-i/</guid>
+    <description><![CDATA[<p>Construindo um veículo robô controlado remotamente.</p>
+<p>Usando Arduino para a plataforma de hardware, por ser amplamente utilizada por criadores de hardware em todo o mundo, o que significa que há muitas informações e recursos disponíveis.</p>
+<p>Sendo fácil o suficiente para concluir em um período de tempo relativamente curto, mas difícil o suficiente para ser interessante e desafiador.</p>]]></description>
+</item>
+<item>
+    <title>Criando uma biblioteca para Arduino</title>
+    <link>https://suzano.github.io/arduino-biblioteca/</link>
+    <pubDate>Fri, 14 Apr 2023 12:00:00 &#43;0000</pubDate>
+    <author>Suzano</author>
+    <guid>https://suzano.github.io/arduino-biblioteca/</guid>
+    <description><![CDATA[<p>Criando uma biblioteca que tem a função de facilitar o código PISCA LED, com a biblioteca pronta e inserida no código, o led irá piscar com apenas 01 linha de programação!</p>]]></description>
+</item>
+</channel>
+</rss>

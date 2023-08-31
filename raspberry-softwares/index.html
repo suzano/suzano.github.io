@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Raspberry Pi - Softwares - Suzano Bitencourt</title><meta name="Description" content="Seu Raspberry Pi precisa de um sistema operacional para funcionar. O Raspberry Pi OS (anteriormente chamado Raspbian) é esse sistema operacional."><meta property="og:title" content="Raspberry Pi - Softwares" />
+<meta property="og:description" content="Seu Raspberry Pi precisa de um sistema operacional para funcionar. O Raspberry Pi OS (anteriormente chamado Raspbian) é esse sistema operacional." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://suzano.github.io/raspberry-softwares/" /><meta property="og:image" content="https://suzano.github.io/raspberry-softwares/featured-image.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-08-29T12:00:00+00:00" />
+<meta property="article:modified_time" content="2023-08-29T12:00:00+00:00" /><meta property="og:site_name" content="Suzano Bitencourt" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://suzano.github.io/raspberry-softwares/featured-image.jpg"/>
+<meta name="twitter:title" content="Raspberry Pi - Softwares"/>
+<meta name="twitter:description" content="Seu Raspberry Pi precisa de um sistema operacional para funcionar. O Raspberry Pi OS (anteriormente chamado Raspbian) é esse sistema operacional."/>
+<meta name="application-name" content="Suzano Bitencourt">
+<meta name="apple-mobile-web-app-title" content="Suzano Bitencourt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://suzano.github.io/raspberry-softwares/" /><link rel="prev" href="https://suzano.github.io/raspberry/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Raspberry Pi - Softwares",
+        "inLanguage": "pt-BR",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/suzano.github.io\/raspberry-softwares\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/suzano.github.io\/raspberry-softwares\/featured-image.jpg",
+                            "width":  1420 ,
+                            "height":  430 
+                        }],"genre": "posts","keywords": "Raspberry Pi, Raspberry Pi OS, Raspbian","wordcount":  1652 ,
+        "url": "https:\/\/suzano.github.io\/raspberry-softwares\/","datePublished": "2023-08-29T12:00:00+00:00","dateModified": "2023-08-29T12:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Suzano"
+            },"description": "Seu Raspberry Pi precisa de um sistema operacional para funcionar. O Raspberry Pi OS (anteriormente chamado Raspbian) é esse sistema operacional."
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Suzano Bitencourt"><span class="header-title-pre"><i class='fa-solid fa-mug-hot' aria-hidden='true'></i></span>Suzano Bitencourt</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categorias </a><a class="menu-item" href="/docs/"> Documentação </a><a class="menu-item" href="/about/"> Sobre </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Pesquisar títulos ou conteúdos ..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Pesquisa">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Limpar">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Suzano Bitencourt"><span class="header-title-pre"><i class='fa-solid fa-mug-hot' aria-hidden='true'></i></span>Suzano Bitencourt</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Pesquisar títulos ou conteúdos ..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Pesquisa">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Limpar">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancelar
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categorias</a><a class="menu-item" href="/docs/" title="">Documentação</a><a class="menu-item" href="/about/" title="">Sobre</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Conteúdos</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Raspberry Pi - Softwares</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://suzano.github.io/sobre/" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Suzano</a></span>&nbsp;<span class="post-category">incluido em <a href="/categories/sistemas-embarcados/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Sistemas Embarcados</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-08-29">2023-08-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1652 palavras&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;8 minutos&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/raspberry-softwares/featured-image.jpg"
+        data-srcset="/raspberry-softwares/featured-image.jpg, /raspberry-softwares/featured-image.jpg 1.5x, /raspberry-softwares/featured-image.jpg 2x"
+        data-sizes="auto"
+        alt="/raspberry-softwares/featured-image.jpg"
+        title="Seu Raspberry Pi precisa de um sistema operacional para funcionar. O Raspberry Pi OS (anteriormente chamado Raspbian) é esse sistema operacional." /></div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Conteúdos</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#conceito">Conceito</a></li>
+    <li><a href="#parte-1-conectar-se-na-internet">Parte 1: Conectar-se na internet</a></li>
+    <li><a href="#parte-2-softwares-para-raspberry-pi">Parte 2: Softwares para Raspberry Pi</a></li>
+    <li><a href="#parte-3-webcam-usb">Parte 3: WebCam USB</a></li>
+    <li><a href="#parte-4-webserver">Parte 4: WebServer</a></li>
+    <li><a href="#parte-5-motion">Parte 5: Motion</a></li>
+    <li><a href="#parte-6-htop">Parte 6: htop</a></li>
+    <li><a href="#parte-7-nload">Parte 7: nload</a></li>
+    <li><a href="#ilustrações">Ilustrações</a></li>
+    <li><a href="#referências">Referências</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Este artigo oferece sugestões de softwares para o Raspberry Pi.</p>
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw" aria-hidden="true"></i>Nota<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">Este artigo é uma anotação com recortes e traduções (vergonhosas) da página do <a href="https://www.raspberrypi.com" target="_blank" rel="noopener noreffer ">Raspberry Pi</a>.</div>
+        </div>
+    </div>
+<h2 id="conceito">Conceito</h2>
+<p>O <code>Raspberry Pi</code> precisa de um sistema operacional para funcionar. Usaremos o <code>Raspberry Pi Imager</code> é a maneira rápida e fácil de instalar o <code>Raspberry Pi OS</code> e outros sistemas operacionais em um cartão microSD que será inserido no <code>Raspberry Pi</code>.</p>
+<h2 id="parte-1-conectar-se-na-internet">Parte 1: Conectar-se na internet</h2>
+<p>A conexão do Raspberry Pi pode ser feito por meio do cabo Ethernet ou usando um dongle Wi-Fi. Nesse uma caso é necessário uma série de instruções para configurar o Wi-Fi.</p>
+<p>Scan de redes wifi locais, onde so valores &ldquo;ESSID&rdquo; são os nomes das redes encontradas:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ ip addr
+</span></span><span class="line"><span class="cl">$ sudo iwlist wlan0 scan <span class="p">|</span> grep ESSID
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Editar o <code>wpa_supplicant</code> para adicionar uma entrada para o Wi-Fi:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Adicionar as linhas para registrar a entrada de novas Wi-Fis conhecidas pelo Raspberry Pi:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">network={
+</span></span><span class="line"><span class="cl">ssid=&#34;WIFI_SSID&#34;
+</span></span><span class="line"><span class="cl">scan_ssid=1
+</span></span><span class="line"><span class="cl">psk=&#34;WIFI_PASSWORD&#34;
+</span></span><span class="line"><span class="cl">key_mgmt=WPA-PSK
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>O roteador fornece Wi-Fi/LAN sem fio. O <code>IP</code> é um protocolo de comunicação que constitui a base da inter-rede de computadores que estabelece a Internet. Para encontrar o endereço IP atribuida para o Raspberry, use o comando:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ ip addr
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>A interface <code>lo</code> é o <code>loopback</code>, o computador a utiliza para se comunicar consigo mesmo. A interface <code>eth0</code> é a interface <code>Ethernet</code> e interface <code>wlan0</code> corresponde a interface <code>Wi-Fi</code>. O <code>endereço IP</code> da LAN tem o título <code>inet</code> e se parece com <code>192.168.0.10</code>.</p>
+<p>Para testar a conexão, é possível executar o <code>ping</code> em alguns sites para procurar uma resposta:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ ping www.google.com
+</span></span><span class="line"><span class="cl">$ ping www.stackoverflow.com
+</span></span><span class="line"><span class="cl">$ ping www.facebook.com
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="parte-2-softwares-para-raspberry-pi">Parte 2: Softwares para Raspberry Pi</h2>
+<p>Para atualizar ou instalar novos softwares no <code>Raspberry Pi OS</code>, podemos usar a ferramenta <code>APT (Advanced Packaging Tool)</code> em uma janela do Terminal. O <code>APT</code> mantém uma lista de fontes de software no seu <code>Raspberry Pi</code> em um arquivo localizado em <code>/etc/apt/sources.list</code>.</p>
+<p>Para atualizar a lista de pacotes abra uma janela do Terminal e digite:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sudo apt update
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Atualizar todos os pacotes instalados para as versões mais recentes com o seguinte comando:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sudo apt full-upgrade
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Instalar de outros pacotes com APT:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sudo apt install &lt;nome_do_pacote&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Desinstalar um pacote com APT:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sudo apt remove &lt;nome_do_pacote&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Remover completamente o pacote e seus arquivos de configuração associados:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sudo apt apt purge &lt;nome_do_pacote&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Atualizar o kernel do Raspberry Pi OS e o firmware VideoCore para as versões:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sudo rpi-update
+</span></span><span class="line"><span class="cl">$ sudo reboot
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="parte-3-webcam-usb">Parte 3: WebCam USB</h2>
+<p>Verificar se a webcam foi identificada corretamente, execute esse comando:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ lsusb
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Será exibida uma lista como todos os periféricos usb.</p>
+<p>Instalar os pacotes para uso de webcam USB:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># Permite usar uma webcam USB padrão para tirar fotos e gravar vídeos em seu Raspberry Pi.</span>
+</span></span><span class="line"><span class="cl">$ sudo apt install fswebcam
+</span></span><span class="line"><span class="cl"><span class="c1"># Adicionar nome de usuário ao videogrupo, caso contrário, você verá erros de “permissão negada”.</span>
+</span></span><span class="line"><span class="cl">$ sudo usermod -a -G video guaracy
+</span></span><span class="line"><span class="cl"><span class="c1"># Para verificar se o usuário foi adicionado ao grupo corretamente.</span>
+</span></span><span class="line"><span class="cl">$ groups
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Tirar uma foto usando a webcam e salvando com um nome de arquivo especificado:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ fswebcam image.jpg
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw" aria-hidden="true"></i>Nota<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">A foto utiliza a resolução padrão e a apresenta um banner mostrando o carimbo de data/hora.</div>
+        </div>
+    </div>
+<p>Especificar a resolução deseja para a foto, use o parâmetro <code>-r</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">fswebcam -r 1280x720 image2.jpg
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Remover o banner da foto, utilize o parâmetro <code>--no-banner</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ fswebcam -r 1280x720 --no-banner image3.jpg
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Para automatizar a captura de imagens é necessário criar um <code>script Bash</code> que tire uma foto com a webcam e salve as imagens no diretório <code>/home/guaracy/webcam</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ <span class="nb">cd</span> ~
+</span></span><span class="line"><span class="cl">$ mkdir webcam
+</span></span><span class="line"><span class="cl">$ <span class="nb">cd</span> webcam
+</span></span><span class="line"><span class="cl">$ touch webcam.sh
+</span></span><span class="line"><span class="cl">$ nano webcam.sh
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Código do script Bash para tirar uma foto e nomea-la com a correspondente data e hora:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="nv">DATE</span><span class="o">=</span><span class="k">$(</span>date +<span class="s2">&#34;%Y-%m-%d_%H%M%S&#34;</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl">fswebcam -r 1280x720 --no-banner /home/guaracy/webcam/<span class="nv">$DATE</span>.jpg
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Para que o script funcione, precisamos torná-lo um arquivo executável:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ chmod +x webcam.sh
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Para executar o script:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ ./webcam.sh
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Também é possível usar o <code>cron</code> para agendar a captura de uma foto em um determinado intervalo:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ crontab -e
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Adicionando a seguinte linha, será agendada a captura de uma foto a cada minuto (referindo-se ao script Bash acima):</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">* * * * * /home/pi/webcam.sh 2&gt;&amp;1
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="parte-4-webserver">Parte 4: WebServer</h2>
+<p>O <code>lighttpd</code> que é um servidor web seguro, rápido e muito flexível, otimizado para ambientes de alto desempenho (pode ser usado em vez do Apache por exemplo). Possue baixo consumo de memória e CPU em comparação com outros servidores web.</p>
+<p>Instalação do Lighttpd e seus componentes:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sudo apt install lighttpd -y
+</span></span><span class="line"><span class="cl">$ sudo lighttpd-enable-mod cgi
+</span></span><span class="line"><span class="cl">$ sudo lighttpd-enable-mod fastcgi
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Por padrão, o <code>Lighttpd</code> procurará uma página <code>index.html</code> no diretório <code>/var/www/html</code>. É possível alterar esse diretório editando o arquivo de configuração do <code>Lighttpd</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sudo nano /etc/lighttpd/lighttpd.conf
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>alterar a linha:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">server.document-root =“/var/www/html”
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>para:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">server.document-root =“/var/www”
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Qualquer alteração no arquivo de configuração só terá efeito após, o servidor web ser parado e reiniciado:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sudo /etc/init.d/lighttpd stop
+</span></span><span class="line"><span class="cl">$ sudo /etc/init.d/lighttpd start
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Criando uma página <code>HTML</code> simples para efeito de testes:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ <span class="nb">cd</span> /var/www/
+</span></span><span class="line"><span class="cl">$ sudo nano index.html
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Exemplo de conteúdo HTML:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE HTML&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;pt-BR&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Uma Página HTML Básica<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	Esta é uma página básica, contendo os principais elementos:
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Doctype do HTML5<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Elemento <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span>html<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span> com o atributo <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span>lang<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span>, o elemento &#34;raiz&#34; que contém todos os outros<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Elemento <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span>head<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span> com o conteúdo de cabeçalho da página não visível<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Elemento <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span>meta<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span> com o atributo <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span>charset<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span>, especificando a codificação da página como sendo UTF-8 (para evitar problemas com caracteres acentuados e outras línguas)<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Elemento <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span>title<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span> com o texto que aparece justamente no título da janela do navegador (ou da respectiva aba no navegador)<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Elemento <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span>body<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span>, que contém todo o conteúdo vísivel do site e que será também estruturado com HTML<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	Acima e neste parágrafo, você vê a utilização das tags <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span>p<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span> (parágrafo), <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span>ul<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span> (<span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>unordered list<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span>, ou lista não ordenada)
+</span></span><span class="line"><span class="cl">	e <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span>li<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span> (<span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>list item<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span>, ou item de lista), que iremos ver mais a fundo na lição sobre Texto e Listas.
+</span></span><span class="line"><span class="cl">	Também utilizada nesta página é a tag <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span>code<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span>, que serve para identificar código utilizado em computadores (neste caso as próprias tags HTML).
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!-- Este é um comentário HTML. O texto aqui não irá aparecer na tela do navegador. Comentários são úteis para anotar partes do documento ou então esconder partes do código intencionalmente, para fins de diagnóstico de problemas (chamado &#34;commenting out&#34;), entre outros. --&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Depois de editar a página e salvá-la, é necessário alterar as permissões:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sudo chmod <span class="m">755</span> index.html
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>No navegador web, digite o endereço IP correspondente ao Raspberry Pi:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://192.168.0.10
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="parte-5-motion">Parte 5: Motion</h2>
+<p>O <code>Motion</code> é um software de vigilância escrito para Linux e derivados. É estritamente uma ferramenta de linha de comando que também pode ser executada como um daemon (serviço que roda no background do sistema operacional), tornando-a perfeita para um sistema embarcado.</p>
+<p>Normalmente, os softwares no Linux e derivados são instalados usando <code>APT (Advanced Packaging Tool)</code>, porém, o repositório correspondente ao <code>Motion</code> fornecerá uma versão do desatualizada do software. Em vez disso, podemos fazer o download do código-fonte do programa disponível no site do GitHub (rede social de desenvolvedores), compilar o código e adicionar manualmente aos registros do sistema operacional.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ <span class="nb">cd</span> ~
+</span></span><span class="line"><span class="cl">$ mkdir Downloads
+</span></span><span class="line"><span class="cl">$ <span class="nb">cd</span> Downloads
+</span></span><span class="line"><span class="cl">$ sudo apt update
+</span></span><span class="line"><span class="cl">$ sudo apt install autoconf automake autopoint build-essential pkgconf libtool libzip-dev libjpeg-dev git libavformat-dev libavcodec-dev libavutil-dev libswscale-dev libavdevice-dev libwebp-dev gettext libmicrohttpd-dev
+</span></span><span class="line"><span class="cl">$ git clone https://github.com/Motion-Project/motion.git
+</span></span><span class="line"><span class="cl">$ <span class="nb">cd</span> motion
+</span></span><span class="line"><span class="cl">$ autoreconf -fiv
+</span></span><span class="line"><span class="cl">$ ./configure
+</span></span><span class="line"><span class="cl">$ make
+</span></span><span class="line"><span class="cl">$ sudo make install
+</span></span><span class="line"><span class="cl">$ sudo mv /usr/local/etc/motion/motion-dist.conf /usr/local/etc/motion/motion.conf
+</span></span><span class="line"><span class="cl">$ sudo reboot
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Editar o arquivo de configuração do <code>Motion</code>, alterar a qualidade da câmera, habilitar web streaming, habilitar autenticação web, etc.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sudo nano /usr/local/etc/motion/motion.conf
+</span></span><span class="line"><span class="cl">$ sudo motion
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Algumas das opções úteis:</p>
+<ul>
+<li>daemon on</li>
+<li>height 320</li>
+<li>width 240</li>
+<li>framerate 100</li>
+<li>text_left CAMERA</li>
+<li>movie_quality</li>
+<li>webcontrol_localhost off</li>
+<li>stream_locahost off</li>
+<li>webcam_quality (compressão jpeg)</li>
+<li>stream_maxrate ()</li>
+<li>stream_authentication</li>
+<li>stream_auth_method (habilitar autenticação)</li>
+<li>webcam_localhost</li>
+<li>control_localhost</li>
+</ul>
+<p>A saída do Motion pode ser vista abrindo o navegador web e digitando:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://192.168.0.10:8081
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Para incorporar o vídeo no site, use um iframe na sua página <code>motion.html</code>. Um iframe é apenas uma janela para outra página, neste caso o streaming de vídeo do Motion.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ <span class="nb">cd</span> /var/www/
+</span></span><span class="line"><span class="cl">$ sudo touch motion.html
+</span></span><span class="line"><span class="cl">$ sudo chmod <span class="m">755</span> index.html
+</span></span><span class="line"><span class="cl">$ sudo touch motion.html
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Exemplo de conteúdo HTML:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE HTML&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;pt-BR&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Motion<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;http://192.168.0.10:8081&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;750&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;1300&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="parte-6-htop">Parte 6: htop</h2>
+<p>O <code>htop</code> é uma ferramenta de monitoramento de processos do Linux interativa e em tempo real muito avançada, muito semelhante ao comando <code>top</code> do Linux, mas possui alguns recursos avançados, interface amigável e teclas de atalho.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sudo apt install htop
+</span></span><span class="line"><span class="cl">$ sudo htop
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="parte-7-nload">Parte 7: nload</h2>
+<p>O <code>nload</code> é uma ferramenta de linha de comando simples e fácil de usar para monitorar o tráfego de rede e o uso da largura de banda em tempo real.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sudo apt install nload
+</span></span><span class="line"><span class="cl">$ nload
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="ilustrações">Ilustrações</h2>
+<p><strong>PIXABAY</strong><br>
+Disponível em: <a href="https://pixabay.com/pt/photos/raspberry-pi-computador-eletr%C3%B4nicos-572481/" target="_blank" rel="noopener noreffer ">https://pixabay.com/pt/photos/raspberry-pi-computador-eletr%C3%B4nicos-572481/</a><br>
+Acesso em: 25 ago. 2023.</p>
+<h2 id="referências">Referências</h2>
+<p><strong>RASPBERRY PI - Getting started</strong><br>
+Disponível em: <a href="https://www.raspberrypi.com/documentation/computers/getting-started.html" target="_blank" rel="noopener noreffer ">https://www.raspberrypi.com/documentation/computers/getting-started.html</a><br>
+Acesso em: 25 ago. 2023.</p>
+<p><strong>MJROBOT.ORG - Controlando um Raspberry Pi robô pela Internet</strong><br>
+Disponível em: <a href="https://mjrobot.org/2016/06/01/controlando-um-raspberry-pi-robo-pela-internet/" target="_blank" rel="noopener noreffer ">https://mjrobot.org/2016/06/01/controlando-um-raspberry-pi-robo-pela-internet/</a><br>
+Acesso em: 25 ago. 2023.</p>
+<p><strong>JRL - Using Motion with a Raspberry Pi</strong><br>
+Disponível em: <a href="https://jarlowrey.com/blog/rpi-with-motion.html" target="_blank" rel="noopener noreffer ">https://jarlowrey.com/blog/rpi-with-motion.html</a><br>
+Acesso em: 25 ago. 2023.</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Atualizado em 2023-08-29</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/raspberry-softwares/index.md" target="_blank">Leia em Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/raspberry-pi/">Raspberry Pi</a>,&nbsp;<a href="/tags/raspberry-pi-os/">Raspberry Pi OS</a>,&nbsp;<a href="/tags/raspbian/">Raspbian</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Voltar</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/raspberry/" class="prev" rel="prev" title="Raspberry Pi"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Raspberry Pi</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Suzano Bitencourt</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Voltar ao topo">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="Ver comentários">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.pt.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copiar para a área de transferência","maxShownLines":50},"comment":{},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"pt","maxResultLength":10,"noResultsFound":"Nenhum resultado encontrado","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

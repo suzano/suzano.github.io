@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Raspberry Pi - Suzano Bitencourt</title><meta name="Description" content="Seu Raspberry Pi precisa de um sistema operacional para funcionar. O Raspberry Pi OS (anteriormente chamado Raspbian) é esse sistema operacional."><meta property="og:title" content="Raspberry Pi" />
+<meta property="og:description" content="Seu Raspberry Pi precisa de um sistema operacional para funcionar. O Raspberry Pi OS (anteriormente chamado Raspbian) é esse sistema operacional." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://suzano.github.io/raspberry/" /><meta property="og:image" content="https://suzano.github.io/raspberry/featured-image.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-08-25T12:00:00+00:00" />
+<meta property="article:modified_time" content="2023-08-25T12:00:00+00:00" /><meta property="og:site_name" content="Suzano Bitencourt" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://suzano.github.io/raspberry/featured-image.jpg"/>
+<meta name="twitter:title" content="Raspberry Pi"/>
+<meta name="twitter:description" content="Seu Raspberry Pi precisa de um sistema operacional para funcionar. O Raspberry Pi OS (anteriormente chamado Raspbian) é esse sistema operacional."/>
+<meta name="application-name" content="Suzano Bitencourt">
+<meta name="apple-mobile-web-app-title" content="Suzano Bitencourt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://suzano.github.io/raspberry/" /><link rel="prev" href="https://suzano.github.io/vscode/" /><link rel="next" href="https://suzano.github.io/raspberry-softwares/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Raspberry Pi",
+        "inLanguage": "pt-BR",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/suzano.github.io\/raspberry\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/suzano.github.io\/raspberry\/featured-image.jpg",
+                            "width":  1420 ,
+                            "height":  430 
+                        }],"genre": "posts","keywords": "Raspberry Pi, Raspberry Pi OS, Raspbian","wordcount":  556 ,
+        "url": "https:\/\/suzano.github.io\/raspberry\/","datePublished": "2023-08-25T12:00:00+00:00","dateModified": "2023-08-25T12:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Suzano"
+            },"description": "Seu Raspberry Pi precisa de um sistema operacional para funcionar. O Raspberry Pi OS (anteriormente chamado Raspbian) é esse sistema operacional."
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Suzano Bitencourt"><span class="header-title-pre"><i class='fa-solid fa-mug-hot' aria-hidden='true'></i></span>Suzano Bitencourt</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categorias </a><a class="menu-item" href="/docs/"> Documentação </a><a class="menu-item" href="/about/"> Sobre </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Pesquisar títulos ou conteúdos ..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Pesquisa">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Limpar">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Suzano Bitencourt"><span class="header-title-pre"><i class='fa-solid fa-mug-hot' aria-hidden='true'></i></span>Suzano Bitencourt</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Pesquisar títulos ou conteúdos ..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Pesquisa">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Limpar">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancelar
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categorias</a><a class="menu-item" href="/docs/" title="">Documentação</a><a class="menu-item" href="/about/" title="">Sobre</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Conteúdos</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Raspberry Pi</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://suzano.github.io/sobre/" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Suzano</a></span>&nbsp;<span class="post-category">incluido em <a href="/categories/sistemas-embarcados/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Sistemas Embarcados</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-08-25">2023-08-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;556 palavras&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutos&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/raspberry/featured-image.jpg"
+        data-srcset="/raspberry/featured-image.jpg, /raspberry/featured-image.jpg 1.5x, /raspberry/featured-image.jpg 2x"
+        data-sizes="auto"
+        alt="/raspberry/featured-image.jpg"
+        title="Seu Raspberry Pi precisa de um sistema operacional para funcionar. O Raspberry Pi OS (anteriormente chamado Raspbian) é esse sistema operacional." /></div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Conteúdos</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#conceito">Conceito</a></li>
+    <li><a href="#parte-1-configurando-seu-raspberry-pi">Parte 1: Configurando seu Raspberry Pi</a></li>
+    <li><a href="#parte-2-instalando-o-sistema-operacional">Parte 2: Instalando o Sistema Operacional</a></li>
+    <li><a href="#parte-3-usando-raspberry-pi-imager">Parte 3: Usando Raspberry Pi Imager</a></li>
+    <li><a href="#parte-4-sistema-operacional-raspberry-pi">Parte 4: Sistema Operacional Raspberry Pi</a></li>
+    <li><a href="#ilustrações">Ilustrações</a></li>
+    <li><a href="#referências">Referências</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Este artigo oferece informações de como começar com o Raspberry Pi.</p>
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw" aria-hidden="true"></i>Nota<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">Este artigo é uma anotação com recortes e traduções (vergonhosas) da página do <a href="https://www.raspberrypi.com" target="_blank" rel="noopener noreffer ">Raspberry Pi</a>.</div>
+        </div>
+    </div>
+<h2 id="conceito">Conceito</h2>
+<p>O <code>Raspberry Pi</code> precisa de um sistema operacional para funcionar. Usaremos o <code>Raspberry Pi Imager</code> é a maneira rápida e fácil de instalar o <code>Raspberry Pi OS</code> e outros sistemas operacionais em um cartão microSD que será inserido no <code>Raspberry Pi</code>.</p>
+<h2 id="parte-1-configurando-seu-raspberry-pi">Parte 1: Configurando seu Raspberry Pi</h2>
+<p>Para começar a usar o Raspberry Pi, é necessário os seguintes acessórios:</p>
+<ul>
+<li>Monitor de computador ou televisão. Para obter melhores resultados, deve usar um monitor com entrada HDMI®.</li>
+<li>Um teclado e mouse USB padrão.</li>
+<li>Uma fonte de alimentação de boa qualidade, projetada especificamente para fornecer consistentemente +5,1 V, apesar das rápidas flutuações no consumo de corrente.</li>
+<li>Cartão SD, recomenda-se um cartão micro SD de no mínimo 8 GB e usar o Raspberry Pi Imager para instalar um sistema operacional nele.</li>
+</ul>
+<h2 id="parte-2-instalando-o-sistema-operacional">Parte 2: Instalando o Sistema Operacional</h2>
+<p>Raspberry Pi recomenda o uso do <code>Raspberry Pi Imager</code>  para instalar um sistema operacional em seu cartão SD. Será preciso de outro computador com leitor de cartão SD para instalar a imagem. O <code>Raspberry Pi Imager</code> pode ser executado em outro Raspberry Pi, mas também funciona no Microsoft Windows, Apple macOS e Linux.</p>
+<p>O download da versão mais recente do <code>Raspberry Pi Imager</code> pode ser feito pelo site: <a href="https://www.raspberrypi.com/software/" target="_blank" rel="noopener noreffer ">https://www.raspberrypi.com/software/</a></p>
+<h2 id="parte-3-usando-raspberry-pi-imager">Parte 3: Usando Raspberry Pi Imager</h2>
+<p>Após o download e instalação do <code>Raspberry Pi Imager</code> correspondente ao seu sistema operacional, conecte um leitor de cartão SD com o cartão SD e execute o programa.</p>
+<p><figure><a class="lightgallery" href="./imager-i.png" title="Raspberry Pi Imager" data-thumbnail="./imager-i.png" data-sub-html="<h2>Raspberry Pi Imager</h2><p>Raspberry Pi Imager</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="./imager-i.png"
+            data-srcset="./imager-i.png, ./imager-i.png 1.5x, ./imager-i.png 2x"
+            data-sizes="auto"
+            alt="./imager-i.png" />
+    </a><figcaption class="image-caption">Raspberry Pi Imager</figcaption>
+    </figure></p>
+<p>Escolha o sistema operacional.</p>
+<p><figure><a class="lightgallery" href="./imager-ii.png" title="Raspberry Pi Imager" data-thumbnail="./imager-ii.png" data-sub-html="<h2>Raspberry Pi Imager</h2><p>Raspberry Pi Imager</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="./imager-ii.png"
+            data-srcset="./imager-ii.png, ./imager-ii.png 1.5x, ./imager-ii.png 2x"
+            data-sizes="auto"
+            alt="./imager-ii.png" />
+    </a><figcaption class="image-caption">Raspberry Pi Imager</figcaption>
+    </figure>
+<figure><a class="lightgallery" href="./imager-iii.png" title="Raspberry Pi Imager" data-thumbnail="./imager-iii.png" data-sub-html="<h2>Raspberry Pi Imager</h2><p>Raspberry Pi Imager</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="./imager-iii.png"
+            data-srcset="./imager-iii.png, ./imager-iii.png 1.5x, ./imager-iii.png 2x"
+            data-sizes="auto"
+            alt="./imager-iii.png" />
+    </a><figcaption class="image-caption">Raspberry Pi Imager</figcaption>
+    </figure>
+<figure><a class="lightgallery" href="./imager-iv.png" title="Raspberry Pi Imager" data-thumbnail="./imager-iv.png" data-sub-html="<h2>Raspberry Pi Imager</h2><p>Raspberry Pi Imager</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="./imager-iv.png"
+            data-srcset="./imager-iv.png, ./imager-iv.png 1.5x, ./imager-iv.png 2x"
+            data-sizes="auto"
+            alt="./imager-iv.png" />
+    </a><figcaption class="image-caption">Raspberry Pi Imager</figcaption>
+    </figure></p>
+<p>Escolha o cartão SD no qual deseja gravar sua imagem.</p>
+<p><figure><a class="lightgallery" href="./imager-v.png" title="Raspberry Pi Imager" data-thumbnail="./imager-v.png" data-sub-html="<h2>Raspberry Pi Imager</h2><p>Raspberry Pi Imager</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="./imager-v.png"
+            data-srcset="./imager-v.png, ./imager-v.png 1.5x, ./imager-v.png 2x"
+            data-sizes="auto"
+            alt="./imager-v.png" />
+    </a><figcaption class="image-caption">Raspberry Pi Imager</figcaption>
+    </figure>
+<figure><a class="lightgallery" href="./imager-vi.png" title="Raspberry Pi Imager" data-thumbnail="./imager-vi.png" data-sub-html="<h2>Raspberry Pi Imager</h2><p>Raspberry Pi Imager</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="./imager-vi.png"
+            data-srcset="./imager-vi.png, ./imager-vi.png 1.5x, ./imager-vi.png 2x"
+            data-sizes="auto"
+            alt="./imager-vi.png" />
+    </a><figcaption class="image-caption">Raspberry Pi Imager</figcaption>
+    </figure></p>
+<p>Entre no menu <code>Opções Avançadas</code> para configurar o Raspberry Pi.</p>
+<p><figure><a class="lightgallery" href="./imager-vii.png" title="Raspberry Pi Imager" data-thumbnail="./imager-vii.png" data-sub-html="<h2>Raspberry Pi Imager</h2><p>Raspberry Pi Imager</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="./imager-vii.png"
+            data-srcset="./imager-vii.png, ./imager-vii.png 1.5x, ./imager-vii.png 2x"
+            data-sizes="auto"
+            alt="./imager-vii.png" />
+    </a><figcaption class="image-caption">Raspberry Pi Imager</figcaption>
+    </figure>
+<figure><a class="lightgallery" href="./imager-viii.png" title="Raspberry Pi Imager" data-thumbnail="./imager-viii.png" data-sub-html="<h2>Raspberry Pi Imager</h2><p>Raspberry Pi Imager</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="./imager-viii.png"
+            data-srcset="./imager-viii.png, ./imager-viii.png 1.5x, ./imager-viii.png 2x"
+            data-sizes="auto"
+            alt="./imager-viii.png" />
+    </a><figcaption class="image-caption">Raspberry Pi Imager</figcaption>
+    </figure></p>
+<p>Preencha os campos como mostrado acima e Salve.</p>
+<p>E para iniciar a instalação do sistema no cartão SD.</p>
+<p><figure><a class="lightgallery" href="./imager-ix.png" title="Raspberry Pi Imager" data-thumbnail="./imager-ix.png" data-sub-html="<h2>Raspberry Pi Imager</h2><p>Raspberry Pi Imager</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="./imager-ix.png"
+            data-srcset="./imager-ix.png, ./imager-ix.png 1.5x, ./imager-ix.png 2x"
+            data-sizes="auto"
+            alt="./imager-ix.png" />
+    </a><figcaption class="image-caption">Raspberry Pi Imager</figcaption>
+    </figure></p>
+<h2 id="parte-4-sistema-operacional-raspberry-pi">Parte 4: Sistema Operacional Raspberry Pi</h2>
+<p>O <code>Raspberry Pi OS</code> é um sistema operacional gratuito baseado em Debian, otimizado para o hardware <code>Raspberry Pi</code>, em desenvolvimento ativo, com ênfase na melhoria da estabilidade e do desempenho do maior número possível de pacotes Debian no Raspberry Pi, portanto, é importante manter o sistema do Raspberry Pi sempre atualizado, para correções de bugs e vulnerabilidades de segurança.</p>
+<p>Para atualizar o software no <code>Raspberry Pi OS</code>, podemos usar a ferramenta <code>APT (Advanced Packaging Tool)</code> em uma janela do Terminal. O <code>APT</code> mantém uma lista de fontes de software no seu <code>Raspberry Pi</code> em um arquivo localizado em <code>/etc/apt/sources.list</code>.</p>
+<p>Para atualizar a lista de pacotes abra uma janela do Terminal e digite:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sudo apt update
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Atualizar todos os pacotes instalados para as versões mais recentes com o seguinte comando:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sudo apt full-upgrade
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Instalar de outros pacotes com APT:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sudo apt install &lt;nome_do_pacote&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Desinstalar um pacote com APT:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sudo apt remove &lt;nome_do_pacote&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Remover completamente o pacote e seus arquivos de configuração associados:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sudo apt purge &lt;nome_do_pacote&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Atualizar o kernel do Raspberry Pi OS e o firmware VideoCore para as versões:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sudo rpi-update
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="ilustrações">Ilustrações</h2>
+<p><strong>PIXABAY</strong><br>
+Disponível em: <a href="https://pixabay.com/pt/photos/raspberry-pi-computador-eletr%C3%B4nicos-572481/" target="_blank" rel="noopener noreffer ">https://pixabay.com/pt/photos/raspberry-pi-computador-eletr%C3%B4nicos-572481/</a><br>
+Acesso em: 25 ago. 2023.</p>
+<h2 id="referências">Referências</h2>
+<p><strong>RASPBERRY PI - Getting started</strong><br>
+Disponível em: <a href="https://www.raspberrypi.com/documentation/computers/getting-started.html" target="_blank" rel="noopener noreffer ">https://www.raspberrypi.com/documentation/computers/getting-started.html</a><br>
+Acesso em: 25 ago. 2023.</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Atualizado em 2023-08-25</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/raspberry/index.md" target="_blank">Leia em Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/raspberry-pi/">Raspberry Pi</a>,&nbsp;<a href="/tags/raspberry-pi-os/">Raspberry Pi OS</a>,&nbsp;<a href="/tags/raspbian/">Raspbian</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Voltar</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/vscode/" class="prev" rel="prev" title="Extensões do VSCode"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Extensões do VSCode</a>
+            <a href="/raspberry-softwares/" class="next" rel="next" title="Raspberry Pi - Softwares">Raspberry Pi - Softwares<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Suzano Bitencourt</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Voltar ao topo">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="Ver comentários">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.pt.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copiar para a área de transferência","maxShownLines":50},"comment":{},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"pt","maxResultLength":10,"noResultsFound":"Nenhum resultado encontrado","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

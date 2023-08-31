@@ -1,0 +1,37 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Robô - Tag - Suzano Bitencourt</title>
+        <link>https://suzano.github.io/tags/rob%C3%B4/</link>
+        <description>Robô - Tag - Suzano Bitencourt</description>
+        <generator>Hugo -- gohugo.io</generator><language>pt-BR</language><managingEditor>suzanobitencourt@gmail.com (Suzano Bitencourt)</managingEditor>
+            <webMaster>suzanobitencourt@gmail.com (Suzano Bitencourt)</webMaster><lastBuildDate>Tue, 18 Apr 2023 13:00:00 &#43;0000</lastBuildDate><atom:link href="https://suzano.github.io/tags/rob%C3%B4/" rel="self" type="application/rss+xml" /><item>
+    <title>Construindo um Robô Arduino - Parte III</title>
+    <link>https://suzano.github.io/arduino-robo-iii/</link>
+    <pubDate>Tue, 18 Apr 2023 13:00:00 &#43;0000</pubDate>
+    <author>Suzano</author>
+    <guid>https://suzano.github.io/arduino-robo-iii/</guid>
+    <description><![CDATA[<p>Um Firmware de Robô Básico (Não Tão)</p>
+<p>Esboço do Arduino que faz o robô correr para frente.</p>
+<p>A idéia é escrever o esboço de forma que me permita adicionar funcionalidades mais complexas posteriormente sem ter que começar do zero. Estabelecendo uma base sólida sobre a qual empilharemos as peças mais complexas posteriormente.</p>]]></description>
+</item>
+<item>
+    <title>Construindo um Robô Arduino - Parte II</title>
+    <link>https://suzano.github.io/arduino-robo-ii/</link>
+    <pubDate>Mon, 17 Apr 2023 13:00:00 &#43;0000</pubDate>
+    <author>Suzano</author>
+    <guid>https://suzano.github.io/arduino-robo-ii/</guid>
+    <description><![CDATA[<p>Programando o Arduino</p>
+<p>Você conhecerá os fundamentos da programação de sensores, motores e outros dispositivos conectados ao Arduino, e também terá um entendimento de como um controle remoto sem fio pode se comunicar com a placa Arduino via Bluetooth.</p>]]></description>
+</item>
+<item>
+    <title>Construindo um Robô Arduino - Parte I</title>
+    <link>https://suzano.github.io/arduino-robo-i/</link>
+    <pubDate>Mon, 17 Apr 2023 12:00:00 &#43;0000</pubDate>
+    <author>Suzano</author>
+    <guid>https://suzano.github.io/arduino-robo-i/</guid>
+    <description><![CDATA[<p>Construindo um veículo robô controlado remotamente.</p>
+<p>Usando Arduino para a plataforma de hardware, por ser amplamente utilizada por criadores de hardware em todo o mundo, o que significa que há muitas informações e recursos disponíveis.</p>
+<p>Sendo fácil o suficiente para concluir em um período de tempo relativamente curto, mas difícil o suficiente para ser interessante e desafiador.</p>]]></description>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Linguagem - Categoria - Suzano Bitencourt</title>
+        <link>https://suzano.github.io/categories/linguagem/</link>
+        <description>Linguagem - Categoria - Suzano Bitencourt</description>
+        <generator>Hugo -- gohugo.io</generator><language>pt-BR</language><managingEditor>suzanobitencourt@gmail.com (Suzano Bitencourt)</managingEditor>
+            <webMaster>suzanobitencourt@gmail.com (Suzano Bitencourt)</webMaster><lastBuildDate>Mon, 20 Mar 2023 12:00:00 &#43;0000</lastBuildDate><atom:link href="https://suzano.github.io/categories/linguagem/" rel="self" type="application/rss+xml" /><item>
+    <title>Sintaxe Básica do Markdown</title>
+    <link>https://suzano.github.io/markdown-sintaxe/</link>
+    <pubDate>Mon, 20 Mar 2023 12:00:00 &#43;0000</pubDate>
+    <author>Suzano</author>
+    <guid>https://suzano.github.io/markdown-sintaxe/</guid>
+    <description><![CDATA[<p>Este artigo oferece uma amostra da sintaxe básica do Markdown que pode ser usada em arquivos de conteúdo do Hugo.</p>]]></description>
+</item>
+</channel>
+</rss>

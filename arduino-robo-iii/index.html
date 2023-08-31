@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Construindo um Robô Arduino - Parte III - Suzano Bitencourt</title><meta name="Description" content="Construindo um Robô Arduino - Parte III"><meta property="og:title" content="Construindo um Robô Arduino - Parte III" />
+<meta property="og:description" content="Construindo um Robô Arduino - Parte III" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://suzano.github.io/arduino-robo-iii/" /><meta property="og:image" content="https://suzano.github.io/arduino-robo-iii/featured-image.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-04-18T13:00:00+00:00" />
+<meta property="article:modified_time" content="2023-04-18T13:00:00+00:00" /><meta property="og:site_name" content="Suzano Bitencourt" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://suzano.github.io/arduino-robo-iii/featured-image.jpg"/>
+<meta name="twitter:title" content="Construindo um Robô Arduino - Parte III"/>
+<meta name="twitter:description" content="Construindo um Robô Arduino - Parte III"/>
+<meta name="application-name" content="Suzano Bitencourt">
+<meta name="apple-mobile-web-app-title" content="Suzano Bitencourt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://suzano.github.io/arduino-robo-iii/" /><link rel="prev" href="https://suzano.github.io/arduino-robo-ii/" /><link rel="next" href="https://suzano.github.io/git-github/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Construindo um Robô Arduino - Parte III",
+        "inLanguage": "pt-BR",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/suzano.github.io\/arduino-robo-iii\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/suzano.github.io\/arduino-robo-iii\/featured-image.jpg",
+                            "width":  1420 ,
+                            "height":  430 
+                        }],"genre": "posts","keywords": "Arduino, Robô, Bibliotecas","wordcount":  3797 ,
+        "url": "https:\/\/suzano.github.io\/arduino-robo-iii\/","datePublished": "2023-04-18T13:00:00+00:00","dateModified": "2023-04-18T13:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Suzano"
+            },"description": "Construindo um Robô Arduino - Parte III"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Suzano Bitencourt"><span class="header-title-pre"><i class='fa-solid fa-mug-hot' aria-hidden='true'></i></span>Suzano Bitencourt</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categorias </a><a class="menu-item" href="/docs/"> Documentação </a><a class="menu-item" href="/about/"> Sobre </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Pesquisar títulos ou conteúdos ..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Pesquisa">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Limpar">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Suzano Bitencourt"><span class="header-title-pre"><i class='fa-solid fa-mug-hot' aria-hidden='true'></i></span>Suzano Bitencourt</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Pesquisar títulos ou conteúdos ..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Pesquisa">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Limpar">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancelar
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categorias</a><a class="menu-item" href="/docs/" title="">Documentação</a><a class="menu-item" href="/about/" title="">Sobre</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Conteúdos</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Construindo um Robô Arduino - Parte III</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://suzano.github.io/sobre/" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Suzano</a></span>&nbsp;<span class="post-category">incluido em <a href="/categories/sistemas-embarcados/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Sistemas Embarcados</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-04-18">2023-04-18</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;3797 palavras&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;18 minutos&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/arduino-robo-iii/featured-image.jpg"
+        data-srcset="/arduino-robo-iii/featured-image.jpg, /arduino-robo-iii/featured-image.jpg 1.5x, /arduino-robo-iii/featured-image.jpg 2x"
+        data-sizes="auto"
+        alt="/arduino-robo-iii/featured-image.jpg"
+        title="Construindo um Robô Arduino - Parte III" /></div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Conteúdos</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#metas">Metas</a>
+      <ul>
+        <li><a href="#estrutura-escalável">Estrutura Escalável</a></li>
+        <li><a href="#abstrações-de-dispositivo">Abstrações de dispositivo</a></li>
+        <li><a href="#configuração">Configuração</a></li>
+        <li><a href="#timing-mais-inteligente">Timing mais inteligente</a></li>
+      </ul>
+    </li>
+    <li><a href="#escrevendo-um-driver-de-dispositivo">Escrevendo um driver de dispositivo!</a></li>
+    <li><a href="#o-driver-de-motor-adafruit">O driver de motor Adafruit</a></li>
+    <li><a href="#usando-o-driver-de-dispositivo">Usando o driver de dispositivo</a></li>
+    <li><a href="#como-implementar-atrasos">Como implementar atrasos</a></li>
+    <li><a href="#ilustrações">Ilustrações</a></li>
+    <li><a href="#fontes">Fontes</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Um Firmware de Robô Básico (Não Tão)</p>
+<p>Esboço do Arduino que faz o robô correr para frente.</p>
+<p>A idéia é escrever o esboço de forma que me permita adicionar funcionalidades mais complexas posteriormente sem ter que começar do zero. Estabelecendo uma base sólida sobre a qual empilharemos as peças mais complexas posteriormente.</p>
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw" aria-hidden="true"></i>Nota<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">Este artigo é uma tradução vergonhosa da página do <a href="https://blog.miguelgrinberg.com/post/building-an-arduino-robot-part-iv-a-not-so-basic-robot-firmware" target="_blank" rel="noopener noreffer ">miguelgrinberg.com</a>.</div>
+        </div>
+    </div>
+<h2 id="metas">Metas</h2>
+<p>Objetivos do projeto do ponto de vista da engenharia de software.</p>
+<h3 id="estrutura-escalável">Estrutura Escalável</h3>
+<p>Para esboços simples, a estrutura de esboço padrão baseada nas funções <code>setup()</code> e <code>loop()</code> é suficiente. Os esboços anteriores foram para testar todos os componentes do robô e aprender a programar esses componentes.</p>
+<p>O problema é que essa estrutura não <code>escala</code> bem. Para o projeto do robô, precisaremos controlar dois motores, o sensor de distância e reagir a comandos remotos vindos do bluetooth, tudo ao mesmo tempo. No futuro, podemos querer estendê-lo com ainda mais dispositivos controlados. Talvez sensores de distância adicionais nas laterais e atrás, ou um olhando para baixo para detectar quando o veículo chega ao final de uma mesa. Talvez até montar uma câmera sem fio ou adicionar recursos de som. As possibilidades são infinitas e cada novo dispositivo adicionado aumentará a complexidade do esboço.</p>
+<p>A função <code>loop()</code> precisaria ficar muito longa e complexa para fazer tudo e, em seguida, fazer alterações nela se tornaria um pesadelo, com qualquer alteração que se  fizesse, correria o risco de quebrar inadvertidamente a funcionalidade existente. O esboço acabaria sendo um <a href="https://pt.wikipedia.org/wiki/C%C3%B3digo_espaguete" target="_blank" rel="noopener noreffer "><code>código espaguete</code></a> (spaghetti code).</p>
+<p>Para este projeto usaremos técnicas de orientação a objetos para organizar o código do esboço e torná-lo mais fácil de escrever, testar, manter e modificar.</p>
+<h3 id="abstrações-de-dispositivo">Abstrações de dispositivo</h3>
+<p>Este esboço esta disponível como código aberto. É seguro presumir que outras pessoas construirão seus próprios veículos robóticos usando peças diferentes das que estamos usando nesta montagem. Por exemplo, alguém pode usar uma placa de driver de motor diferente ou usar wi-fi para o controle remoto em vez de bluetooth. Se construirmos um esboço com a suposição de que os componentes do robô são apenas aqueles para os que estamos usando nesta montagem, apenas alguns poucos poderão se beneficiar imediatamente e a maioria terá que hackear para fazê-lo funcionar para eles.</p>
+<p>Em vez disso, pensaremos sobre a funcionalidade que desejamos implementar em termos gerais e, depois, escrever drivers de dispositivo para os módulos de que precisamos.</p>
+<p>Dando à outros a liberdade de substituir peças no robô sem precisar modificar o esboço principal. Mudar de bluetooth para wi-fi exigirá apenas escrever um novo driver de comunicação remota. O esboço principal falará com os drivers bluetooth ou wi-fi e não saberá a diferença!</p>
+<h3 id="configuração">Configuração</h3>
+<p>A ideia é que deva ser fácil configurar o software do robô para o hardware real. O melhor exemplo é o uso de pinos na placa Arduino. Não vamos codificar nenhum número de pino. Em vez disso, adicionarei constantes <code>#define</code> na parte superior do esboço com todos os pinos, para que alterar as atribuições dos pinos se torne uma tarefa trivial.</p>
+<p>Mas a configuração não se limita a números de pinos. Existem também alguns padrões operacionais (como a distância até uma parede ou obstáculo quando o robô para e gira) que também podem ser considerados parte da configuração e serão representados por constantes na parte superior do esboço para os usuários modificarem facilmente.</p>
+<h3 id="timing-mais-inteligente">Timing mais inteligente</h3>
+<p>Em esboços simples, tende-se a abusar da função <code>delay()</code> como uma maneira fácil de fazer com que as ações durem um certo tempo.</p>
+<p>Mas para um projeto real que precisa fazer muitas coisas ao mesmo tempo isso é <code>impraticável</code>. Mas na plataforma Arduino há um único <code>thread</code> de execução, então chamar <code>delay()</code> faz todo o programa entrar em hibernação, e isso não é bom para funcionamento do robô.</p>
+<p>Um ambiente <code>multithreading</code>, é a forma ideal de fazer um programa fazer muitas coisas ao mesmo tempo. Uma chamada de thread <code>delay()</code> não impediria a execução de outras threads.</p>
+<p>Portanto, não usaremos <code>delay()</code>para nada, exceto para testes de descarte.</p>
+<p>Parte do segredo está em fazer a função <code>loop()</code> fazer apenas uma pequena quantidade de trabalho e retornar. A função <code>loop()</code> será chamada em um ritmo muito rápido (lembre-se de que ela é chamada repetidamente até que a placa seja desligada). Cada vez que <code>loop()</code> é chamado, podemos descobrir qual é o tempo de atividade. Saber a hora atual permitirá implementar um equivalente bloqueio ou espera, sem usar o <code>delay()</code>.</p>
+<h2 id="escrevendo-um-driver-de-dispositivo">Escrevendo um driver de dispositivo!</h2>
+<p>Vamos começar escrevendo um driver de dispositivo que saiba como controlar motores.</p>
+<p>Um driver de dispositivo é simplesmente uma abstração para o dispositivo pretendido. Agora estamos escrevendo um para um motor, então a operação básica que esse driver deve saber fazer é definir a velocidade do motor.</p>
+<p>Vamos armazenar os drivers de dispositivo em arquivos de cabeçalho, que são arquivos com extensão <code>.h</code>. Para módulos pequenos, usar um arquivo de cabeçalho é uma boa escolha. Para módulos maiores, a norma é armazenar o código em um arquivo fonte com extensão <code>.cpp</code> e depois escrever um pequeno arquivo de cabeçalho que contenha apenas a declaração das funções públicas do arquivo fonte. Os arquivos de cabeçalho funcionam para neste momento, se no futuro um módulo crescer para um tamanho decente, podemos mover o código para um arquivo <code>.cpp</code>.</p>
+<p>A intenção é que o driver do dispositivo do motor permita que o esboço principal funcione com diferentes controladores de motor usando as mesmas chamadas de função, portanto, a primeira tarefa ao definir um driver é decidir quais serão as funções comuns do driver.</p>
+<p>Aqui está o código do driver de dispositivo motor, que vamos armazenar em um arquivo chamado <code>motor_driver.h</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">namespace</span> <span class="n">Michelino</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">class</span> <span class="nc">MotorDriver</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">        <span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm">         *  Use positive values to run the motor forward, 
+</span></span></span><span class="line"><span class="cl"><span class="cm">         *  negative values to run it backward and zero to stop the motor.
+</span></span></span><span class="line"><span class="cl"><span class="cm">         */</span>
+</span></span><span class="line"><span class="cl">        <span class="k">virtual</span> <span class="kt">void</span> <span class="n">setSpeed</span><span class="p">(</span><span class="kt">int</span> <span class="n">speed</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm">         * Return the current speed of the motor.
+</span></span></span><span class="line"><span class="cl"><span class="cm">         * The current speed of the motor with range -255 to 255.
+</span></span></span><span class="line"><span class="cl"><span class="cm">         */</span>
+</span></span><span class="line"><span class="cl">        <span class="k">virtual</span> <span class="kt">int</span> <span class="nf">getSpeed</span><span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>            
+</span></span><span class="line"><span class="cl">    <span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Se você não estiver familiarizado com C++, há várias coisas aqui que precisam de uma explicação.</p>
+<p>Qualquer texto que apareça entre <code>/*</code> e <code>*/</code> é considerado um comentário, portanto será ignorado pelo compilador C++. Existe um formato alternativo para comentários que você já deve ter visto, esses usam um prefixo <code>//</code> e vão até o final da linha. Ambos os formatos são válidos, mas neste caso, como estou escrevendo comentários de várias linhas, estou usando o formato <code>/* ... */</code>.</p>
+<p>A palavra-chave <code>namespace</code> agrupa todas as definições dentro <code>{</code> e <code>}</code> sob um nome definido pelo usuário. Isso é útil para evitar colisões de nomes com outros módulos, por isso é sempre uma boa ideia incluir seu próprio código em um <code>namespace</code>. Colocamos todo o código sob o namespace <code>Michelino</code>.</p>
+<p>A palavra-chave <code>class</code> define uma estrutura que agrupa dados e funções em uma entidade chamada <code>objeto</code>. Minha classe de driver de motor é chamada <code>MotorDriver</code> e contém apenas duas funções, que no contexto de uma <code>classe</code> são chamadas de <code>métodos</code>. Os métodos <code>setSpeed</code> e <code>getSpeed</code> controlarão um motor, mas observe que, ao contrário da biblioteca <code>AF_Motor</code> que usamos antes, não estamos definindo que tipo de controlador de motor é usado para a tarefa. O esboço principal apenas chamará esses métodos sem saber como eles são implementados, portanto, para alternar de um controlador para outro, basta reimplementar essas duas funções para o controlador selecionado.</p>
+<p>A apalavra-chave <code>public:</code> que aparece antes dos métodos indica que as declarações a seguir são acessíveis a qualquer pessoa. Você verá mais tarde que algumas classes têm conteúdos que estão escondidos do mundo exterior.</p>
+<p>A palavra-chave <code>virtual</code> que inicia cada declaração de método indica que esses métodos podem ser sobrescritos por uma subclasse, e no final <code>= 0</code> das declarações indica que os métodos não possuem uma implementação. Esses dois atributos combinados são usados ​​para garantir que a única maneira de fornecer uma implementação para esses métodos seja em uma <code>subclasse</code>.</p>
+<p>Por fim, a palavra-chave <code>const</code> que aparece no método <code>getSpeed</code> indica que esse método é constante, ou seja, que esse método não altera o estado interno do objeto.</p>
+<p>Deixando de lado os detalhes técnicos de escrever uma classe C++, o ponto importante é que os drivers de dispositivo que adotam a interface acima devem ser capazes de controlar um motor DC com duas operações, <code>setSpeed()</code> e <code>getSpeed()</code>. Os valores de velocidade são dados na faixa de <code>-255</code> a <code>255</code>, com velocidades positivas movendo-se para <code>frente</code>, velocidades negativas movendo-se para <code>trás</code> e <code>zero</code> fazendo o motor <code>parar</code>.</p>
+<h2 id="o-driver-de-motor-adafruit">O driver de motor Adafruit</h2>
+<p>Escrevendo uma implementação específica para a shield de motor Adafruit.</p>
+<p>Vou armazenar o driver da shield do motor Adafruit em um arquivo chamado <code>adafruit_motor_driver.h</code>. Aqui está o código:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;motor_driver.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="k">namespace</span> <span class="n">Michelino</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">class</span> <span class="nc">Motor</span> <span class="o">:</span> <span class="k">public</span> <span class="n">MotorDriver</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">        <span class="cm">/*
+</span></span></span><span class="line"><span class="cl"><span class="cm">         * Class constructor.
+</span></span></span><span class="line"><span class="cl"><span class="cm">         * number the DC motor number to control, from 1 to 4.
+</span></span></span><span class="line"><span class="cl"><span class="cm">         */</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Motor</span><span class="p">(</span><span class="kt">int</span> <span class="n">number</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="o">:</span> <span class="n">MotorDriver</span><span class="p">(),</span> <span class="n">motor</span><span class="p">(</span><span class="n">number</span><span class="p">),</span> <span class="n">currentSpeed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="kt">void</span> <span class="nf">setSpeed</span><span class="p">(</span><span class="kt">int</span> <span class="n">speed</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">currentSpeed</span> <span class="o">=</span> <span class="n">speed</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">speed</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">motor</span><span class="p">.</span><span class="n">setSpeed</span><span class="p">(</span><span class="n">speed</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="n">motor</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">FORWARD</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">motor</span><span class="p">.</span><span class="n">setSpeed</span><span class="p">(</span><span class="o">-</span><span class="n">speed</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="n">motor</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">BACKWARD</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="nf">getSpeed</span><span class="p">()</span> <span class="k">const</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">currentSpeed</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">private</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">AF_DCMotor</span> <span class="n">motor</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">currentSpeed</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Iniciamos incluindo o arquivo de cabeçalho do driver do motor. O driver Adafruit deriva da definição de driver genérico que escrevemos acima, de modo que a definição precisa ser acessível.</p>
+<p>A definição <code>class</code> neste arquivo parece um pouco diferente:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Motor</span> <span class="o">:</span> <span class="k">public</span> <span class="n">MotorDriver</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Isso diz que estamos criando uma classe chamada <code>Motor</code> que deriva da classe <code>MotorDriver</code>. Isso significa que a classe <code>Motor</code> seguirá o protocolo estabelecido pela classe <code>MotorDriver</code>.</p>
+<p>A classe tem uma seção <code>public</code> que começa com constructor:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">Motor</span><span class="p">(</span><span class="kt">int</span> <span class="n">number</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Este é um método com o mesmo nome da classe (Motor neste caso). Os métodos construtores são chamados quando um objeto é criado e destinam-se a definir o estado inicial do objeto. Este construtor usa o número do motor como um argumento.</p>
+<p>O construtor <code>Motor</code> tem uma lista de inicializadores:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="o">:</span> <span class="n">MotorDriver</span><span class="p">(),</span> <span class="n">motor</span><span class="p">(</span><span class="n">number</span><span class="p">),</span> <span class="n">currentSpeed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Esta é uma lista de itens que serão inicializados quando um objeto desta classe for criado. O primeiro item apenas invoca o construtor da classe pai, o driver genérico <code>MotorDriver</code>. Eu não incluí um construtor nesta classe, mas o compilador irá gerar um vazio. É uma boa prática sempre inicializar a <code>classe pai</code> mesmo quando não houver um construtor, porque no futuro um construtor pode ser adicionado.</p>
+<p>Os dois itens restantes na lista de inicializadores são <code>variáveis</code> ​​de membro dessa classe. Se você olhar na parte inferior da classe, há um bloco <code>private</code> que define duas variáveis ​​chamadas <code>motor</code> e <code>currentSpeed</code>. A variável <code>motor</code> é do tipo <code>AF_DCMotor</code>, a classe definida pela biblioteca da shield do motor Adafruit. Para inicializar esta variável, tenho que invocar seu construtor, que, se você se lembra de um artigo anterior, usa o número do motor como argumento. Recebi o número do motor como um argumento para meu próprio construtor, então apenas o transmito aqui. A variável <code>currentSpeed</code> é do tipo int, então apenas a inicializo com <code>0</code> para que ela tenha um valor inicial conhecido.</p>
+<p>O corpo do construtor <code>Motor</code> está vazio, pois a única coisa que preciso é inicializar as variáveis ​​de membro.</p>
+<p>O que se segue é a implementação dos métodos setSpeede getSpeedpara este controlador de motor específico, usando a biblioteca AF_Motor de código aberto da Adafruit, que deve ser instalada separadamente (consulte meu artigo anterior para obter instruções). Esta biblioteca requer duas funções a serem chamadas para configurar um motor, uma para definir a velocidade e outra para definir o modo. Eu defini meu driver de motor para usar uma forma mais simples de configurar o motor, apenas com uma velocidade que pode ser positiva, negativa ou zero. A implementação de setSpeedtraduz meu formato para aquele exigido pela biblioteca de escudos do motor Adafruit. Eu também armazeno a velocidade atual em uma variável de membro, para que eu possa retorná-la em getSpeed.</p>
+<p>Na parte inferior estão as duas variáveis ​​de membro privadas que esta classe usa. Essas variáveis ​​são declaradas como privadas porque não quero que sejam acessíveis de fora do objeto que as possui. Quero que qualquer alteração no motor ou em sua velocidade seja realizada por meio das funções públicas do driver (seguindo o princípio do encapsulamento ), portanto, uma boa maneira de evitar que eu use acidentalmente as variáveis ​​de membro diretamente é torná-las privadas. Uma variável de membro privado só pode ser modificada de métodos que pertencem ao objeto, mas não é acessível de nenhum outro lugar no código. Um bom motivo para ocultar essas variáveis ​​de membro é que outros drivers de motor precisarão de variáveis ​​diferentes, desde que o código fora dessa classe apenas chame setSpeed()egetSpeed()trocar este driver por outro não deve ser um problema.</p>
+<p>Se você estiver usando um controlador de motor diferente do meu em seu robô, tudo o que você precisa fazer é copiar o adafruit_motor_driver.harquivo &lt;your_controller&gt;_motor_driver.he implementar a classe conforme apropriado para seu controlador. O único requisito é que a nova classe também seja chamada Motore tenha as mesmas duas funções públicas. As duas classes serão então conceitualmente equivalentes, então o esboço principal pode usar qualquer uma delas.</p>
+<h2 id="usando-o-driver-de-dispositivo">Usando o driver de dispositivo</h2>
+<p>Agora eu tenho um driver de dispositivo completo para minha bplindagem de motor Adafruit. Mas como faço para usá-lo em um esboço?</p>
+<p>Isso é realmente mais simples do que você pode pensar. Aqui está um esboço de exemplo que inicia um motor em velocidade máxima usando o driver Adafruit que acabei de construir:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;AFMotor.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;adafruit_motor_driver.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define MOTOR_INIT 1
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="n">Michelino</span><span class="o">::</span><span class="n">Motor</span> <span class="n">motor</span><span class="p">(</span><span class="n">MOTOR_INIT</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">motor</span><span class="p">.</span><span class="n">setSpeed</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>O <code>#include</code> no topo traz a biblioteca de motores <code>Adafruit</code> e do <code>driver</code> para ela.</p>
+<p>Observe como o <code>objeto</code> motor é criado:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">Michelino</span><span class="o">::</span><span class="n">Motor</span> <span class="n">motor</span><span class="p">(</span><span class="n">MOTOR_INIT</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>A notação <code>Michelino::Motor</code> diz ao compilador para localizar a classe <code>Motor</code> dentro do namespace <code>Michelino</code>.</p>
+<p>Uma vez que o objeto do motor é criado, ele pode ser controlado usando as funções do driver <code>setSpeed</code> e <code>getSpeed</code>.</p>
+<p>Agora vamos supor que mais tarde você queira fazer o esboço acima funcionar com outra shield de motor, digamos uma chamada <code>&quot;x&quot;</code>, para a qual você escreveu um driver de dispositivo. Então você pode apenas adicionar algumas linhas de código ao sketch, como segue:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// enable one of the motor shields below
+</span></span></span><span class="line"><span class="cl"><span class="c1">//#define ENABLE_ADAFRUIT_MOTOR_DRIVER
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="cp">#define ENABLE_X_MOTOR_DRIVER
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="cp">#ifdef ENABLE_ADAFRUIT_MOTOR_DRIVER
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;AFMotor.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;adafruit_motor_driver.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define MOTOR_INIT 1
+</span></span></span><span class="line"><span class="cl"><span class="cp">#endif
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="cp">#ifdef ENABLE_X_MOTOR_DRIVER
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;XMotor.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;x_motor_driver.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define MOTOR_INIT 2
+</span></span></span><span class="line"><span class="cl"><span class="cp">#endif
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="n">Michelino</span><span class="o">::</span><span class="n">Motor</span> <span class="n">motor</span><span class="p">(</span><span class="n">MOTOR_INIT</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">motor</span><span class="p">.</span><span class="n">setSpeed</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>No topo, estamos definindo duas constantes <code>#define</code>, mas uma delas está comentada. Esta é uma maneira muito fácil de fornecer configuração, basta descomentar a única constante que corresponde à parte que você possui.</p>
+<p>Um bloco <code>#ifdef ... #endif</code> só será visto pelo compilador se a constante que segue <code>#ifdef</code> estiver definida. Como apenas uma das constantes de blindagem do motor será definida, estou carregando efetivamente apenas um dos drivers de dispositivo no esboço.</p>
+<p>No exemplo acima, o esboço pode ser alternado entre a blindagem Adafruit usando o motor nº 1 e a blindagem do motor X usando o motor nº 2, apenas alterando qual das #defineinstruções na parte superior é usada!</p>
+<p>O esboço principal
+Agora que tenho uma solução realmente boa para controlar minhas peças de hardware, preciso pensar em como o esboço principal será estruturado.</p>
+<p>Como mencionei antes, ter um grande pedaço de código na loop()função não é ideal porque funções grandes e complexas são difíceis de manter. Se eu criei uma classe para representar um motor, por que não criar também uma classe para representar o robô inteiro?</p>
+<p>Aqui está um esboço que define uma classe de ponto inicial para o robô. Este arquivo será nomeado michelino.ino(os esboços do Arduino usam a .inoextensão):</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @file michelino.ino
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @brief Arduino robot vehicle firmware.
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @author Miguel Grinberg
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cp">#define ENABLE_ADAFRUIT_MOTOR_DRIVER
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="cp">#ifdef ENABLE_ADAFRUIT_MOTOR_DRIVER
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;AFMotor.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;adafruit_motor_driver.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define LEFT_MOTOR_INIT 1
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define RIGHT_MOTOR_INIT 3
+</span></span></span><span class="line"><span class="cl"><span class="cp">#endif
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="k">namespace</span> <span class="n">Michelino</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">class</span> <span class="nc">Robot</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">        <span class="cm">/*
+</span></span></span><span class="line"><span class="cl"><span class="cm">         * @brief Class constructor.
+</span></span></span><span class="line"><span class="cl"><span class="cm">         */</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Robot</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">            <span class="o">:</span> <span class="n">leftMotor</span><span class="p">(</span><span class="n">LEFT_MOTOR_INIT</span><span class="p">),</span> <span class="n">rightMotor</span><span class="p">(</span><span class="n">RIGHT_MOTOR_INIT</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">initialize</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="cm">/*
+</span></span></span><span class="line"><span class="cl"><span class="cm">         * @brief Initialize the robot state.
+</span></span></span><span class="line"><span class="cl"><span class="cm">         */</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">void</span> <span class="nf">initialize</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">leftMotor</span><span class="p">.</span><span class="n">setSpeed</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">rightMotor</span><span class="p">.</span><span class="n">setSpeed</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="cm">/*
+</span></span></span><span class="line"><span class="cl"><span class="cm">         * @brief Update the state of the robot based on input from sensor and remote control.
+</span></span></span><span class="line"><span class="cl"><span class="cm">         *  Must be called repeatedly while the robot is in operation.
+</span></span></span><span class="line"><span class="cl"><span class="cm">         */</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">void</span> <span class="nf">run</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">private</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Motor</span> <span class="n">leftMotor</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Motor</span> <span class="n">rightMotor</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Michelino</span><span class="o">::</span><span class="n">Robot</span> <span class="n">robot</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">robot</span><span class="p">.</span><span class="n">initialize</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">robot</span><span class="p">.</span><span class="n">run</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>O esboço não deve apresentar surpresas. Começo carregando meu driver de blindagem do motor, usando a #ifdeftécnica que mostrei antes. Quando e se eu escrever novos drivers de motor, adicionarei novas constantes e #ifdefblocos para carregá-los.</p>
+<p>Minha classe de robô será nomeada apropriadamente Robote estará dentro do Michelinonamespace. Ele terá inicialmente dois membros de dados privados que representam os dois motores nomeados leftMotore rightMotor. Eles serão inicializados na Robotlista de inicializadores do construtor de classe. A classe tem dois métodos públicos, initialize()que run()serão as contrapartes da classe para setup()e loop(). Nesta versão inicial da classe, o initialize()método inicia os dois motores em velocidade máxima e run()não faz nada.</p>
+<p>Depois que a classe é definida, uma instância é criada no escopo global e os métodos setup()e loop()simplesmente chamam os métodos initialize()e run()desse objeto.</p>
+<p>O que você acha que acontecerá quando executar esse esboço? O robô vai avançar! Dei algumas voltas e reviravoltas, mas finalmente cumpri minha promessa.</p>
+<h2 id="como-implementar-atrasos">Como implementar atrasos</h2>
+<p>Antes de terminar este artigo, vou mostrar como os atrasos podem ser implementados sem realmente usar a delay()função, para que o robô possa fazer outras coisas enquanto espera, como receber e executar comandos remotos.</p>
+<p>Para mostrar como isso é feito, vou modificar o esboço acima para fazer o robô começar esperando por cinco segundos, depois avançando por oito segundos e repetindo o ciclo.</p>
+<p>Primeiro, adicionarei o conceito de estado ao robô. Para este exemplo, terei dois estados possíveis, parado e em execução . Para definir esses estados no sketch vou usar uma enumeração C++ :</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl">    <span class="k">private</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">enum</span> <span class="nc">state_t</span> <span class="p">{</span> <span class="n">stateStopped</span><span class="p">,</span> <span class="n">stateRunning</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl">    <span class="n">state_t</span> <span class="n">state</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>A enuminstrução cria um tipo enumerado definido pelo usuário chamado state_t. A segunda instrução define uma nova variável de membro nomeada statedesse tipo. A statevariável de membro terá um dos dois valores possíveis, stateStoppedou stateRunning. Eu poderia facilmente ter usado uma intvariável e chamar o estado 0 de estado parado e o estado 1 de estado em execução, mas depois que você me ver usando essa variável, tenho certeza de que concordará comigo que usar tipos enumerados torna o código muito mais legível e mais fácil de entender.</p>
+<p>Vou adicionar outra variável de membro à Robotclasse que me ajudará a contar o tempo:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">private</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">unsigned</span> <span class="kt">long</span> <span class="n">startTime</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>O tipo da startTimevariável é unsigned long. Este é o tipo em que as unidades de tempo são retornadas pela função millis()fornecida pelas bibliotecas do software Arduino.</p>
+<p>Em seguida, no initialize()método em vez de ligar os motores, agora vou inicializar o estado do robô e registrar a hora atual:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl">  <span class="kt">void</span> <span class="nf">initialize</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">state</span> <span class="o">=</span> <span class="n">stateStopped</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">startTime</span> <span class="o">=</span> <span class="n">millis</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>E por fim, no run()método é onde toda a mágica acontece:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">run</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">unsigned</span> <span class="kt">long</span> <span class="n">currentTime</span> <span class="o">=</span> <span class="n">millis</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">unsigned</span> <span class="kt">long</span> <span class="n">elapsedTime</span> <span class="o">=</span> <span class="n">currentTime</span> <span class="o">-</span> <span class="n">startTime</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">switch</span> <span class="p">(</span><span class="n">state</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">case</span> <span class="nl">stateStopped</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">elapsedTime</span> <span class="o">&gt;=</span> <span class="mi">5000</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">leftMotor</span><span class="p">.</span><span class="n">setSpeed</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="n">rightMotor</span><span class="p">.</span><span class="n">setSpeed</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="n">state</span> <span class="o">=</span> <span class="n">stateRunning</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="n">startTime</span> <span class="o">=</span> <span class="n">currentTime</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">case</span> <span class="nl">stateRunning</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">elapsedTime</span> <span class="o">&gt;=</span> <span class="mi">8000</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">leftMotor</span><span class="p">.</span><span class="n">setSpeed</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="n">rightMotor</span><span class="p">.</span><span class="n">setSpeed</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="n">state</span> <span class="o">=</span> <span class="n">stateStopped</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="n">startTime</span> <span class="o">=</span> <span class="n">currentTime</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>O run()método é chamado repetidamente por meio da loop()função, portanto, aqui posso verificar facilmente quanto tempo se passou subtraindo o startTimeque inicializei initialize()do tempo atual fornecido pela millis()função. Estou armazenando o tempo atual e decorrido em duas variáveis ​​locais que nomeei currentTimee elapsedTime.</p>
+<p>O que resta é verificar se terminei de esperar e, se sim, altere o estado do robô. Como o período de espera é diferente dependendo do estado em que o robô está, decidi usar uma switchinstrução, que analisa o valor de uma expressão e executa o bloco de código que começa na caseinstrução correspondente e termina com a breakinstrução .</p>
+<p>Então, quando o robô estiver no estado parado, o seguinte código será executado:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">elapsedTime</span> <span class="o">&gt;=</span> <span class="mi">5000</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">leftMotor</span><span class="p">.</span><span class="n">setSpeed</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="n">rightMotor</span><span class="p">.</span><span class="n">setSpeed</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="n">state</span> <span class="o">=</span> <span class="n">stateRunning</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="n">startTime</span> <span class="o">=</span> <span class="n">currentTime</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Espera-se que este código seja auto-explicativo. Se o tempo decorrido não chegar a cinco segundos nada acontecerá, a run()função retornará sem nenhuma alteração e um pouco depois será chamada novamente. Eventualmente, o se elapsedTimetornará 5000 milissegundos ou mais, então o código dentro da ifinstrução será executado. E essas instruções iniciam os motores, alteram o estado para stateRunninge redefinem o startTimepara o currentTime, de modo que o tempo decorrido seja redefinido para zero.</p>
+<p>A próxima vez run()que executa o estado será stateRunning, então o outro bloco na switchinstrução será executado:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="n">elapsedTime</span> <span class="o">&gt;=</span> <span class="mi">8000</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">leftMotor</span><span class="p">.</span><span class="n">setSpeed</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="n">rightMotor</span><span class="p">.</span><span class="n">setSpeed</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="n">state</span> <span class="o">=</span> <span class="n">stateStopped</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="n">startTime</span> <span class="o">=</span> <span class="n">currentTime</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>E isso funciona exatamente como acima, mas espera oito segundos em vez de cinco.</p>
+<p>Fazer coisas neste certamente mais complicado do que usar delay():</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">run</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">leftMotor</span><span class="p">.</span><span class="n">setSpeed</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">rightMotor</span><span class="p">.</span><span class="n">setSpeed</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">delay</span><span class="p">(</span><span class="mi">5000</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">leftMotor</span><span class="p">.</span><span class="n">setSpeed</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">rightMotor</span><span class="p">.</span><span class="n">setSpeed</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">delay</span><span class="p">(</span><span class="mi">8000</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">         <span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Mas a delay()solução mostrada acima é limitada, pois nada acontece durante essas esperas de cinco e oito segundos. Com a solução de tempo decorrido, será fácil para mim fazer o robô fazer outras coisas enquanto espera, como parar quando chegar muito perto de uma parede ou responder a comandos remotos enviados por bluetooth.</p>
+<h2 id="ilustrações">Ilustrações</h2>
+<p><strong>PIXABAY</strong><br>
+Disponível em: <a href="https://pixabay.com/pt/photos/circuito-integrado-computador-441294/" target="_blank" rel="noopener noreffer ">https://pixabay.com/pt/photos/circuito-integrado-computador-441294/</a><br>
+Acesso em: 18 abr. 2023.</p>
+<h2 id="fontes">Fontes</h2>
+<p><strong>MIGUELGRINBERG.COM</strong><br>
+Disponível em: <a href="https://blog.miguelgrinberg.com/post/building-an-arduino-robot-part-iv-a-not-so-basic-robot-firmware" target="_blank" rel="noopener noreffer ">https://blog.miguelgrinberg.com/post/building-an-arduino-robot-part-iv-a-not-so-basic-robot-firmware</a><br>
+Acesso em: 18 abr. 2023.</p>
+<p><strong>ARDUINO.CC</strong><br>
+Disponível em: <a href="https://www.arduino.cc" target="_blank" rel="noopener noreffer ">https://www.arduino.cc</a><br>
+Acesso em: 18 abr. 2023.</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Atualizado em 2023-04-18</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/arduino-robo-iii/index.md" target="_blank">Leia em Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/arduino/">Arduino</a>,&nbsp;<a href="/tags/rob%C3%B4/">Robô</a>,&nbsp;<a href="/tags/bibliotecas/">Bibliotecas</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Voltar</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/arduino-robo-ii/" class="prev" rel="prev" title="Construindo um Robô Arduino - Parte II"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Construindo um Robô Arduino - Parte II</a>
+            <a href="/git-github/" class="next" rel="next" title="Git e GitHub">Git e GitHub<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Suzano Bitencourt</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Voltar ao topo">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="Ver comentários">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.pt.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copiar para a área de transferência","maxShownLines":50},"comment":{},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"pt","maxResultLength":10,"noResultsFound":"Nenhum resultado encontrado","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

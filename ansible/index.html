@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Ansible - Suzano Bitencourt</title><meta name="Description" content="Conceitos básicos de Ansible e como usá-lo para gerenciar a configuração de servidores e aplicações.."><meta property="og:title" content="Ansible" />
+<meta property="og:description" content="Conceitos básicos de Ansible e como usá-lo para gerenciar a configuração de servidores e aplicações.." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://suzano.github.io/ansible/" /><meta property="og:image" content="https://suzano.github.io/ansible/featured-image.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-03-20T12:00:00+00:00" />
+<meta property="article:modified_time" content="2023-03-22T12:00:00+00:00" /><meta property="og:site_name" content="Suzano Bitencourt" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://suzano.github.io/ansible/featured-image.jpg"/>
+<meta name="twitter:title" content="Ansible"/>
+<meta name="twitter:description" content="Conceitos básicos de Ansible e como usá-lo para gerenciar a configuração de servidores e aplicações.."/>
+<meta name="application-name" content="Suzano Bitencourt">
+<meta name="apple-mobile-web-app-title" content="Suzano Bitencourt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://suzano.github.io/ansible/" /><link rel="prev" href="https://suzano.github.io/fatsort/" /><link rel="next" href="https://suzano.github.io/ventoy/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Ansible",
+        "inLanguage": "pt-BR",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/suzano.github.io\/ansible\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/suzano.github.io\/ansible\/featured-image.jpg",
+                            "width":  1420 ,
+                            "height":  430 
+                        }],"genre": "posts","keywords": "Linux, Ansible, Automação","wordcount":  1121 ,
+        "url": "https:\/\/suzano.github.io\/ansible\/","datePublished": "2023-03-20T12:00:00+00:00","dateModified": "2023-03-22T12:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Suzano"
+            },"description": "Conceitos básicos de Ansible e como usá-lo para gerenciar a configuração de servidores e aplicações.."
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Suzano Bitencourt"><span class="header-title-pre"><i class='fa-solid fa-mug-hot' aria-hidden='true'></i></span>Suzano Bitencourt</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categorias </a><a class="menu-item" href="/docs/"> Documentação </a><a class="menu-item" href="/about/"> Sobre </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Pesquisar títulos ou conteúdos ..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Pesquisa">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Limpar">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Suzano Bitencourt"><span class="header-title-pre"><i class='fa-solid fa-mug-hot' aria-hidden='true'></i></span>Suzano Bitencourt</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Pesquisar títulos ou conteúdos ..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Pesquisa">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Limpar">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancelar
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categorias</a><a class="menu-item" href="/docs/" title="">Documentação</a><a class="menu-item" href="/about/" title="">Sobre</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Conteúdos</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Ansible</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://suzano.github.io/sobre/" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Suzano</a></span>&nbsp;<span class="post-category">incluido em <a href="/categories/manuten%C3%A7%C3%A3o/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Manutenção</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-03-20">2023-03-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1121 palavras&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;6 minutos&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/ansible/featured-image.jpg"
+        data-srcset="/ansible/featured-image.jpg, /ansible/featured-image.jpg 1.5x, /ansible/featured-image.jpg 2x"
+        data-sizes="auto"
+        alt="/ansible/featured-image.jpg"
+        title="Conceitos básicos de Ansible e como usá-lo para gerenciar a configuração de servidores e aplicações.." /></div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Conteúdos</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#conceitos">Conceitos</a>
+      <ul>
+        <li><a href="#automação-de-infraestrutura">Automação De Infraestrutura</a></li>
+        <li><a href="#como-funciona">Como funciona?</a></li>
+      </ul>
+    </li>
+    <li><a href="#parte-1-repositórios">Parte 1: Repositórios</a></li>
+    <li><a href="#parte-2-instalação">Parte 2: Instalação</a></li>
+    <li><a href="#parte-3-ad-hoc">Parte 3: Ad-Hoc</a></li>
+    <li><a href="#parte-4-módulos">Parte 4: Módulos</a></li>
+    <li><a href="#parte-5-inventário">Parte 5: Inventário</a>
+      <ul>
+        <li><a href="#primeiro-arquivo-de-inventário">Primeiro Arquivo De Inventário</a></li>
+      </ul>
+    </li>
+    <li><a href="#parte-6-playbook">Parte 6: Playbook</a>
+      <ul>
+        <li><a href="#primeira-playbook">Primeira Playbook</a></li>
+      </ul>
+    </li>
+    <li><a href="#parte-7-dicas-e-truques">Parte 7: Dicas E Truques</a>
+      <ul>
+        <li><a href="#criar-relação-de-confiança-hosts-linux">Criar relação de confiança Hosts Linux</a></li>
+        <li><a href="#outras-opções-de-conexão-com-os-hosts-alvo">Outras opções de conexão com os Hosts Alvo</a></li>
+        <li><a href="#listagem-de-hosts-e-tasks-das-playbooks">Listagem de Hosts e Tasks das Playbooks</a></li>
+        <li><a href="#checagem-de-sintaxe">Checagem de sintaxe</a></li>
+        <li><a href="#saltos">Saltos</a></li>
+        <li><a href="#depurando-debug">Depurando (Debug)</a></li>
+      </ul>
+    </li>
+    <li><a href="#ilustrações">Ilustrações</a></li>
+    <li><a href="#referências">Referências</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>O objetivo é apresentar os conceitos básicos de Ansible e como usá-lo para gerenciar a configuração de servidores e aplicações. Comandos básicos, playbooks para automatizar tarefas de configuração de servidores e aplicações, e executar playbooks em diferentes ambientes.</p>
+<h2 id="conceitos">Conceitos</h2>
+<h3 id="automação-de-infraestrutura">Automação De Infraestrutura</h3>
+<p>O Ansible é uma ferramenta open source que permitem a automação de TI,  automação cloud, gerenciamento de conformidade e segurança, fluxo automático para integração e deploy contínuo (CI/CD).
+Existem outras como Puppet, Saltstack, Chef e CFEngine.</p>
+<h3 id="como-funciona">Como funciona?</h3>
+<p>O Ansible conecta-se ao que você quer automatizar e implementa programas que executam instruções anteriormente inseridas manualmente. Em seguida, o Ansible executa determinados módulos (sobre SSH padrão) e os remove ao terminar (se aplicável).</p>
+<h2 id="parte-1-repositórios">Parte 1: Repositórios</h2>
+<p>Para os ambientes de RHEL/CentOS 6, é necessário adicionar/instalar o repositório do EPEL(Extra Packages for Enterprise Linux):</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sudo yum install epel-release -y
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="parte-2-instalação">Parte 2: Instalação</h2>
+<p>Arch Linux</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ paru -Sy ansible libselinux-python
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>OpenSUSE</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sudo zypper refresh
+</span></span><span class="line"><span class="cl">$ sudo zypper install ansible
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>RHEL/Centos 6+</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sudo yum install ansible libselinux-python -y
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Fedora 24+</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sudo dnf install ansible libselinux-python -y
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="parte-3-ad-hoc">Parte 3: Ad-Hoc</h2>
+<p>Na Informática, uma rede ad hoc é uma ligação temporária entre vários computadores e dispositivos, utilizada para uma finalidade específica. Por exemplo: jogos em rede, partilha de documentos, partilha de impressora, partilha de internet com os utilizadores da rede, etc.</p>
+<p>Após a conclusão da instalação, o Ansible já estará pronto para iniciar os primeiros comandos de automação.</p>
+<p>Verificando a versão do Ansible</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ ansible --version
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Verificar conectividade entre o Ansible Control e o Host:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ ansible localhost -m ping
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>Dica:<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">Quando nenhum arquivo de inventário é definido, somente o Host ‘localhost’ fica disponível para os comandos Ansible. Para Hosts remotos será necessário definí-los num arquivo de inventário.</div>
+        </div>
+    </div>
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw" aria-hidden="true"></i>Info:<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">O módulo ‘ping’ foi informado através do parâmetro -m e, no caso de sucesso, retorna ‘pong’. A exibição dos resultados dos comandos Ansible é feita no formato json, mas pode ser alterada para yaml a partir da versão 2.5.</div>
+        </div>
+    </div>
+<p>Coletando informações do host (Gathers facts)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ ansible localhost -m setup
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">O comando setup coleta as informações dos Hosts e as exibe em forma de variáveis com notação JSON. Estas variáveis podem ser utilizadas em tempo de execução para customizar ou condicionar uma ação.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Reiniciando um serviço</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ ansible localhost -m service -a <span class="s2">&#34;name=sshd state=restarted&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw" aria-hidden="true"></i>Info:<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">O parâmetro <code>-a</code> informa os parâmetros do módulo em questão (no exemplo, <code>-m service</code>). O uso via Ad-Hoc é com aspas (simples ou duplas), utilizando o caractere ‘=’ para atribuir o valor de cada opção/parâmetro.</div>
+        </div>
+    </div>
+<h2 id="parte-4-módulos">Parte 4: Módulos</h2>
+<p>Verificando Os Módulos Disponíveis:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ ansible-doc -l
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw" aria-hidden="true"></i>Info:<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">Após a pesquisa, digitar a tecla <code>n</code> (next) para mostrar a próxima entrada ou <code>p</code> (preview) para mostrar a entrada anterior. Para sair basta digitar a letra ‘q’.</div>
+        </div>
+    </div>
+<p>Com o nome do módulo escolhido, é possível ver a documentação do módulo através do comando:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ ansible-doc &lt;nome_do_modulo&gt;
+</span></span><span class="line"><span class="cl">$ ansible-doc add_host
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="parte-5-inventário">Parte 5: Inventário</h2>
+<h3 id="primeiro-arquivo-de-inventário">Primeiro Arquivo De Inventário</h3>
+<p>O Ansible foi projetado para trabalhar com múltiplos sistemas (servidores baremetal, máquinas virtuais, Dispositivos de rede etc.) ao mesmo tempo. Ele trabalha selecionando partes desses sistemas listados num arquivo de inventário, que por padrão fica salvo em <code>/etc/ansible/hosts</code>. É possível também especificar um arquivo diferente usando o parâmetro <code>-i &lt;path/nome_inventario&gt;</code> na linha de comando (Ad-Hoc <code>$ ansible</code> ou Playbook <code>$ ansible-playbook</code>).</p>
+<p>Criaremos um inventário simplificado com vários hosts que apontam para localhost através da variável <code>ansible_connection=local</code>. Com isso teremos mais de um host no inventário apontando para um único servidor, simulando vários sistemas.</p>
+<p>Copie, cole e salve o conteúdo abaixo no arquivo <code>/etc/ansible/hosts-teste</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">web1.example.com
+</span></span><span class="line"><span class="cl">web2.example.com
+</span></span><span class="line"><span class="cl">db.example.com
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[webservers]
+</span></span><span class="line"><span class="cl">web1.example.com
+</span></span><span class="line"><span class="cl">web2.example.com
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[dbservers]
+</span></span><span class="line"><span class="cl">db.example.com
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[datacenter:children]
+</span></span><span class="line"><span class="cl">webservers
+</span></span><span class="line"><span class="cl">dbservers
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[datacenter:vars]
+</span></span><span class="line"><span class="cl">ansible_connection=local
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Verificando se todos os hosts (all) do inventário estão respondendo:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ ansible -i /etc/ansible/hosts-teste -m ping all
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Verificando o grupo webservers</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ ansible -i /etc/ansible/hosts-teste -m ping webservers -e <span class="s1">&#39;ansible_python_interpreter=/usr/bin/python3&#39;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="parte-6-playbook">Parte 6: Playbook</h2>
+<h3 id="primeira-playbook">Primeira Playbook</h3>
+<p>Os comandos Ad-Hoc executam apenas um módulo por vez. Para criar uma sequência de tarefas será necessário criar playbooks.</p>
+<p>Utilizando um arquivo no formato YAML, todas as tarefas podem ser definidas em sequência e chamadas através de um único comando <code>ansible-playbook -i &lt;nome_inventario&gt; &lt;nome_playbook&gt;</code>.</p>
+<p>Uma playbook basicamente é composta por <code>play</code> e <code>tasks</code>.</p>
+<ul>
+<li>play</li>
+<li>tasks</li>
+</ul>
+<p>Copie, cole e salve o arquivo abaixo com o nome playbook.yml</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">- name: 1 - Criando servidores web
+</span></span><span class="line"><span class="cl">  hosts: webservers
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  tasks:
+</span></span><span class="line"><span class="cl">    # task 1
+</span></span><span class="line"><span class="cl">    - name: garantiar que o Apache esteja na última versão
+</span></span><span class="line"><span class="cl">      package: name=httpd state=latest
+</span></span><span class="line"><span class="cl">    # task 2
+</span></span><span class="line"><span class="cl">    - name: conter a linha &#39;127.0.0.1 teste&#39; no arquivo /etc/hosts
+</span></span><span class="line"><span class="cl">      lineinfile: path=/etc/hosts line=&#39;127.0.0.1 teste&#39; state=present
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">- name: 2 - Criando o servidor de banco
+</span></span><span class="line"><span class="cl">  hosts: dbservers
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  tasks:
+</span></span><span class="line"><span class="cl">    # task 1
+</span></span><span class="line"><span class="cl">    - name: garantir que o mysqld (MariaDB) está na última versão
+</span></span><span class="line"><span class="cl">      package: name=mariadb-server state=latest
+</span></span><span class="line"><span class="cl">    # task 2
+</span></span><span class="line"><span class="cl">    - name: garantir que o  mysqld (MariaDB) está executando (e habilitá-lo no boot)
+</span></span><span class="line"><span class="cl">      service: name=mariadb state=started enabled=yes
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="parte-7-dicas-e-truques">Parte 7: Dicas E Truques</h2>
+<h3 id="criar-relação-de-confiança-hosts-linux">Criar relação de confiança Hosts Linux</h3>
+<p>Gerar uma chave de conexão:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ ssh-key-gen
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Copiar o ID para o Hosts alvo:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ ssh-copy-id &lt;nome_host&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="outras-opções-de-conexão-com-os-hosts-alvo">Outras opções de conexão com os Hosts Alvo</h3>
+<p>Solicitando a senha do usuário pelo prompt:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ ansible-playbook -i /etc/ansible/hosts-test playbook.yml --ask-pass
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Solicitando senha para escalar privilégios pelo prompt:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ ansible-playbook -i /etc/ansible/hosts-test playbook.yml --ask-become-pas
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="listagem-de-hosts-e-tasks-das-playbooks">Listagem de Hosts e Tasks das Playbooks</h3>
+<p>Listando todos os Hosts das Playbooks:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sudo ansible-playbook -i /etc/ansible/hosts-test playbook.yml --list-hosts
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Listando todas as TASKS das Playbooks:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sudo ansible-playbook -i /etc/ansible/hosts-test playbook.yml --list-tasks
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="checagem-de-sintaxe">Checagem de sintaxe</h3>
+<p>Checando a sintaxe YAML:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sudo ansible-playbook -i /etc/ansible/hosts-test playbook.yml --syntax-check
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="saltos">Saltos</h3>
+<p>Confirmando a execução das TASKs:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sudo ansible-playbook -i /etc/ansible/hosts-test playbook.yml --step
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Iniciando a Playbook a partir de uma TASK:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sudo ansible-playbook -i /etc/ansible/hosts-test playbook.yml --start-at-task<span class="o">=</span><span class="s2">&#34;garantir que o mysqld (MariaDB) está na última versão&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Limitando a execução da playbook:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sudo ansible-playbook -i /etc/ansible/hosts-test playbook.yml --limit web1.example.com
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="depurando-debug">Depurando (Debug)</h3>
+<p>Executando a playbook em Debug modo 1:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sudo ansible-playbook -i /etc/ansible/hosts-test playbook.yml -v
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Executando a playbook em Debug modo 2:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sudo ansible-playbook -i /etc/ansible/hosts-test playbook.yml -vv
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Executando a playbook em Debug modo 3:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sudo ansible-playbook -i /etc/ansible/hosts-test playbook.yml -vvv
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Executando a playbook em Debug de conexão:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sudo ansible-playbook -i /etc/ansible/hosts-test playbook.yml -vvvv
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="ilustrações">Ilustrações</h2>
+<p><strong>PIXABAY</strong><br>
+Disponível em: <a href="https://pixabay.com/pt/photos/rede-servidor-sistema-2402637/" target="_blank" rel="noopener noreffer ">https://pixabay.com/pt/photos/rede-servidor-sistema-2402637/</a><br>
+Acesso em: 22 mar. 2023.</p>
+<h2 id="referências">Referências</h2>
+<p><strong>ANSIBLE-BR - Documentação ANSIBLE-BR</strong><br>
+Disponível em: <a href="http://ansible-br.org" target="_blank" rel="noopener noreffer ">http://ansible-br.org</a><br>
+Acesso em: 22 mar. 2023</p>
+<p><strong>RED HAT - O que é Ansible?</strong><br>
+Disponível em: <a href="https://www.redhat.com/pt-br/technologies/management/ansible/what-is-ansible" target="_blank" rel="noopener noreffer ">https://www.redhat.com/pt-br/technologies/management/ansible/what-is-ansible</a><br>
+Acesso em: 22 mar. 2023</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Atualizado em 2023-03-22</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/ansible/index.md" target="_blank">Leia em Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/linux/">Linux</a>,&nbsp;<a href="/tags/ansible/">Ansible</a>,&nbsp;<a href="/tags/automa%C3%A7%C3%A3o/">Automação</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Voltar</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/fatsort/" class="prev" rel="prev" title="Fatsort"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Fatsort</a>
+            <a href="/ventoy/" class="next" rel="next" title="Ventoy">Ventoy<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Suzano Bitencourt</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Voltar ao topo">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="Ver comentários">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.pt.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copiar para a área de transferência","maxShownLines":50},"comment":{},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"pt","maxResultLength":10,"noResultsFound":"Nenhum resultado encontrado","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

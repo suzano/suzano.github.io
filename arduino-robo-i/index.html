@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Construindo um Robô Arduino - Parte I - Suzano Bitencourt</title><meta name="Description" content="Construindo um Robô Arduino - Parte I"><meta property="og:title" content="Construindo um Robô Arduino - Parte I" />
+<meta property="og:description" content="Construindo um Robô Arduino - Parte I" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://suzano.github.io/arduino-robo-i/" /><meta property="og:image" content="https://suzano.github.io/arduino-robo-i/featured-image.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-04-17T12:00:00+00:00" />
+<meta property="article:modified_time" content="2023-04-17T12:00:00+00:00" /><meta property="og:site_name" content="Suzano Bitencourt" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://suzano.github.io/arduino-robo-i/featured-image.jpg"/>
+<meta name="twitter:title" content="Construindo um Robô Arduino - Parte I"/>
+<meta name="twitter:description" content="Construindo um Robô Arduino - Parte I"/>
+<meta name="application-name" content="Suzano Bitencourt">
+<meta name="apple-mobile-web-app-title" content="Suzano Bitencourt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://suzano.github.io/arduino-robo-i/" /><link rel="prev" href="https://suzano.github.io/arduino-biblioteca/" /><link rel="next" href="https://suzano.github.io/arduino-robo-ii/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Construindo um Robô Arduino - Parte I",
+        "inLanguage": "pt-BR",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/suzano.github.io\/arduino-robo-i\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/suzano.github.io\/arduino-robo-i\/featured-image.jpg",
+                            "width":  1420 ,
+                            "height":  430 
+                        }],"genre": "posts","keywords": "Arduino, Robô, Bibliotecas","wordcount":  636 ,
+        "url": "https:\/\/suzano.github.io\/arduino-robo-i\/","datePublished": "2023-04-17T12:00:00+00:00","dateModified": "2023-04-17T12:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Suzano"
+            },"description": "Construindo um Robô Arduino - Parte I"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Suzano Bitencourt"><span class="header-title-pre"><i class='fa-solid fa-mug-hot' aria-hidden='true'></i></span>Suzano Bitencourt</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categorias </a><a class="menu-item" href="/docs/"> Documentação </a><a class="menu-item" href="/about/"> Sobre </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Pesquisar títulos ou conteúdos ..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Pesquisa">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Limpar">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Suzano Bitencourt"><span class="header-title-pre"><i class='fa-solid fa-mug-hot' aria-hidden='true'></i></span>Suzano Bitencourt</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Pesquisar títulos ou conteúdos ..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Pesquisa">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Limpar">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancelar
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categorias</a><a class="menu-item" href="/docs/" title="">Documentação</a><a class="menu-item" href="/about/" title="">Sobre</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Conteúdos</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Construindo um Robô Arduino - Parte I</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://suzano.github.io/sobre/" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Suzano</a></span>&nbsp;<span class="post-category">incluido em <a href="/categories/sistemas-embarcados/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Sistemas Embarcados</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-04-17">2023-04-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;636 palavras&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutos&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/arduino-robo-i/featured-image.jpg"
+        data-srcset="/arduino-robo-i/featured-image.jpg, /arduino-robo-i/featured-image.jpg 1.5x, /arduino-robo-i/featured-image.jpg 2x"
+        data-sizes="auto"
+        alt="/arduino-robo-i/featured-image.jpg"
+        title="Construindo um Robô Arduino - Parte I" /></div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Conteúdos</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#recursos-e-funções-do-robô">Recursos e Funções do Robô</a></li>
+    <li><a href="#lista-de-dispositivos">Lista de Dispositivos</a>
+      <ul>
+        <li><a href="#placa-arduino">Placa Arduino</a></li>
+        <li><a href="#controle-de-motor">Controle de Motor</a></li>
+        <li><a href="#sensor-de-distância">Sensor de Distância</a></li>
+        <li><a href="#escravo-bluetooth">Escravo Bluetooth</a></li>
+        <li><a href="#placa-de-prototipagem-protoboard-e-cabos">Placa de prototipagem (protoboard) e cabos</a></li>
+        <li><a href="#cabo-usb">Cabo USB</a></li>
+        <li><a href="#kit-de-veículo-para-arduino">Kit de Veículo para Arduino</a></li>
+      </ul>
+    </li>
+    <li><a href="#ilustrações">Ilustrações</a></li>
+    <li><a href="#fontes">Fontes</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Construindo um veículo robô controlado remotamente.</p>
+<p>Usando Arduino para a plataforma de hardware, por ser amplamente utilizada por criadores de hardware em todo o mundo, o que significa que há muitas informações e recursos disponíveis.</p>
+<p>Sendo fácil o suficiente para concluir em um período de tempo relativamente curto, mas difícil o suficiente para ser interessante e desafiador.</p>
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw" aria-hidden="true"></i>Nota<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">Este artigo é uma tradução vergonhosa da página do <a href="https://blog.miguelgrinberg.com/post/building-an-arduino-robot-part-i-hardware-components" target="_blank" rel="noopener noreffer ">miguelgrinberg.com</a>.</div>
+        </div>
+    </div>
+<h2 id="recursos-e-funções-do-robô">Recursos e Funções do Robô</h2>
+<p>Recursos e funções:</p>
+<ul>
+<li>Deve ser um veículo que pode se mover para frente, para trás e virar.</li>
+<li>Deve ser fácil de montar e desmontar.</li>
+<li>Deve ter um modo em que seja capaz de se mover por conta própria, detectando os obstáculos à frente e evitando-os.</li>
+<li>Deve ter um modo em que possa ser totalmente controlado a partir do meu smartphone Android.</li>
+<li>Deve ser fácil de hackear, mudar e melhorar.</li>
+</ul>
+<h2 id="lista-de-dispositivos">Lista de Dispositivos</h2>
+<p>Lista de dispositivos usados para projeto:</p>
+<ul>
+<li>Placa Arduino</li>
+<li>Controle de motor</li>
+<li>Sensor de distância</li>
+<li>Escravo Bluetooth</li>
+<li>Placa de prototipagem e cabos</li>
+<li>Cabo USB</li>
+<li>Kit de veículo</li>
+</ul>
+<h3 id="placa-arduino">Placa Arduino</h3>
+<p><figure><a class="lightgallery" href="./arduino.jpg" title="Arduino Uno" data-thumbnail="./arduino.jpg" data-sub-html="<h2>Arduino Uno</h2><p>Arduino Uno</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="./arduino.jpg"
+            data-srcset="./arduino.jpg, ./arduino.jpg 1.5x, ./arduino.jpg 2x"
+            data-sizes="auto"
+            alt="./arduino.jpg" />
+    </a><figcaption class="image-caption">Arduino Uno</figcaption>
+    </figure></p>
+<p>Arduino é uma plataforma eletrônica de código aberto baseada em hardware e software fáceis de usar. As placas Arduino são capazes de ler entradas de um sensor, transformá-las em uma saída, ativando um motor, ligando um LED ou até publicando algo online. Você pode dizer à sua placa o que fazer enviando um conjunto de instruções para o microcontrolador na placa. Para isso utiliza-se a linguagem de programação Arduino (baseada em Wiring), e o Software Arduino (IDE), baseado em Processamento.</p>
+<h3 id="controle-de-motor">Controle de Motor</h3>
+<p><figure><a class="lightgallery" href="./driver-motor.jpg" title="Controle de Motor" data-thumbnail="./driver-motor.jpg" data-sub-html="<h2>Controle de Motor</h2><p>Controle de Motor</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="./driver-motor.jpg"
+            data-srcset="./driver-motor.jpg, ./driver-motor.jpg 1.5x, ./driver-motor.jpg 2x"
+            data-sizes="auto"
+            alt="./driver-motor.jpg" />
+    </a><figcaption class="image-caption">Controle de Motor</figcaption>
+    </figure></p>
+<p>A placa Arduino não pode controlar diretamente um motor. Para essa função existe um circuito especializado chamado <code>H-Bridge</code>, e existem várias implementações deste circuito prontamente disponíveis para a plataforma Arduino, ou você também pode construir um a partir de peças básicas por quase nada.</p>
+<h3 id="sensor-de-distância">Sensor de Distância</h3>
+<p><figure><a class="lightgallery" href="./sensor-distancia.jpg" title="Sensor de Distância" data-thumbnail="./sensor-distancia.jpg" data-sub-html="<h2>Sensor de Distância</h2><p>Sensor de Distância</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="./sensor-distancia.jpg"
+            data-srcset="./sensor-distancia.jpg, ./sensor-distancia.jpg 1.5x, ./sensor-distancia.jpg 2x"
+            data-sizes="auto"
+            alt="./sensor-distancia.jpg" />
+    </a><figcaption class="image-caption">Sensor de Distância</figcaption>
+    </figure></p>
+<p>Os sensores de distância enviam um sinal ultrassônico para a frente e, em seguida, aguardam para receber um sinal rebatido. Dependendo de quanto tempo o sinal leva para retornar, a distância aproximada de um obstáculo pode ser calculada. Vamos usar este pequeno dispositivo para evitar que o robô bata em paredes ou outros obstáculos em seu caminho.</p>
+<h3 id="escravo-bluetooth">Escravo Bluetooth</h3>
+<p><figure><a class="lightgallery" href="./escravo-bluetooth.jpg" title="Escravo Bluetooth" data-thumbnail="./escravo-bluetooth.jpg" data-sub-html="<h2>Escravo Bluetooth</h2><p>Escravo Bluetooth</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="./escravo-bluetooth.jpg"
+            data-srcset="./escravo-bluetooth.jpg, ./escravo-bluetooth.jpg 1.5x, ./escravo-bluetooth.jpg 2x"
+            data-sizes="auto"
+            alt="./escravo-bluetooth.jpg" />
+    </a><figcaption class="image-caption">Escravo Bluetooth</figcaption>
+    </figure></p>
+<p>A maneira mais fácil de controlar o robô a partir de um smartphone é através da interface serial bluetooth que todos os smartphones modernos possuem. O telefone funcionará como um mestre, então eu precisava de um escravo bluetooth para o robô.</p>
+<h3 id="placa-de-prototipagem-protoboard-e-cabos">Placa de prototipagem (protoboard) e cabos</h3>
+<p><figure><a class="lightgallery" href="./protoboard.jpg" title="Protoboard" data-thumbnail="./protoboard.jpg" data-sub-html="<h2>Protoboard</h2><p>Protoboard</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="./protoboard.jpg"
+            data-srcset="./protoboard.jpg, ./protoboard.jpg 1.5x, ./protoboard.jpg 2x"
+            data-sizes="auto"
+            alt="./protoboard.jpg" />
+    </a><figcaption class="image-caption">Protoboard</figcaption>
+    </figure></p>
+<p>Para poder montar e desmontar o robô à vontade sem estragar nenhuma peça, usaremos uma  placa de prototipagem (protoboard) e diversos cabos não havendo necessidade de nenhuma solda.</p>
+<h3 id="cabo-usb">Cabo USB</h3>
+<p><figure><a class="lightgallery" href="./cabo-usb.jpg" title="Cabo USB" data-thumbnail="./cabo-usb.jpg" data-sub-html="<h2>Cabo USB</h2><p>Cabo USB</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="./cabo-usb.jpg"
+            data-srcset="./cabo-usb.jpg, ./cabo-usb.jpg 1.5x, ./cabo-usb.jpg 2x"
+            data-sizes="auto"
+            alt="./cabo-usb.jpg" />
+    </a><figcaption class="image-caption">Cabo USB</figcaption>
+    </figure></p>
+<p>A placa Arduino é conectada a um computador através de uma porta USB. A conexão USB é usada para carregar software e também pode ser usada como fonte de energia durante o teste.</p>
+<h3 id="kit-de-veículo-para-arduino">Kit de Veículo para Arduino</h3>
+<p><figure><a class="lightgallery" href="./kit-veiculo.jpg" title="Kit de Veículo para Arduino" data-thumbnail="./kit-veiculo.jpg" data-sub-html="<h2>Kit de Veículo para Arduino</h2><p>Kit de Veículo para Arduino</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="./kit-veiculo.jpg"
+            data-srcset="./kit-veiculo.jpg, ./kit-veiculo.jpg 1.5x, ./kit-veiculo.jpg 2x"
+            data-sizes="auto"
+            alt="./kit-veiculo.jpg" />
+    </a><figcaption class="image-caption">Kit de Veículo para Arduino</figcaption>
+    </figure></p>
+<p>Existem muitas opções de kit para veículos com Arduino. Os únicos requisitos é um com o tamanho suficiente para suportar a plataforma e todas as peças, incluindo as rodas e motores.</p>
+<h2 id="ilustrações">Ilustrações</h2>
+<p><strong>PIXABAY</strong><br>
+Disponível em: <a href="https://pixabay.com/pt/photos/circuito-integrado-computador-441294/" target="_blank" rel="noopener noreffer ">https://pixabay.com/pt/photos/circuito-integrado-computador-441294/</a><br>
+Acesso em: 17 abr. 2023.</p>
+<p><strong>AMAZON.COM.BR - PLACA ARDUINO</strong><br>
+Disponível em: <a href="https://www.amazon.com.br/Placa-Uno-Atmega328p-compat%C3%ADvel-Arduino/dp/B0BSSLRM7L/ref=sr_1_3?keywords=arduino&amp;qid=1681826246&amp;sr=8-3" target="_blank" rel="noopener noreffer ">https://www.amazon.com.br/Placa-Uno-Atmega328p-compat%C3%ADvel-Arduino/dp/B0BSSLRM7L/ref=sr_1_3?keywords=arduino&qid=1681826246&sr=8-3</a><br>
+Acesso em: 17 abr. 2023.</p>
+<p><strong>AMAZON.COM.BR - CONTROLE DE MOTOR</strong><br>
+Disponível em: <a href="https://www.amazon.com.br/controlador-unidade-expans%C3%A3o-compat%C3%ADvel-Duemilanove/dp/B09ZQP1B46/ref=sr_1_15?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&amp;crid=KT5LP178ZN7M&amp;keywords=driver&#43;motor&amp;qid=1681826595&amp;sprefix=driver&#43;motor%2Caps%2C188&amp;sr=8-15" target="_blank" rel="noopener noreffer ">https://www.amazon.com.br/controlador-unidade-expans%C3%A3o-compat%C3%ADvel-Duemilanove/dp/B09ZQP1B46/ref=sr_1_15?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=KT5LP178ZN7M&keywords=driver+motor&qid=1681826595&sprefix=driver+motor%2Caps%2C188&sr=8-15</a><br>
+Acesso em: 17 abr. 2023.</p>
+<p><strong>AMAZON.COM.BR - SENSOR DE DISTÂNCIA</strong><br>
+Disponível em: <a href="https://www.amazon.com.br/Modulo-Distancia-Ultrass%C3%B3nico-Chipsce-Hc-Sr04/dp/B08L7RLY5T/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&amp;crid=1VLOUPOQBT93V&amp;keywords=Hc-Sr04&amp;qid=1681826497&amp;sprefix=hc-sr04%2Caps%2C176&amp;sr=8-1" target="_blank" rel="noopener noreffer ">https://www.amazon.com.br/Modulo-Distancia-Ultrass%C3%B3nico-Chipsce-Hc-Sr04/dp/B08L7RLY5T/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1VLOUPOQBT93V&keywords=Hc-Sr04&qid=1681826497&sprefix=hc-sr04%2Caps%2C176&sr=8-1</a><br>
+Acesso em: 17 abr. 2023.</p>
+<p><strong>AMAZON.COM.BR - ESCRAVO BLUETOOTH</strong><br>
+Disponível em: <a href="https://www.amazon.com.br/M%C3%B3dulo-Bluetooth-Hc-06-Slave-Rs232/dp/B09Q8H8W9X/ref=sr_1_2?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&amp;crid=WCKJ46B48730&amp;keywords=HC-06&amp;qid=1681826898&amp;sprefix=hc-06%2Caps%2C173&amp;sr=8-2" target="_blank" rel="noopener noreffer ">https://www.amazon.com.br/M%C3%B3dulo-Bluetooth-Hc-06-Slave-Rs232/dp/B09Q8H8W9X/ref=sr_1_2?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=WCKJ46B48730&keywords=HC-06&qid=1681826898&sprefix=hc-06%2Caps%2C173&sr=8-2</a><br>
+Acesso em: 17 abr. 2023.</p>
+<p><strong>AMAZON.COM.BR - PROTOBOARD</strong><br>
+Disponível em: <a href="https://www.amazon.com.br/Protoboard-Regulador-Tens%C3%A3o-Jumper-Fios/dp/B0BY5KT69Z/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&amp;crid=28DFD87NBZ5JP&amp;keywords=protoboard&amp;qid=1681827372&amp;sprefix=protoboard%2Caps%2C436&amp;sr=8-1" target="_blank" rel="noopener noreffer ">https://www.amazon.com.br/Protoboard-Regulador-Tens%C3%A3o-Jumper-Fios/dp/B0BY5KT69Z/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=28DFD87NBZ5JP&keywords=protoboard&qid=1681827372&sprefix=protoboard%2Caps%2C436&sr=8-1</a></p>
+<p><strong>AMAZON.COM.BR - CABO USB</strong><br>
+Disponível em: <a href="https://www.amazon.com.br/Cabo-Para-Impressora-Pluscable-1-8M/dp/B076B5M45B/ref=sr_1_25?keywords=cabo&#43;usb&amp;qid=1681826419&amp;sr=8-25" target="_blank" rel="noopener noreffer ">https://www.amazon.com.br/Cabo-Para-Impressora-Pluscable-1-8M/dp/B076B5M45B/ref=sr_1_25?keywords=cabo+usb&qid=1681826419&sr=8-25</a><br>
+Acesso em: 17 abr. 2023.</p>
+<p><strong>AMAZON.COM.BR - KIT DE VEÍCULO</strong><br>
+Disponível em: <a href="https://www.amazon.com.br/Chassi-Carro-Segue-Faixa-Rodas/dp/B0BY5K14K7/ref=sr_1_7?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&amp;crid=S5AE51KK8X2D&amp;keywords=kit&#43;de&#43;veiculo&#43;arduino&amp;qid=1681827433&amp;sprefix=kit&#43;de&#43;veiculo&#43;arduino%2Caps%2C188&amp;sr=8-7" target="_blank" rel="noopener noreffer ">https://www.amazon.com.br/Chassi-Carro-Segue-Faixa-Rodas/dp/B0BY5K14K7/ref=sr_1_7?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=S5AE51KK8X2D&keywords=kit+de+veiculo+arduino&qid=1681827433&sprefix=kit+de+veiculo+arduino%2Caps%2C188&sr=8-7</a><br>
+Acesso em: 17 abr. 2023.</p>
+<h2 id="fontes">Fontes</h2>
+<p><strong>MIGUELGRINBERG.COM</strong><br>
+Disponível em: <a href="https://blog.miguelgrinberg.com/post/building-an-arduino-robot-part-i-hardware-components" target="_blank" rel="noopener noreffer ">https://blog.miguelgrinberg.com/post/building-an-arduino-robot-part-i-hardware-components</a><br>
+Acesso em: 17 abr. 2023.</p>
+<p><strong>ARDUINO.CC</strong><br>
+Disponível em: <a href="https://www.arduino.cc" target="_blank" rel="noopener noreffer ">https://www.arduino.cc</a><br>
+Acesso em: 17 abr. 2023.</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Atualizado em 2023-04-17</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/arduino-robo-i/index.md" target="_blank">Leia em Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/arduino/">Arduino</a>,&nbsp;<a href="/tags/rob%C3%B4/">Robô</a>,&nbsp;<a href="/tags/bibliotecas/">Bibliotecas</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Voltar</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/arduino-biblioteca/" class="prev" rel="prev" title="Criando uma biblioteca para Arduino"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Criando uma biblioteca para Arduino</a>
+            <a href="/arduino-robo-ii/" class="next" rel="next" title="Construindo um Robô Arduino - Parte II">Construindo um Robô Arduino - Parte II<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Suzano Bitencourt</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Voltar ao topo">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="Ver comentários">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.pt.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copiar para a área de transferência","maxShownLines":50},"comment":{},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"pt","maxResultLength":10,"noResultsFound":"Nenhum resultado encontrado","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

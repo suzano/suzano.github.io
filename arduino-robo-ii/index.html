@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Construindo um Robô Arduino - Parte II - Suzano Bitencourt</title><meta name="Description" content="Construindo um Robô Arduino - Parte II"><meta property="og:title" content="Construindo um Robô Arduino - Parte II" />
+<meta property="og:description" content="Construindo um Robô Arduino - Parte II" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://suzano.github.io/arduino-robo-ii/" /><meta property="og:image" content="https://suzano.github.io/arduino-robo-ii/featured-image.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-04-17T13:00:00+00:00" />
+<meta property="article:modified_time" content="2023-04-17T13:00:00+00:00" /><meta property="og:site_name" content="Suzano Bitencourt" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://suzano.github.io/arduino-robo-ii/featured-image.jpg"/>
+<meta name="twitter:title" content="Construindo um Robô Arduino - Parte II"/>
+<meta name="twitter:description" content="Construindo um Robô Arduino - Parte II"/>
+<meta name="application-name" content="Suzano Bitencourt">
+<meta name="apple-mobile-web-app-title" content="Suzano Bitencourt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://suzano.github.io/arduino-robo-ii/" /><link rel="prev" href="https://suzano.github.io/arduino-robo-i/" /><link rel="next" href="https://suzano.github.io/arduino-robo-iii/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Construindo um Robô Arduino - Parte II",
+        "inLanguage": "pt-BR",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/suzano.github.io\/arduino-robo-ii\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/suzano.github.io\/arduino-robo-ii\/featured-image.jpg",
+                            "width":  1420 ,
+                            "height":  430 
+                        }],"genre": "posts","keywords": "Arduino, Robô, Bibliotecas","wordcount":  4819 ,
+        "url": "https:\/\/suzano.github.io\/arduino-robo-ii\/","datePublished": "2023-04-17T13:00:00+00:00","dateModified": "2023-04-17T13:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Suzano"
+            },"description": "Construindo um Robô Arduino - Parte II"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Suzano Bitencourt"><span class="header-title-pre"><i class='fa-solid fa-mug-hot' aria-hidden='true'></i></span>Suzano Bitencourt</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categorias </a><a class="menu-item" href="/docs/"> Documentação </a><a class="menu-item" href="/about/"> Sobre </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Pesquisar títulos ou conteúdos ..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Pesquisa">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Limpar">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Suzano Bitencourt"><span class="header-title-pre"><i class='fa-solid fa-mug-hot' aria-hidden='true'></i></span>Suzano Bitencourt</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Pesquisar títulos ou conteúdos ..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Pesquisa">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Limpar">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancelar
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categorias</a><a class="menu-item" href="/docs/" title="">Documentação</a><a class="menu-item" href="/about/" title="">Sobre</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Conteúdos</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Construindo um Robô Arduino - Parte II</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://suzano.github.io/sobre/" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Suzano</a></span>&nbsp;<span class="post-category">incluido em <a href="/categories/sistemas-embarcados/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Sistemas Embarcados</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-04-17">2023-04-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;4819 palavras&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;23 minutos&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/arduino-robo-ii/featured-image.jpg"
+        data-srcset="/arduino-robo-ii/featured-image.jpg, /arduino-robo-ii/featured-image.jpg 1.5x, /arduino-robo-ii/featured-image.jpg 2x"
+        data-sizes="auto"
+        alt="/arduino-robo-ii/featured-image.jpg"
+        title="Construindo um Robô Arduino - Parte II" /></div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Conteúdos</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#os-pinos-do-arduino">Os pinos do Arduino</a></li>
+    <li><a href="#programando-o-arduino-com-sketches">Programando o Arduino com Sketches</a></li>
+    <li><a href="#olá-mundo-estilo-arduino">&ldquo;Olá, mundo!&rdquo;, estilo Arduino</a>
+      <ul>
+        <li><a href="#algumas-informações">Algumas informações</a></li>
+        <li><a href="#referência-do-arduino">Referência do Arduino</a></li>
+      </ul>
+    </li>
+    <li><a href="#trabalhando-com-leds">Trabalhando com LEDs</a></li>
+    <li><a href="#programação-do-sensor-de-distância">Programação do sensor de distância</a></li>
+    <li><a href="#motores">Motores</a></li>
+    <li><a href="#controle-remoto-por-bluetooth">Controle Remoto por Bluetooth</a></li>
+    <li><a href="#ilustrações">Ilustrações</a></li>
+    <li><a href="#fontes">Fontes</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Programando o Arduino</p>
+<p>Você conhecerá os fundamentos da programação de sensores, motores e outros dispositivos conectados ao Arduino, e também terá um entendimento de como um controle remoto sem fio pode se comunicar com a placa Arduino via Bluetooth.</p>
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw" aria-hidden="true"></i>Nota<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">Este artigo é uma tradução vergonhosa da página do <a href="https://blog.miguelgrinberg.com/post/building-an-arduino-robot-part-ii-programming-the-arduino" target="_blank" rel="noopener noreffer ">miguelgrinberg.com</a>.</div>
+        </div>
+    </div>
+<h2 id="os-pinos-do-arduino">Os pinos do Arduino</h2>
+<p>A placa Arduino se comunica com os dispositivos conectados por meio de seus pinos de entrada e saída:</p>
+<p><figure><a class="lightgallery" href="./arduino.png" title="Arduino Uno" data-thumbnail="./arduino.png" data-sub-html="<h2>Arduino Uno</h2><p>Arduino Uno</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="./arduino.png"
+            data-srcset="./arduino.png, ./arduino.png 1.5x, ./arduino.png 2x"
+            data-sizes="auto"
+            alt="./arduino.png" />
+    </a><figcaption class="image-caption">Arduino Uno</figcaption>
+    </figure></p>
+<p>No lado esquerdo você tem a porta USB (caixa cinza) e o conector de entrada de energia (caixa preta). Durante o teste, alimentaremos o Arduino com um cabo USB, mas o robô final receberá energia de uma caixa de bateria conectada ao conector de entrada de energia.</p>
+<p>No topo, da direita para a esquerda, há 14 pinos marcados do <code>0</code> ao <code>13</code>. Estes são os <code>pinos digitais</code>. Esses pinos podem ser configurados individualmente como entradas ou saídas, o que significa que dados digitais podem ser lidos ou gravados de dispositivos conectados nesses pinos. Como esses pinos são digitais, eles têm apenas dois estados possíveis, <code>HIGH</code> e <code>LOW</code>.</p>
+<p>Alguns dos pinos digitais possuem funções pré-atribuídas. Os pinos <code>0</code> e <code>1</code> também são rotulados <code>RX</code> e <code>TX</code> respectivamente. Estes são usados ​​pelo hardware de comunicação serial para enviar e receber dados. O pino <code>13</code> tem um <code>LED</code> ligado a ele na maioria das placas Arduino, por isso é um pino conveniente para enviar informações visuais simples para o mundo real. O LED do pino 13 está localizado abaixo do próprio pino 13, identificado com a letra <code>L</code> no diagrama acima. Os pinos <code>3</code>, <code>5</code>, <code>6</code>, <code>9</code>, <code>10</code> e <code>11</code> são marcados com um <code>~</code> ou uma etiqueta <code>PWM</code>, abreviação de <code>Pulse Width Modulation</code> (Modulação por Largura de Pulso). Esses pinos são capazes de produzir uma saída analógica simulada em uma linha digital. Estes podem ser usados, por exemplo, para acender um LED em diferentes níveis de intensidade.</p>
+<p>O próximo pino no topo da direita para a esquerda é <code>GND</code>, abreviação de <code>ground</code> (terra). O terra é o que fecha um circuito e permite que a corrente elétrica flua ininterruptamente.</p>
+<p>O próximo pino no canto superior esquerdo é rotulado <code>AREF</code>, abreviação de <code>Analog Reference</code> (Referência Analógica). Este pino raramente é usado, ele informa ao Arduino como configurar a faixa de tensão dos pinos analógicos.</p>
+<p>No canto inferior direito, temos seis pinos rotulados com <code>0</code> até <code>5</code>. Estes são os <code>pinos de entrada analógica</code>. Ao contrário dos pinos digitais que possuem apenas dois estados possíveis, um pino analógico pode ter <code>1024 estados possíveis</code>, de acordo com a tensão aplicada a ele. Normalmente, a faixa de tensão vai até <code>5V</code>, mas a faixa pode ser alterada aplicando a tensão máxima desejada ao pino <code>AREF</code>. Também diferente dos pinos digitais que podem ser configurados como entradas ou saídas, os pinos analógicos podem ser apenas entradas.</p>
+<p>Uma propriedade interessante dos <code>pinos analógicos</code> é que eles também podem ser usados ​​como <code>pinos digitais</code>, com <code>números de pinos de 14 a 19</code>. Você verá mais tarde que uma parte importante de qualquer projeto é alocar pinos para componentes. Se você está ficando sem pinos digitais, lembre-se de que você tem mais seis disponíveis para você.</p>
+<p>Continuando na parte inferior da direita para a esquerda, encontramos um alfinete rotulado <code>VIN</code>. Este pino fornece acesso direto à <code>tensão fornecida pela fonte de alimentação</code>. Por exemplo, se você alimentar seu Arduino com uma fonte de alimentação de 9V através do conector de alimentação, esse pino fornecerá 9V.</p>
+<p>Os próximos dois pinos são rotulados <code>GND</code> são mais dois pinos de aterramento, exatamente como o da linha superior. Eles estão aqui apenas por conveniência.</p>
+<p>Os próximos dois pinos são rotulados <code>5V</code> e <code>3.3V</code> apenas retornam essas tensões, independentemente de qual seja a tensão da fonte de alimentação.</p>
+<p>Em seguida, temos o pino <code>RESET</code>. Quando este pino é conectado ao <code>GND</code> do placa, ele é redefinido. Portanto, este é um pino útil para construir um botão de reinicialização externo.</p>
+<p>Se você estiver interessado em descobrir o que os pinos extras em sua placa fazem, consulte a documentação de sua placa.</p>
+<h2 id="programando-o-arduino-com-sketches">Programando o Arduino com Sketches</h2>
+<p>A maneira mais fácil de programar a placa é com o <a href="https://www.arduino.cc/en/software" target="_blank" rel="noopener noreffer "><strong>Software Arduino</strong></a>, que é gratuito e de código aberto, disponível para usuários de Windows, Mac OS X e Linux.</p>
+<p>Aqui está uma captura de tela do software Arduino:</p>
+<p><figure><a class="lightgallery" href="./software-arduino.png" title="Software Arduino" data-thumbnail="./software-arduino.png" data-sub-html="<h2>Software Arduino</h2><p>Software Arduino</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="./software-arduino.png"
+            data-srcset="./software-arduino.png, ./software-arduino.png 1.5x, ./software-arduino.png 2x"
+            data-sizes="auto"
+            alt="./software-arduino.png" />
+    </a><figcaption class="image-caption">Software Arduino</figcaption>
+    </figure></p>
+<p>A área branca é onde o programa é escrito. A linguagem de programação que a plataforma Arduino utiliza chama-se <code>C++</code> (pronuncia-se C plus plus ), uma linguagem considerada muito poderosa, mas difícil de aprender.</p>
+<p>Os programas <code>C++</code> são escritos como texto normal. O Arduino chama esses programas de <code>Sketches</code>. Em seguida, um utilitário chamado <code>compilador</code> lê o esboço e o converte em <code>instruções de máquina</code> que o Arduino entende.</p>
+<p>A área preta na parte inferior da janela do software Arduino é onde as informações de status aparecem. Por exemplo, se o seu código <code>C++</code> tiver um erro, é aqui que você verá os detalhes.</p>
+<p>O <code>Software Arduino</code> também possui uma barra de ferramentas, com os seguintes botões (em ordem, da esquerda para a direita):</p>
+<ul>
+<li><strong>Verificar</strong>: executa o compilador C++ em seu programa. Se houver algum erro, você os verá na área preta de status.</li>
+<li><strong>Upload</strong>: Compila seu programa C++ como o botão Verify faz, e se a compilação for bem-sucedida, ele carrega o programa resultante para a placa Arduino, que deve ser conectada ao computador através da porta USB.</li>
+<li><strong>Novo</strong>: Limpa o programa atualmente carregado.</li>
+<li><strong>Abrir</strong>: mostra uma lista suspensa com uma longa lista de programas de exemplo para carregar ou a opção de carregar um esboço do disco.</li>
+<li><strong>Salvar</strong>: Salva o programa atual em um arquivo no disco.</li>
+<li><strong>Serial Monitor</strong>: Abre o console do monitor serial. Isso é usado principalmente para depuração, como mostrarei daqui a pouco.</li>
+</ul>
+<h2 id="olá-mundo-estilo-arduino">&ldquo;Olá, mundo!&rdquo;, estilo Arduino</h2>
+<p>Para começar, vamos escrever um programa muito simples que escreve uma mensagem na porta serial. Veremos esta mensagem no Serial Monitor.</p>
+<p>Primeiro instale o <a href="https://www.arduino.cc/en/software" target="_blank" rel="noopener noreffer "><strong>Software Arduino</strong></a>. As instruções de instalação são muito simples, você não deve ter nenhum problema com esta etapa.</p>
+<p>Inicie o software Arduino certificando-se de que a placa Arduino não esteja conectada ao seu computador. Abra o menu <code>Ferramentas</code> e, em seguida, o submenu <code>Porta</code>. Observe as opções que aparecem e feche o software Arduino.</p>
+<p>Em seguida, conecte sua placa Arduino ao computador usando o cabo USB. Com a placa Arduino conectada, inicie o software Arduino novamente. No menu <code>Ferramentas</code>, abra o submenu <code>Placa</code> e verifique se o modelo correto da placa Arduino está selecionado. Em seguida, no submenu <code>Porta</code>, encontre a entrada da porta serial que não apareceu na lista quando você desconectou a placa Arduino. Essa é a porta serial atribuída à conexão do Arduino, então selecione-a.</p>
+<p>Em seguida, na área branca, digite (ou copie/cole) o seguinte programa C++:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&#34;Olá, mundo!&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Pressione o botão <code>Carregar</code> para compilar e carregar o esboço no Arduino. Se você cometeu algum erro, ele será indicado na área preta de status. Neste ponto, os erros parecerão muito enigmáticos se você não estiver acostumado a programar em C++, então o melhor que você pode fazer é comparar o que você digitou com o acima e corrigir quaisquer diferenças que encontrar até que a operação de upload seja bem-sucedida.</p>
+<p>Se o upload for bem-sucedido, a área de status exibirá uma mensagem semelhante à seguinte:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Binary sketch size: 1,978 bytes (of a 32,256 byte maximum)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Neste ponto, o programa está sendo executado dentro do Arduino. Você notará que o LED rotulado como <code>TX</code> pisca de vez em quando, indicando que a placa Arduino está transmitindo dados pela <code>porta serial</code>.</p>
+<p>Para ver os dados, clique no botão <code>Monitor Serial</code> na barra de ferramentas. No canto inferior direito da janela do monitor serial, verifique se o menu suspenso está definido como <code>9600 baud</code>. Agora você deve ver a mensagem <code>Olá, mundo!</code> sendo impressa na janela a cada segundo.</p>
+<p>Parabéns, você concluiu seu primeiro esboço do Arduino!</p>
+<h3 id="algumas-informações">Algumas informações</h3>
+<p>Os esboços do Arduino têm duas funções principais, chamadas <code>setup</code> e <code>loop</code>. Quando o programa iniciar, ele executará a função <code>setup</code>. Esta função deve inicializar o hardware e deixá-lo pronto para operação. Então a função <code>loop</code> será chamada repetidamente até que o Arduino seja resetado ou desligado. Se você observar o código acima, verá essas duas funções, cada uma começando com a palavra <code>void</code> seguida pelo nome da função e terminando com uma <code>chave</code> de fechamento.</p>
+<p>O que vem antes da chave de abertura é chamado de <code>declaração da função</code>. O que vai entre as chaves de abertura e fechamento é o <code>código real da função</code>, ou seja, as instruções que o Arduino executa quando a função é invocada .</p>
+<p>Neste pequeno exemplo, a função <code>setup</code> inicializa a interface serial chamando a função <code>Serial.begin</code>. O que vai entre os parênteses são chamados de <code>argumentos</code> e cada função define quais argumentos ela precisa, se houver. A função <code>Serial.begin</code> requer que a <code>velocidade da comunicação serial</code> seja fornecida como argumento, em unidades de <code>baud</code>. No exemplo foi selecionado <code>9600 bauds</code>. A instrução termina com um <code>ponto e vírgula</code>, que funciona como um <code>separador de instrução</code>.</p>
+<h3 id="referência-do-arduino">Referência do Arduino</h3>
+<p>Esta página de <a href="https://www.arduino.cc/reference/en/" target="_blank" rel="noopener noreffer "><strong>referência do Arduino</strong></a> contém uma referência rápida para C++ e a lista de todas as funções fornecidas pelo ambiente de desenvolvimento do Arduino.</p>
+<p>Por exemplo, digamos que você queira conhecer <code>todas as funções relacionadas às comunicações da porta serial</code>. Em seguida, você pode abrir o link <code>Serial</code> na seção <code>Communications</code>. Você encontrará a função <code>begin</code> usada acima. Observe que fora de qualquer contexto a função é chamada <code>Serial.begin</code>, mas quando o contexto está claramente na classe <code>Serial</code>, basta chamar a função <code>begin</code>. Se agora você quiser ver informações sobre os <code>argumentos</code> exigidos pela função <code>Serial.begin</code>, basta clicar nele para ir para a documentação do <code>Serial.begin</code>.</p>
+<p>A documentação de referência do Arduino é muito boa, então eu recomendo que você a mantenha aberta em uma janela do navegador sempre que estiver escrevendo esboços.</p>
+<p>A segunda função é a função <code>loop</code>. Esta função faz duas chamadas de função. Primeiro ele chama <code>Serial.println</code>, passando a mensagem <code>&quot;Olá, mundo!&quot;</code> como um argumento. Como você pode imaginar, a função <code>Serial.println</code> imprime uma mensagem na porta serial. A mensagem é fornecida como uma cadeia de caracteres , entre aspas duplas. A função é chamada de <code>println</code> e não <code>print</code> porque além de imprimir nossa mensagem ela finaliza a linha, fazendo com que a próxima impressão comece no início da próxima linha. Existe, de fato, uma dunção <code>print</code> que imprime a mensagem e não passa para a próxima linha.</p>
+<p>A segunda e última instrução na função <code>loop</code> é uma chamada para uma função chamada <code>delay</code>. Esta função pausa o programa pelo tempo especificado como um argumento. As unidades de tempo são dadas em <code>milissegundos</code>, então passando o valor 1000 para pausar o programa por um segundo.</p>
+<p>Como a função <code>loop</code> é invocada repetidamente, o resultado desse programa é que o texto <code>Olá, mundo!</code> é impresso no <code>Monitor Serial</code> a cada segundo.</p>
+<h2 id="trabalhando-com-leds">Trabalhando com LEDs</h2>
+<p>Vejamos seguinte esboço:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">pinMode</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&#34;Hello, world!&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">digitalWrite</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">digitalWrite</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Digite o código acima na janela de código do software Arduino substituindo o sketch antigo e faça o upload para sua placa para testá-lo.</p>
+<p>Se você entendeu o primeiro esboço, provavelmente poderá descobrir o que esta versão faz facilmente.</p>
+<p>Na função <code>setup</code>, além de inicializar a porta serial como antes, também esta inicializando o <code>pino 13</code> como um <code>pino de saída</code>. Lembre-se que os pinos digitais podem ser usados ​​como <code>entradas</code> ou <code>saídas</code>, então sempre que você precisar usar um pino, você deve configurá-lo para o uso pretendido. Nesse caso, estou tornando-o um pino de saída, o que significa que posso escrever um valor nesse pino, e o valor que escrevo afetará a corrente elétrica que sai dele. Consulte a documentação <a href="https://www.arduino.cc/reference/en/language/functions/digital-io/pinmode/" target="_blank" rel="noopener noreffer "><strong>pinMode</strong></a> para obter detalhes sobre isso.</p>
+<p>A função <code>loop</code> imprime a mensagem para a porta serial como antes, mas então define o <code>pino 13</code> para um estado <code>HIGH</code> com a função <code>digitalWrite</code>. Na maioria das placas Arduino, isso acende o LED on-board. Em seguida, o programa faz uma pausa de 500 milissegundos ou meio segundo. Em seguida, o estado do <code>pino 13</code> é alterado para estado <code>LOW</code> para desligar o LED. Então o programa dorme por mais meio segundo.</p>
+<p>A função <code>loop</code> é chamada repetidamente, então o que o código acima faz é fazer o LED piscar! Ele pisca a uma taxa de uma piscada por segundo, permanecendo aceso no primeiro meio segundo e depois desligado na outra metade.</p>
+<h2 id="programação-do-sensor-de-distância">Programação do sensor de distância</h2>
+<p>Programar o sensor de distância HC-SR04. Esse sensor ajuda o robô a &ldquo;ver&rdquo; e evitar paredes e obstáculos.</p>
+<p>Para a maioria dos dispositivos que se conectam à placa Arduino já existem <code>bibliotecas</code> de funções apropriadas incorporadas ao <code>Software Arduino</code>. Você pode ver quais bibliotecas estão incluídas acessando o menu <code>Sketch</code>, submenu <code>Incluir Biblioteca...</code>. Você verá bibliotecas para motores, LCDs e uma variedade de outros dispositivos.</p>
+<p>Na maioria dos casos, os <code>fabricantes de dispositivos</code> compatíveis com Arduino fornecem as bibliotecas necessárias para controlar seus produtos. Outras vezes, os desenvolvedores escrevem suas próprias bibliotecas e as disponibilizam como código aberto. A documentação do dispositivo é o primeiro lugar a ser consultado, mas, como sempre, em casos como esse, o Google é seu melhor amigo.</p>
+<p>A biblioteca <a href="https://bitbucket.org/teckel12/arduino-new-ping/wiki/Home" target="_blank" rel="noopener noreffer "><strong>arduino-new-ping</strong></a> parecia ser bem completa e usaremos no projeto. A biblioteca vem em um arquivo <code>zip</code>, disponível como um link para <a href="https://bitbucket.org/teckel12/arduino-new-ping/downloads/NewPing_v1.9.7.zip" target="_blank" rel="noopener noreffer "><strong>download</strong></a>. Para instalá-lo e disponibilizá-lo no software Arduino você só precisa descompactá-lo e copiar a pasta superior (chamada NewPing) dentro da pasta <code>libraries</code> em sua pasta de sketches do Arduino. A pasta de esboços do Arduino está em seu diretório inicial, consulte a documentação para obter detalhes.</p>
+<p>Depois de instalar a biblioteca <code>NewPing</code>, feche e reabra o software Arduino para que ele possa reconhecê-lo.</p>
+<p>Agora inicie um novo esboço, vá para o menu Esboço e selecione &ldquo;Incluir Biblioteca&hellip;&rdquo;. Agora você deve ver <code>NewPing</code> na lista. Se você selecionar esta biblioteca, a seguinte linha será adicionada ao seu esboço:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;NewPing.h&gt;</span><span class="cp">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>Isso está dizendo ao <code>compilador C++</code> que você usará as funções da biblioteca de terceiros <code>NewPing</code>.</p>
+<p>Antes de mostrar o esboço que controla o sensor de distância, observe o seguinte esquema elétrico:</p>
+<p><figure><a class="lightgallery" href="./arduino-ultrasonico.png" title="Sensor de Distância" data-thumbnail="./arduino-ultrasonico.png" data-sub-html="<h2>Sensor de Distância</h2><p>Sensor de Distância</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="./arduino-ultrasonico.png"
+            data-srcset="./arduino-ultrasonico.png, ./arduino-ultrasonico.png 1.5x, ./arduino-ultrasonico.png 2x"
+            data-sizes="auto"
+            alt="./arduino-ultrasonico.png" />
+    </a><figcaption class="image-caption">Sensor de Distância</figcaption>
+    </figure></p>
+<p>Primeiro, conecte a saída <code>5V</code> do Arduino ao lado <code>vermelho</code> da seção superior da placa de ensaio e a linha <code>GND</code> ao lado <code>azul</code>. As seções superior e inferior da protoboard têm lados <code>vermelho</code> e <code>azul</code> e são normalmente usados ​​para distribuir energia e linhas de aterramento para toda a protoboard. Conectar a saída <code>5V</code> a um dos pinos vermelhos torna os 5V disponíveis para todos os pinos vermelhos dessa linha e, da mesma forma, conectar o <code>GND</code> a um pino azul torna o <code>GND</code> disponível em todos os pinos azuis da linha.</p>
+<p>Em seguida, transfira as linhas <code>5V</code> e <code>GND</code> para a parte inferior da placa de ensaio com mais dois <code>cabos de jumper</code>. Esta é sempre uma boa prática ao criar protótipos, configurar a protoboard dessa maneira garante que você sempre possa pegar suas linhas de energia e terra do lado mais conveniente.</p>
+<p>O <code>sensor de distância</code> se conecta perfeitamente a quatro pinos consecutivos no meio da protoboard. As duas seções intermediárias da placa de ensaio conectam grupos de cinco pinos alinhados verticalmente, então, para fazer uma conexão com um dos pinos do sensor, basta conectar uma extremidade do cabo jumper em qualquer um dos quatro pinos restantes no mesmo grupo.</p>
+<p>O pino mais à esquerda é rotulado <code>VCC</code>, este é o pino que deve ser conectado à linha <code>5V</code>. Então, para fazer isso, conecte um cabo jumper a este pino do sensor a um dos pinos vermelhos na parte inferior da placa de ensaio. Os próximos dois pinos são rotulados <code>Trig</code> e <code>Echo</code>. Eles se conectam a quaisquer dois pinos disponíveis na placa Arduino. Como qualquer pino serve, usarei os pinos analógicos <code>0</code> e <code>1</code>, que, como dito anteriormente, podemos usar como pinos digitais <code>14</code> e <code>15</code>. O pino mais à direita é rotulado , então a conexão pode ir para qualquer <code>GND</code> um dos pinos azuis no superior ou inferior da protoboard.</p>
+<p>Código do esboço:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;NewPing.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="cp">#define TRIGGER_PIN  14
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define ECHO_PIN     15
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define MAX_DISTANCE 200
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="n">NewPing</span> <span class="nf">DistanceSensor</span><span class="p">(</span><span class="n">TRIGGER_PIN</span><span class="p">,</span> <span class="n">ECHO_PIN</span><span class="p">,</span> <span class="n">MAX_DISTANCE</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">cm</span> <span class="o">=</span> <span class="n">DistanceSensor</span><span class="p">.</span><span class="n">ping_cm</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&#34;Distance: &#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">cm</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&#34;cm&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>A instrução <code>#include</code> na parte superior informa ao compilador C++ é sempre usada para incluir biblioteca de terceiros. O <code>NewPing.h</code> entre os colchetes angulares refere-se a um arquivo de cabeçalho que está dentro desta biblioteca. Este arquivo contém as definições para todas as funções fornecidas pela biblioteca. Se uma biblioteca não tiver documentação, é provável que haja informações na parte superior desse arquivo.</p>
+<p>Em seguida, há algumas linhas <code>#define</code>. Se você se lembra do esboço do LED piscando acima, o pino número 13 em alguns lugares. Em vez de usar o número diretamente, poderia ter definido uma <code>constante</code>. Isso é o que faz o <code>#define</code>. Você o usa para dar um nome significativo a um valor e, no restante do esboço, pode escrever o nome em vez do valor. Isso é útil para tornar o código mais legível, mas também facilita muito a alteração das atribuições dos pinos, porque aí é só ir até o topo do sketch e atualizar os números em um só lugar.</p>
+<p>Neste esboço, temos três declarações <code>#define</code>. Os dois primeiros criam <code>constantes</code> para os pinos <code>Trig</code> e <code>Echo</code> do sensor de distância que estão conectados aos pinos <code>14</code> e <code>15</code> respectivamente (pinos analógicos 0 e 1). A terceira <code>#define</code> define uma constante para a distância máxima que desejamos que o sensor reconheça, que definimos para 2 metros, usando unidades em <code>centímetros</code>.</p>
+<p>A seguir, temos a seguinte afirmação:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">NewPing</span> <span class="nf">DistanceSensor</span><span class="p">(</span><span class="n">TRIGGER_PIN</span><span class="p">,</span> <span class="n">ECHO_PIN</span><span class="p">,</span> <span class="n">MAX_DISTANCE</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Esta instrução cria um <code>objeto</code> que representa o sensor de distância. A sintaxe para a criação do objeto requer primeiro a classe do objeto (<code>NewPing</code> neste caso), depois o nome se deseja dar ao objeto (DistanceSensor) e então quaisquer argumentos entre parênteses. Os argumentos que o objeto <code>NewPing</code> requer, são o pino do <code>gatilho</code>, o pino do <code>eco</code> e a <code>distância máxima</code> a ser considerada, todos nessa ordem e separados por vírgulas. Essas são as três constantes definidas acima, então basta escrever os nomes em vez dos valores.</p>
+<p>Observe que o <code>objeto</code> é criado fora de qualquer função. Os objetos podem existir apenas no nível em que são criados, portanto, criar o objeto dentro da função <code>loop</code> faria com que ele desaparecesse quando essa função terminasse. Na próxima vez que <code>loop</code> for chamado, um novo objeto será criado e inicializado, o que seria uma perda de tempo e esforço. Colocar a criação do objeto fora de qualquer função o torna um <code>objeto global</code> que persiste nas chamadas de função.</p>
+<p>A função <code>setup</code> é exatamente como a anteriores, apenas configura a comunicação serial para que possamos ver a saída da placa Arduino no <code>Monitor Serial</code>.</p>
+<p>A função <code>loop</code> começa com um tipo de instrução:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">cm</span> <span class="o">=</span> <span class="n">DistanceSensor</span><span class="p">.</span><span class="n">ping_cm</span><span class="p">();</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>À direita do sinal <code>=</code> estamos invocando uma função chamada <code>ping_cm</code> fornecida pelo obketo <code>DistanceSensor</code> criado acima. Essa função é um pouco diferente das funções, pois além de fazer algo, ela retorna um resultado, que nesse caso é a distância até o objeto mais próximo medida em centímetros.</p>
+<p>Como pretendemos usar esse resultado de distância mais tarde no esboço, temos que armazená-lo em algum lugar, então à esquerda do sinbal <code>=</code> é criado uma variável chamada <code>cm</code>, que é basicamente um espaço na memória onde um valor pode ser armazenado. A sintaxe C++ para criação de variáveis ​​requer que eu forneça o tipo de valores que esta variável irá armazenar primeiro (unsigned int neste caso, um número inteiro positivo) e então o nome da variável, que é qualquer nome da sua escolha que mais tarde usaremos para referir ao valor armazenado na variável.</p>
+<p>Como observação, a documentação da biblioteca do sensor de distância indica que também há uma função <code>ping_in</code> que é equivalente, <code>ping_cm</code> mas retorna o resultado da distância em <code>polegadas</code>. Outra opção fornecida pela biblioteca é uma função <code>ping</code>, que apenas retorna o tempo que o sinal ultrassônico levou para retornar ao sensor em <code>microssegundos</code>. Você pode dividir esse tempo pelo tempo que o som leva para percorrer o dobro das unidades de distância de sua escolha para obter a distância nessas unidades. Para esse projeto, ter a distância em centímetros já é o suficiente.</p>
+<p>Em seguida, na função <code>loop</code>, temos três impressões consecutivas para a porta serial. As duas primeiras impressões usam a função <code>Serial.print</code> função e as últimas usam <code>Serial.println</code>. Isso significa que a segunda e a terceira impressão irão para a mesma linha da primeira e, após a impressão da terceira mensagem, o cursor se moverá para a próxima linha.</p>
+<p>A primeira e a última instrução print imprimem mensagens de texto como nos esboços anteriores. A impressão do meio, no entanto, imprime a variável <code>cm</code>, na qual tem  o resultado da função <code>ping_cm</code> do sensor de distância.</p>
+<p>A linha final na função <code>loop</code> leva um <code>delay</code>, exatamente como antes.</p>
+<p>Quando você executa este esboço em seu Arduino e move sua mão ou algum outro objeto para mais perto e mais longe do sensor, você verá algo assim no monitor serial:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Distance: 28cm
+</span></span><span class="line"><span class="cl">Distance: 28cm
+</span></span><span class="line"><span class="cl">Distance: 21cm
+</span></span><span class="line"><span class="cl">Distance: 18cm
+</span></span><span class="line"><span class="cl">Distance: 15cm
+</span></span><span class="line"><span class="cl">Distance: 15cm
+</span></span><span class="line"><span class="cl">Distance: 12cm
+</span></span><span class="line"><span class="cl">Distance: 12cm
+</span></span><span class="line"><span class="cl">Distance: 24cm
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="motores">Motores</h2>
+<p>A <code>placa de driver de motor</code> usada nesse projeto é a <code>Adafruit Motor Shield</code>, que vem com sua própria biblioteca, chamada <code>AF_Motor</code>. Se você estiver usando o mesmo controlador de motor, vá em frente e instale esta biblioteca em seu ambiente Arduino. Se você estiver usando um controlador de motor diferente, precisará encontrar a biblioteca que funciona para o seu hardware.</p>
+<p>A maioria dos controladores de motor vem como um escudo (shield), o que significa que a placa do motor é conectada diretamente na parte superior da placa do Arduino, conectando-se a ambas as fileiras de pinos, embora muitos dos pinos não sejam usados ​​para controlar motores. Os escudos de motor mais agradáveis ​e ​fornecem conectores modu de passagem com acesso a todos os pinos do Arduino. Infelizmente, o <code>escudo Adafruit</code> não dá acesso aos pinos, portanto, conectar componentes adicionais torna-se difícil. Esse é um problema que teremos que contornar.</p>
+<p>O <code>controlador de motor Adafruit</code> pode acionar até quatro <code>motores DC</code>, rotulados de <code>M1</code> a <code>M4</code> na placa. Precisaremos de apenas dois, um de cada lado da placa.</p>
+<p>O esboço que usaremos para testar os motores:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;AFMotor.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="n">AF_DCMotor</span> <span class="nf">Motor1</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">AF_DCMotor</span> <span class="nf">Motor2</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Motor1</span><span class="p">.</span><span class="n">setSpeed</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Motor2</span><span class="p">.</span><span class="n">setSpeed</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Motor1</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">FORWARD</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Motor2</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">FORWARD</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Motor1</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">BACKWARD</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Motor2</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">BACKWARD</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Motor1</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">FORWARD</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Motor2</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">BACKWARD</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Motor1</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">BACKWARD</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Motor2</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">FORWARD</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Motor1</span><span class="p">.</span><span class="n">setSpeed</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Motor2</span><span class="p">.</span><span class="n">setSpeed</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Motor1</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">BRAKE</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Motor2</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">BRAKE</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Acho que não preciso explicar cada linha neste esboço, já que ele não possui nenhuma nova construção C++. Assim como o sensor de distância, cada motor requer a criação de um <code>objeto</code>, desta vez da classe <code>AF_DCMotor</code>. O único argumento é o número do motor, de <code>1</code> a <code>4</code>. Criamos dois motores, números <code>1</code> e <code>3</code> para corresponder aos motores conectados às portas <code>M1</code> e <code>M3</code> do controlador.</p>
+<p>Os motores são controlados com duas funções, <code>setSpeed</code> e <code>run</code>. A função <code>setSpeed</code> recebe um argumento numérico com faixa de <code>0</code> a <code>255</code>, indicando a velocidade que o motor deve girar. A função <code>run</code> configura o modo de funcionamento do motor, que pode ser <code>FORWARD</code>, <code>BACKWARD</code>, <code>BRAKE</code> ou <code>RELEASE</code>.</p>
+<p>O esboço acima faz com que as rodas façam alguns truques:</p>
+<ul>
+<li>ambas as rodas indo para frente,</li>
+<li>depois um segundo</li>
+<li>ambas as rodas indo para trás,</li>
+<li>depois um segundo</li>
+<li>uma roda para frente e a outra para trás,</li>
+<li>depois um segundo</li>
+<li>cada roda inverte a direção</li>
+<li>depois um segundo</li>
+<li>então as rodas param por um segundo.</li>
+</ul>
+<p>Em seguida, o ciclo se repete com a próxima invocação da função <code>loop</code>.</p>
+<h2 id="controle-remoto-por-bluetooth">Controle Remoto por Bluetooth</h2>
+<p>O escravo Bluetooth permite conectar o Arduino ao smartphone para receber comandos de controle remoto.</p>
+<p>O escravo bluetooth funciona sobre os protocolos de comunicação serial padrão na placa Arduino, o que significa que você usa as funções da classe <code>Serial</code> como as que foram usadas nos esboços anteriores. Quando a placa Arduino com Bluetooth é emparelhada com um smartphone, um comando <code>Serial.print</code> enviará os dados não para o PC, mas para o telefone! A classe <code>Serial</code> também tem funções para ler dados da outra ponta, então vou usar essas funções para receber comandos do smartphone.</p>
+<p><figure><a class="lightgallery" href="./arduino-bluetooth.png" title="Escravo Bluetooth" data-thumbnail="./arduino-bluetooth.png" data-sub-html="<h2>Escravo Bluetooth</h2><p>Escravo Bluetooth</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="./arduino-bluetooth.png"
+            data-srcset="./arduino-bluetooth.png, ./arduino-bluetooth.png 1.5x, ./arduino-bluetooth.png 2x"
+            data-sizes="auto"
+            alt="./arduino-bluetooth.png" />
+    </a><figcaption class="image-caption">Escravo Bluetooth</figcaption>
+    </figure></p>
+<p>Observe como os pinos <code>RX</code> e <code>TX</code> no escravo Bluetooth vão para os pinos digitais <code>0</code> e <code>1</code>, respectivamente, os pinos dedicados às comunicações seriais.</p>
+<p>Esboço de exemplo que permite a comunicação remota:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">pinMode</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">Serial</span><span class="p">.</span><span class="n">available</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">char</span> <span class="n">ch</span> <span class="o">=</span> <span class="n">Serial</span><span class="p">.</span><span class="n">read</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&#34;Received: &#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">ch</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">ch</span> <span class="o">==</span> <span class="sc">&#39;a&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">digitalWrite</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">digitalWrite</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>A função <code>setup</code> não tem nada que eu não tenha feito antes.</p>
+<p>Na função <code>loop</code>, estamos introduzindo um novo tipo de instrução C++, a instrução <code>if</code>, às vezes também chamada de <code>condicional</code>. Uma condicional é útil quando você deseja que o programa faça algo somente quando uma condição for verdadeira .</p>
+<p>O que segue após a palavra-chave <code>if</code> é a condição, entre parênteses. No esboço, a condição que estamos verificando é <code>Serial.available() &gt; 0</code>. Para saber se esta condição é verdadeira ou não o Arduino irá invocar a função <code>Serial.available</code>, que retorna o número de bytes de dados que foram recebidos na porta serial, e comparar esse número com <code>0</code>. Se o número de bytes disponíveis for maior que <code>0</code> então a condição é verdadeira, então as instruções que estão entre as chaves de abertura e fechamento serão executadas. Se a condição não for verdadeira, todo o grupo de instruções dentro das chaves será ignorado.</p>
+<p>A função <code>Serial.available</code> retornará um número positivo somente quando o mestre na outra ponta da comunicação serial tiver enviado dados. Dizer <code>if Serial.available() &gt; 0</code> em C++ é o mesmo que dizer que <code>se houver dados disponíveis</code>. Se a condição não for verdadeira (o que é o mesmo que dizer que é falsa), significa que naquele momento o controle remoto não enviou nenhum dado; portanto, nesse caso, não tenho nada para fazer e pulo tudo.</p>
+<p>Então, o que acontece quando a condição é verdadeira?</p>
+<p>A primeira coisa dentro do <code>bloco if</code> é ler um byte da porta serial, usando a função <code>Serial.read</code>. Note que utilizamos uma variável para armazenar o resultado, mas desta vez a variável foi declarada do tipo <code>char</code>, que em C++ é o tipo que representa um byte de dados.</p>
+<p>Depois de imprimir os dados recebidos, tem outra condicional (observe o recuo no esboço para deixar bem claro que existe uma instrução if dentro de outra). Desta vez, a condição é <code>ch == 'a'</code>, que será verdadeira somente quando a letra minúscula <code>a</code> for o dado recebido. Nesse caso, definimos o <code>pino 13</code> em <code>HIGH</code>, o que liga o LED.</p>
+<p>A instrução <code>else</code> a seguir é uma extensão do <code>if</code>. Quando a condição <code>if</code> é falsa, as instruções dentro das chaves são ignoradas. Quando uma condicional tem <code>blocos if</code> e <code>blocos else</code>, a condição determina qual dos dois blocos é executado. Se a condição for verdadeira, o bloco executado é o <code>if</code> e o bloco <code>else</code> é ignorado. Se a condição for falsa, o bloco ignorado é o <code>if</code> e o bloco executado é o <code>else</code>.</p>
+<p>Quando o Arduino receber um <code>a</code> ele acenderá o LED do pino 13. Quaisquer outros dados recebidos irão desligá-lo. Com este esboço simples construimos um controle remoto para o LED na placa Arduino!</p>
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw" aria-hidden="true"></i>Nota<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">Ao tentar fazer upload deste esboço para o Arduino, o upload pode falhar. Isso é o resultado de uma colisão entre a comunicação serial estabelecida pelo computador e a do escravo Bluetooth. Parece que o escravo Bluetooth vence e impede que o computador fale com o Arduino.
+Desconecte os pinos <code>RX</code> e <code>TX</code> do escravo Bluetooth quando for carregar um novo esboço e resolve o problema.</div>
+        </div>
+    </div>
+<h2 id="ilustrações">Ilustrações</h2>
+<p><strong>ARDUINO.CC</strong><br>
+Disponível em: <a href="https://cdn.arduino.cc/homepage/static/media/arduino-UNO.bcc69bde.png" target="_blank" rel="noopener noreffer ">https://cdn.arduino.cc/homepage/static/media/arduino-UNO.bcc69bde.png</a><br>
+Acesso em: 17 abr. 2023.</p>
+<p><strong>PIXABAY</strong><br>
+Disponível em: <a href="https://pixabay.com/pt/photos/circuito-integrado-computador-441294/" target="_blank" rel="noopener noreffer ">https://pixabay.com/pt/photos/circuito-integrado-computador-441294/</a><br>
+Acesso em: 17 abr. 2023.</p>
+<h2 id="fontes">Fontes</h2>
+<p><strong>MIGUELGRINBERG.COM</strong><br>
+Disponível em: <a href="https://blog.miguelgrinberg.com/post/building-an-arduino-robot-part-ii-programming-the-arduino" target="_blank" rel="noopener noreffer ">https://blog.miguelgrinberg.com/post/building-an-arduino-robot-part-ii-programming-the-arduino</a><br>
+Acesso em: 17 abr. 2023.</p>
+<p><strong>ARDUINO.CC</strong><br>
+Disponível em: <a href="https://www.arduino.cc" target="_blank" rel="noopener noreffer ">https://www.arduino.cc</a><br>
+Acesso em: 17 abr. 2023.</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Atualizado em 2023-04-17</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/arduino-robo-ii/index.md" target="_blank">Leia em Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/arduino/">Arduino</a>,&nbsp;<a href="/tags/rob%C3%B4/">Robô</a>,&nbsp;<a href="/tags/bibliotecas/">Bibliotecas</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Voltar</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/arduino-robo-i/" class="prev" rel="prev" title="Construindo um Robô Arduino - Parte I"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Construindo um Robô Arduino - Parte I</a>
+            <a href="/arduino-robo-iii/" class="next" rel="next" title="Construindo um Robô Arduino - Parte III">Construindo um Robô Arduino - Parte III<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Suzano Bitencourt</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Voltar ao topo">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="Ver comentários">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.pt.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copiar para a área de transferência","maxShownLines":50},"comment":{},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"pt","maxResultLength":10,"noResultsFound":"Nenhum resultado encontrado","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
