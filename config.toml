@@ -1,6 +1,6 @@
 baseurl = "http://example.org/"
 languageCode = "en-us"
-title = "Hugo Cards"
+title = "Suzano Bitencourt"
 theme = "hugo-cards"
 #themesDir = "../.."
 
@@ -14,8 +14,8 @@ theme = "hugo-cards"
   facebook = ""
   quora = ""
   twitter = "http://twitter.com/bul_ikana"
-  github = "http://github.com/bul-ikana"
-  email = ""
+  github = "https://github.com/suzano"
+  email = "suzanobitencourt@gmail.com"
 
   fbLikeBox = ""
   fbAppId = ""
