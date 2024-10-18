@@ -2,7 +2,7 @@ baseurl = "http://example.org/"
 languageCode = "en-us"
 title = "Hugo Cards"
 theme = "hugo-cards"
-#themesDir = "../.."
+themesDir = "../.."
 
 [pagination]
   pagerSize = 6
