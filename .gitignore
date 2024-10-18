@@ -1,0 +1,39 @@
+# Saída de construção do Hugo (padrão)
+public/
+
+# Arquivos temporários Hugo
+.hugo_build.lock
+resources/_gen/
+
+# Arquivos de log
+*.log
+
+# Arquivos gerados pelo sistema operacional
+.DS_Store
+Thumbs.db
+
+# Módulos Node (se estiver usando npm/yarn no projeto)
+node_modules/
+
+# Configurações opcionais de Netlify / Vercel / Outros serviços de implantação
+netlify.toml
+vercel.json
+
+# Arquivos temporários e específicos do sistema
+*.swp
+*.swo
+.sass-cache/
+.idea/
+.vscode/
+*.bak
+*.tmp
+
+# Arquivos binários
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Arquivos específicos do Mac
+.DS_Store
+
