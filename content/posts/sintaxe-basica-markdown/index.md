@@ -6,10 +6,10 @@ categories: [Linguagem]
 author: "Suzano Bitencourt"
 profile:
   attrs:
-    - key: Name
-      val: Stuart
-    - key: Likes
-      val: Playing guitar
+    - key: 
+      val: 
+    - key: 
+      val: 
 ---
 
 Este artigo oferece uma amostra da sintaxe básica do Markdown que pode ser usada em arquivos de conteúdo do Hugo.
