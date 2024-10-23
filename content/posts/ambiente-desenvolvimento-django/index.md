@@ -1,5 +1,5 @@
 ---
-title:  "Configurando um ambiente de desenvolvimento Django"
+title:  "Ambiente de Desenvolvimento Django"
 date:   2024-10-20 09:00:00 +0530
 img: "django.png"
 categories: [Programação, Linguagem, Django]
@@ -12,7 +12,7 @@ profile:
       val: 
 ---
 
-Este artigo faz parte dos meus estudos de programação de site do lado do servidor e como usar os frameworks web Django (Python) e Express (Node.js / JavaScript) para criar aplicativos básicos.
+Este artigo faz parte dos meus estudos de programação de site do lado do servidor e como usar os frameworks web Django.
 
 <!--more-->
 
@@ -26,7 +26,7 @@ Aplicações web Django podem rodar em quase todas as maquinas que suportam a li
 
 Existem várias formas de baixar o Django, porém, a melhor forma de conseguir a última versão estável do Django é usando Python Package Repository (PyPi), pelo comando pip.
 
-Django suporta (principalmente) quatro bancos de dados (PostgreSQL, MySQL, Oracle, e SQLite ), contudo, existem bibliotecas community que fornecem níveis variados de suporte para outros populares bancos de dados SQL e NoSQL. 
+Django suporta (principalmente) quatro bancos de dados (PostgreSQL, MySQL, Oracle, e SQLite ), contudo, existem bibliotecas community que fornecem níveis variados de suporte para outros populares bancos de dados SQL e NoSQL.
 
 ### Instalar em todo o sistema VS Instalar em ambiente virtual Python
 
@@ -146,6 +146,6 @@ Acesso em: 20 out. 2024.
 
 ## Referências
 
-**MDN WEb DOCS - Configurando um ambiente de desenvolvimento Django**  
+**MDN WEB DOCS - Configurando um ambiente de desenvolvimento Django**  
 Disponível em: <https://developer.mozilla.org/pt-BR/docs/Learn/Server-side/Django/development_environment>  
 Acesso em: 20 out. 2024.
