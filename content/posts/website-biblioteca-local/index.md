@@ -20,7 +20,7 @@ A programação do lado do servidor é essencial para sites que precisam exibir 
 
 ## Visão geral
 
-Este é um tutorial Django "Biblioteca Local" do MDN (<https://developer.mozilla.org/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website>), no qual desenvolveremos um website que pode ser usado para gerenciar um catálogo para uma biblioteca local.
+Este é um tutorial Django "Biblioteca Local" do MDN (<https://developer.mozilla.org/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website>), vamos desenvolver um site para gerenciar o catálogo de uma biblioteca local, cobrindo desde a criação do projeto até a implementação de funcionalidades para o gerenciamento de livros e empréstimos.
 
 Será estudado nesse tutorial:
 - Usar as ferramentas do Django para criar a estrutura de um website e aplicação.
@@ -37,11 +37,11 @@ Será estudado nesse tutorial:
 
 ## Website da Biblioteca Local - LocalLibrary
 
-Esse tutoria, guiará a criação de um site chamado **LocalLibrary**. A proposta do site é fornecer um catálogo online para uma pequena biblioteca local.
+Este tutorial guiará a criação de um site chamado LocalLibrary. O objetivo do site é oferecer um catálogo online para gerenciar o acervo de uma pequena biblioteca local, permitindo a consulta e administração de livros e empréstimos.
 
 ## Parte 1: Esqueleto do Projeto
 
-Para o website `Biblioteca Local` a pasta do website e a pasta do projeto terão, ambas, o nome `locallibrary`, e terá apenas um aplicativo chamado `catalog`. O nível hierárquico mais alto da estrutura de pastas ficará assim:
+Para o website `Biblioteca Local`, tanto a pasta principal do site quanto a pasta do projeto terão o nome `locallibrary`, e haverá apenas um aplicativo chamado `catalog`. A estrutura de diretórios no nível hierárquico mais alto ficará assim:
 
 ```
 ┬ locallibrary/ # Pasta do website
@@ -71,7 +71,7 @@ django-admin startproject locallibrary
 cd locallibrary
 ```
 
-4 - O comando `django-admin` criará uma estrutura com pastas e arquivos:
+4 - O comando `django-admin startproject <nome_do_projeto>` criará uma estrutura com pastas e arquivos:
 ```
 ┬ locallibrary/
 ├ manage.py
@@ -83,11 +83,30 @@ cd locallibrary
 ```
 
 A sub-pasta do projeto:
-- **__ __init__ __.py**  - É um arquivo em branco que instrui o Python a tratar esse diretório como um pacote Python.
-- **settings.py** - Contém todas as definições do website. É onde nós registramos qualquer aplicação que criarmos, a localização de nossos arquivos estáticos, configurações de banco de dados etc.
-- **urls.py** - Define os mapeamentos de URL para visualização do site. Mesmo que esse arquivo possa conter todo o código para mapeamento de URL, é mais comum delegar apenas o mapeamento para aplicativos específicos, como será visto mais adiante.
-- **wsgi.py** - É usado para ajudar na comunicação entre seu aplicativo Django e o web server. Você pode tratar isso como um boilerplate.
-- **manage.py** - É usado para criar aplicações, trabalhar com bancos de dados, e iniciar o webserver de desenvolvimento.
+1. **manage.py** - É usado para criar aplicações, trabalhar com bancos de dados, e iniciar o webserver de desenvolvimento.
+    - Arquivo de comando que facilita a interação com o projeto Django.
+    - Você o usa para comandos como iniciar o servidor (runserver), realizar migrações (migrate), criar usuários (createsuperuser), entre outros.
+    - Ele é uma espécie de atalho para o comando django-admin.
+2. **locallibrary/** - Diretório interno.
+    - Diretório que contém os arquivos principais de configuração do projeto.
+    - Tem o mesmo nome do projeto e abriga as configurações, rotas e outros arquivos necessários para que o projeto funcione.
+3. **__ __init__ __.py**  - É um arquivo em branco que instrui o Python a tratar esse diretório como um pacote Python.
+    - Isso permite que o projeto seja importado como um módulo Python.
+4. **settings.py** - Contém todas as definições do website.
+    - O arquivo de configurações do projeto.
+    - Nele estão as definições de configurações, como banco de dados, middleware, templates, aplicativos instalados, entre outros.
+    - É aqui que você ajusta os parâmetros de comportamento do Django, como a configuração de segurança e a conexão com o banco de dados.
+5. **urls.py** -Pode conter todo o código para mapeamento de URL, é mais comum delegar apenas o mapeamento para aplicativos específicos.
+    - Arquivo responsável por definir as rotas/URLs do projeto.
+    - Nele, você mapeia URLs para as respectivas views (funcionalidades).
+    - Funciona como uma "tabela de roteamento", que direciona requisições para as funções apropriadas.
+6. **asgi.py** - Arquivo de configuração para a interface de servidor ASGI (Asynchronous Server Gateway Interface).
+    - ASGI é o padrão para aplicativos Django assíncronos e em tempo real, usado em conjunto com servidores compatíveis com essa interface.
+    - Ele é útil quando você precisa de funcionalidades assíncronas, como WebSockets.
+7. **wsgi.py** - É usado para ajudar na comunicação entre seu aplicativo Django e o web server. Você pode tratar isso como um boilerplate.
+    - Arquivo de configuração para a interface de servidor WSGI (Web Server Gateway Interface).
+    - WSGI é a interface padrão usada para servir aplicativos Django de forma síncrona.
+    - É o ponto de entrada para servidores web como o Gunicorn ou o Apache servirem o seu aplicativo Django.
 
 ### Criando o aplicativo de catálogo
 
@@ -99,7 +118,9 @@ A ferramenta cria uma nova pasta `catalog` e adiciona alguns arquivos para difer
 
 ### Registrando o aplicativo de catálogo
 
-1 - Abra o arquivo de configurações do projeto `locallibrary/locallibrary/settings.py` e encontre a definição para a lista `INSTALLED_APPS`. 
+1 - Abra o arquivo de configurações do projeto `locallibrary/locallibrary/settings.py` e encontre a definição para a lista `INSTALLED_APPS`.
+
+É em `INSTALLED_APPS` que definimos uma lista de aplicativos (apps) que estão habilitados para o seu projeto. Esses aplicativos podem ser tanto os nativos do Django quanto aplicativos criados por você ou pacotes de terceiros.
 ```
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -113,15 +134,14 @@ INSTALLED_APPS = [
 ```
 
 A nova linha especifica o objeto de configuração do aplicativo (CatalogConfig) que foi gerado em `/locallibrary/catalog/apps.py` onde a aplicação foi criada.
-As linhas anteriores permitem suporte para o site de administração do Django e, como resultado, várias funcionalidades que ele utiliza (incluindo seções, autenticação etc).
 
 ### Especificando o Banco de Dados
 
-Esse é o momento em que você também especifica o banco de dados que será usado no projeto. Faz mais sentido usar o mesmo banco de dados tanto para desenvolvimento quanto para a produção (quando possível), a fim de evitar pequenas diferenças de comportamento.
+Neste ponto, você também define o banco de dados que será utilizado no projeto. É recomendável usar o mesmo banco de dados tanto no desenvolvimento quanto na produção (sempre que possível), para evitar diferenças sutis de comportamento.
 
-Você pode encontrar mais sobre as outras opções em Databases na documentação Django (<https://docs.djangoproject.com/en/2.0/ref/settings/#databases>).
+Para mais detalhes sobre outras opções de banco de dados, consulte a documentação do Django em Databases (<https://docs.djangoproject.com/en/2.0/ref/settings/#databases>).
 
-Usaremos o banco de dados SQLite para este exemplo porque não esperamos ter muito acesso simultâneo em um banco de dados para demonstração, e também porque ele não requer trabalho adicional de configuração! Você pode ver como o banco de dados é configurado em settings.py (mais informações estão incluidas abaixo).
+Neste exemplo, usaremos o banco de dados SQLite, já que não esperamos um grande número de acessos simultâneos. Além disso, o SQLite não exige configurações adicionais, o que o torna ideal para uma demonstração. A configuração do banco de dados é feita no arquivo settings.py (mais detalhes estão descritos abaixo).
 
 O arquivo de configurações mais simples possível é para uma configuração de banco de dados único usando SQLite. Isso pode ser configurado usando o seguinte:
 
@@ -135,6 +155,7 @@ DATABASES = {
 ```
 
 Ao se conectar a outros backends de banco de dados, como MySQL, Oracle ou PostgreSQL, parâmetros de conexão adicionais serão necessários. Ver o ENGINE definição abaixo sobre como especificar outros tipos de banco de dados. Este exemplo é para PostgreSQL:
+
 ```
 DATABASES = {
     'default': {
@@ -150,16 +171,23 @@ DATABASES = {
 
 ### Outras configurações do projeto
 
-O arquivo `settings.py` também é usado para configurar várias outras definições, como o TIME_ZONE (<https://docs.djangoproject.com/en/2.0/ref/settings/#std:setting-TIME_ZONE>).
+O arquivo `settings.py` também é utilizado para configurar diversas outras definições, como o `TIME_ZONE`.
 
-Mude seu valor de TIME_ZONE para uma string relativa ao seu fuso-horário, por exemplo:
+Configurar o `TIME_ZONE` é importante para manter a consistência de dados. Garantindo que todos os registros de data e hora no banco de dados sejam armazenados de maneira consistente, evitando confusões em aplicações que operam em diferentes fusos horários.
 
+Mais detalhes podem ser encontrados na documentação do Django (<https://docs.djangoproject.com/en/2.0/ref/settings/#std:setting-TIME_ZONE>).
+
+Altere o valor de `TIME_ZONE` para uma string correspondente ao seu fuso horário, como, por exemplo:
 ```
 TIME_ZONE = 'America/Sao_Paulo'
 ```
 
 ### Conectando o mapeador de URL
 
+O website foi criado com um arquivo mapeador de URL `urls.py` na pasta do projeto. Ele desempenha um papel crucial na definição de como os URLs solicitados pelos usuários são correspondidos às respectivas visualizações (views) da aplicação.
+Embora você possa usar esse arquivo para gerenciar todos seus mapeamentos de URL, é mais comum fazer os mapeamentos diretamente no aplicativo associado.
+
+Abra `locallibrary/locallibrary/urls.py` e leia o texto que explica alguma formas de usar o mapeador de URL.
 
 ```
 """
@@ -185,6 +213,23 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 ```
+
+Ouma lista Python de funções `path()`. Cada função `path()` associa um padrão s mapeamentos de URL são gerenciados através da variável `urlpatterns` que é de URL para uma view específica, que será exibida quando o padrão for correspondido, ou com outra lista de testes de padrões de URL (no segundo caso, o padrão vem da "URL base" para padrões definidos no módulo target). A lista urlpatterns define inicialmente uma função única que mapeia todas URLs com o padrão admin para o módulo admin.site.urls, que contém as próprias definições de mapeamento de URL da área de administração do aplicativo.
+
+Nota: A rota em path() é uma string que define um padrão de URL para correspondência. Essa string pode incluir um nome de variável (entre tags), e.g. 'catalog/<id>/'. Esse padrão corresponderá a uma URL como /catalog/any_chars/ e passa any_chars para a view como uma string com paramêtros nome id). Nós discutiremos métodos de caminho e padrões de rota ainda mais em tópicos posteriores
+
+Adicione as linhas abaixo no fim do arquivo a fim de adicionar um novo item à lista urlpatterns. Esse novo item inclui um path() que encaminha solicitações com o padrão catalog/ para o módulo catalog.urls (o arquivo com a URL relativa /catalog/urls.py).
+
+```
+# Use include() to add paths from the catalog application
+from django.conf.urls import include
+from django.urls import path
+
+urlpatterns += [
+    path('catalog/', include('catalog.urls')),
+]
+```
+
 
 ### Testando o framework do site
 
