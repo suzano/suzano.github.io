@@ -101,12 +101,56 @@ A ferramenta cria uma nova pasta `catalog` e adiciona alguns arquivos para difer
 
 1 - Abra o arquivo de configurações do projeto `locallibrary/locallibrary/settings.py` e encontre a definição para a lista `INSTALLED_APPS`. 
 ```
-
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'catalog.apps.CatalogConfig', # Especifica o objeto de configuração do aplicativo
+]
 ```
+
+A nova linha especifica o objeto de configuração do aplicativo (CatalogConfig) que foi gerado em `/locallibrary/catalog/apps.py` onde a aplicação foi criada.
+As linhas anteriores permitem suporte para o site de administração do Django e, como resultado, várias funcionalidades que ele utiliza (incluindo seções, autenticação etc).
 
 ### Especificando o Banco de Dados
 
+Esse é o momento em que você também especifica o banco de dados que será usado no projeto. Faz mais sentido usar o mesmo banco de dados tanto para desenvolvimento quanto para a produção (quando possível), a fim de evitar pequenas diferenças de comportamento.
+
+Você pode encontrar mais sobre as outras opções em Databases na documentação Django (<https://docs.djangoproject.com/en/2.0/ref/settings/#databases>).
+
+Usaremos o banco de dados SQLite para este exemplo porque não esperamos ter muito acesso simultâneo em um banco de dados para demonstração, e também porque ele não requer trabalho adicional de configuração! Você pode ver como o banco de dados é configurado em settings.py (mais informações estão incluidas abaixo).
+
+O arquivo de configurações mais simples possível é para uma configuração de banco de dados único usando SQLite. Isso pode ser configurado usando o seguinte:
+
+```
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'mydatabase',
+    }
+}
+```
+
+Ao se conectar a outros backends de banco de dados, como MySQL, Oracle ou PostgreSQL, parâmetros de conexão adicionais serão necessários. Ver o ENGINE definição abaixo sobre como especificar outros tipos de banco de dados. Este exemplo é para PostgreSQL:
+```
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'mydatabase',
+        'USER': 'mydatabaseuser',
+        'PASSWORD': 'mypassword',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
+    }
+}
+```
+
 ### Outras configurações do projeto
+
+O arquivo `settings.py` também é usado para configurar várias outras definições, como o TIME_ZONE <https://docs.djangoproject.com/en/2.0/ref/settings/#std:setting-TIME_ZONE> — deve se utilizar uma string padrão da Lista de tz time zones (a coluna TZ na tabela contém os valores que você precisa). Mude seu valor de TIME_ZONE para uma string relativa ao seu fuso-horário, por exemplo:
 
 ### Conectando o mapeador de URL
 
