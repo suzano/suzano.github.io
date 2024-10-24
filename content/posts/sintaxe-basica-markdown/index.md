@@ -1,6 +1,6 @@
 ---
 title:  "Sintaxe Básica do Markdown"
-date:   2024-10-18 09:00:00 +0530
+date:   2024-01-01 09:00:00 +0530
 img: "markdown.png"
 categories: [Linguagem]
 author: "Suzano Bitencourt"
