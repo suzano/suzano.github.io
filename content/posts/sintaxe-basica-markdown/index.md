@@ -740,16 +740,16 @@ Com uma referência mais adiante no documento que define o local da URL:
 
 **WIKIPEDIA**  
 Disponível em: <https://pt.m.wikipedia.org/wiki/Ficheiro:Markdown-mark.svg>  
-Acesso em: 23 mar. 2023.
+Acesso em: 01 jan. 2024.
 
 **GITHUB OCTODEX**  
 Disponível em: <https://octodex.github.com/images/minion.png>  
 Disponível em: <https://octodex.github.com/images/stormtroopocat.jpg>  
 Disponível em: <https://octodex.github.com/images/dojocat.jpg>  
-Acesso em: 23 mar. 2023.
+Acesso em: 01 jan. 2024.
 
 ## Referências
 
 **GRAV - Markdown Syntax**  
 Disponível em: <https://learn.getgrav.org/17/content/markdown>  
-Acesso em: 23 mar. 2023.
+Acesso em: 01 jan. 2024.
