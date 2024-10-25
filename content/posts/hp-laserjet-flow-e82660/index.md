@@ -12,7 +12,7 @@ profile:
       val: 
 ---
 
-Procedimento para instalação da impressora multifuncional laser HP LaserJet Flow E82660 usado no departamento.
+Procedimento para instalação da impressora multifuncional laser HP LaserJet Flow E82660.
 
 <!--more-->
 
