@@ -60,7 +60,7 @@ Fonte: ABSY, Conceição (et. al). Leitura em língua inglesa, uma abordagem ins
 ### Prefixos - Alteram o significado das palavras
 
 | Negação | Exemplo |
-| :-----: | :------ |
+| :------ | :------ |
 | dis- | disconnect |
 | il- | illegal |
 | in- | inactive |
@@ -71,8 +71,10 @@ Fonte: ABSY, Conceição (et. al). Leitura em língua inglesa, uma abordagem ins
 | non- | non-smoke |
 | mis- (incorreção / erro) | miscalculate |
 
+---
+
 | Tamanho ou grau | Exemplo |
-| :-------------: | :------ |
+| :-------------- | :------ |
 | super- (acima) | superman |
 | out- (coisa mais rápida) | outrun |
 | sur- (sobre e acima) | surtax |
@@ -83,23 +85,29 @@ Fonte: ABSY, Conceição (et. al). Leitura em língua inglesa, uma abordagem ins
 | ultra- (extremamente e além de) | ultra-violete |
 | mini- (pouco) | miniskirt |
 
+---
+
 | Locativos | Exemplo |
-| :-------: | :------ |
+| :-------- | :------ |
 | super- (sobre) | superstructure |
 | sub- (abaixo, grau inferior) | subconscious |
 | inter- (entre) | internacional |
 | trans- (através, de um lugar para outro) | transplant |
 
+---
+
 | Tempo e ordem | Exemplo |
-| :-----------: | :------ |
+| :------------ | :------ |
 | fore- (antes) | foretell |
 | pre- (antes) | pre-marital |
 | post- (depois) | post-classical |
 | ex- (anterior) | ex-husband |
 | re- (novamente, de volta) | re-evaluate |
 
+---
+
 | Outros prefixos | Exemplo |
-| :-------------: | :------ |
+| :-------------- | :------ |
 | auto- (próprio) | autobiography |
 | neo- (novo) | neo-gothic |
 | pan- (todo, universal) | pan-African |
