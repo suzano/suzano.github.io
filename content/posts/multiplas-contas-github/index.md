@@ -2,7 +2,7 @@
 title:  "Múltiplas chaves SSH para GitHub"
 date:   2024-01-31 09:00:00 +0530
 img: "git-github.png"
-categories: [Linguagem]
+categories: [Git, GitHub, GitLab]
 author: "Suzano Bitencourt"
 profile:
   attrs:
@@ -107,6 +107,38 @@ $ ssh -T git@github.com
 # Hi Usuário! You've successfully authenticated, but GitHub does not provide shell access.
 $ ssh -T git@gitlab.com
 # Welcome to GitLab, @Usuário!
+```
+
+## Parte 6: Clonagem dos repositórios
+
+1 - Durante a clonagem, usarmos como nome de host e que usamos na configuração do SSH.
+`git clone git@github.com:personal_account_name/repo_name.git`
+```bash
+$ git clone git@github.com_usuario1:conta/nome_repo.git
+```
+
+## Parte 7: Para repositórios locais existentes
+
+1 - Liste o Git remote do repositório:
+```bash
+$ git remote -v
+```
+
+2 - Verifique se o URL corresponde ao nosso host do GitHub:
+```bash
+git remote set-url origin git@github.com_usuario1:conta/nome_repo.git
+```
+
+3 - Se estiver criando um novo repositório no local:
+```bash
+$ git remote add origin git@github.com_usuario1:conta/nome_repo.git
+```
+
+4 - Faça o push do Commit para o repositório do GitHub:
+```bash
+git add .
+git commit -m "Initial commit"
+git push -u origin master
 ```
 
 ## Ilustrações
