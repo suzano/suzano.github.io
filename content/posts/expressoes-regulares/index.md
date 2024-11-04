@@ -143,7 +143,6 @@ Explicando cada parte:
 ### Validação de Texto Com Formato Específico
 
 Entendendo os requisitos:
-- Máximo de 150 caracteres: Precisamos limitar o comprimento da string.
 - Limitar um campo do tipo texto com o seguinte formato. SIGLA - Nome da Instituição - Departamento
 
 Expressão regular que atende a esses requisitos é:
