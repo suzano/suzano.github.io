@@ -67,14 +67,14 @@ Entendendo os requisitos:
 
 Expressão regular que atende a esses requisitos é:
 ```
-^[a-zA-Z]{2,150}(?: [a-zA-Z]{2,150})*$
+^[a-zA-ZÀ-ÿ']{2,150}(?: [a-zA-ZÀ-ÿ']{2,150})*$
 ```
 
 Explicando cada parte:
 ```
 1. ^: Indica o início da string.
-2. [a-zA-Z]{2,150}: Permite de 2 a 150 letras (maiúsculas ou minúsculas).
-3. (?: [a-zA-Z]{1,150})*: Permite zero ou mais ocorrências de um espaço seguido de 2 a 150 letras.
+2. [a-zA-ZÀ-ÿ']{2,150}: Permite de 2 a 150 letras (maiúsculas ou minúsculas).
+3. (?: [a-zA-ZÀ-ÿ']{1,150})*: Permite zero ou mais ocorrências de um espaço seguido de 2 a 150 letras.
     - O ?: indica um grupo não capturante.
 4. $: Indica o final da string.
 ```
