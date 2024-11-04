@@ -12,7 +12,7 @@ profile:
       val: 
 ---
 
-Este artigo possue minhas anotações do curso de ENGLISH@USP - Focus On Reading.
+Minhas anotações do curso de ENGLISH@USP - Focus On Reading.
 
 <!--more-->
 
