@@ -19,11 +19,13 @@ Minhas anotações do curso de ENGLISH@USP - Focus On Reading.
 
 Aprendendo a ler, em nível inicial, textos acadêmicos e da vida cotidiana em língua inglesa.
 
-## Aulas revisadas:
-~~01~~ - 02 - 03 - 04 - 05 - 06 - 07 - 08 - 09 - 10 - 11 - 12 - 13 - 14 - 15 - 16 - 17 - 18 - ~~19~~ - 20
+## Aulas revisadas
 
-## Aulas complementares:
-~~01~~ - 02 - 03 - 04 - 05 - 06 - 07 - 08 - 09 - 10 - 11 - 12 - 13 - 14 - 15 - 16 - 17 - 18 - ~~19~~ - 20
+~~01~~ - 02 - 03 - 04 - 05 - 06 - 07 - 08 - 09 - 10 - 11 - 12 - 13 - 14 - 15 - ~~16~~ - 17 - 18 - ~~19~~ - ~~20~~
+
+## Aulas complementares
+
+01 - 02 - 03 - 04 - 05 - 06 - 07 - 08 - 09 - 10 - 11 - 12 - 13 - 14 - 15 - 16 - 17 - 18 - 19 - 20
 
 -----
 
@@ -233,8 +235,6 @@ Prefixos de `quantidade`:
 
 ## Aula 17
 
-
-
 ## Aula 18
 
 ## Aula 19 - Verb forms I
@@ -271,6 +271,7 @@ A ordem básica das palavras nas frases em inglês geralmente segue o padrão: *
 ### Visão Geral dos Tempos Verbais
 
 **Simple Present (Presente Simples)**
+
 - **Uso:** Expressa fatos, hábitos ou verdades gerais.
 - **Estrutura:** Sujeito + Verbo (3ª pessoa singular ganha um -s)
 - **Exemplos:**
@@ -278,6 +279,7 @@ A ordem básica das palavras nas frases em inglês geralmente segue o padrão: *
     - "She works every day." (Ela trabalha todos os dias.)
 
 **Simple Past (Passado Simples)**
+
 - **Uso:** Refere-se a ações concluídas no passado.
 - **Estrutura:** Sujeito + Verbo no passado (em geral, adiciona-se -ed para verbos regulares)
 - **Exemplo:**
@@ -285,6 +287,7 @@ A ordem básica das palavras nas frases em inglês geralmente segue o padrão: *
     - "He studied hard for the test." (Ele estudou muito para a prova.)
 
 **Simple Future (Futuro Simples)**
+
 - **Uso:** Ações futuras, previsões ou decisões tomadas no momento.
 - **Estrutura:** Sujeito + will + Verbo (forma base)
 - **Exemplos:**
@@ -292,6 +295,7 @@ A ordem básica das palavras nas frases em inglês geralmente segue o padrão: *
     - "She will call you tomorrow." (Ela vai te ligar amanhã.)
 
 **Present Continuous (Presente Contínuo)**
+
 - **Uso:** Ações que estão acontecendo agora, no presente, ou ações temporárias.
 - **Estrutura:** Sujeito + am/is/are + Verbo com -ing
 - **Exemplos:**
@@ -299,6 +303,7 @@ A ordem básica das palavras nas frases em inglês geralmente segue o padrão: *
     - "They are watching TV right now." (Eles estão assistindo TV agora.)
 
 **Past Continuous (Passado Contínuo)**
+
 - **Uso:** Ações em progresso no passado, geralmente interrompidas por outra ação.
 - **Estrutura:** Sujeito + was/were + Verbo com -ing
 - **Exemplos:**
@@ -306,6 +311,7 @@ A ordem básica das palavras nas frases em inglês geralmente segue o padrão: *
     - "We were playing soccer at that time." (Nós estávamos jogando futebol naquela hora.)
 
 **Future Continuous (Futuro Contínuo)**
+
 - **Uso:** Ações que estarão em progresso em um determinado momento no futuro.
 - **Estrutura:** Sujeito + will be + Verbo com -ing
 - **Exemplos:**
@@ -313,6 +319,7 @@ A ordem básica das palavras nas frases em inglês geralmente segue o padrão: *
     - "They will be traveling next week." (Eles estarão viajando na próxima semana.)
 
 **Present Perfect (Presente Perfeito)**
+
 - **Uso:** Ações passadas com relevância no presente ou experiências de vida.
 - **Estrutura:** Sujeito + have/has + Particípio passado do verbo
 - **Exemplos:**
@@ -320,6 +327,7 @@ A ordem básica das palavras nas frases em inglês geralmente segue o padrão: *
     - "She has finished her homework." (Ela terminou o dever de casa.)
 
 **Past Perfect (Passado Perfeito)**
+
 - **Uso:** Ações que ocorreram antes de outra ação no passado.
 - **Estrutura:** Sujeito + had + Particípio passado do verbo
 - **Exemplos:**
@@ -327,6 +335,7 @@ A ordem básica das palavras nas frases em inglês geralmente segue o padrão: *
     - "She had already eaten when he called." (Ela já tinha comido quando ele ligou.)
         
 **Future Perfect (Futuro Perfeito)**
+
 - **Uso:** Ações que estarão completas antes de um determinado momento no futuro.
 - **Estrutura:** Sujeito + will have + Particípio passado do verbo
 - **Exemplos:**
@@ -334,6 +343,7 @@ A ordem básica das palavras nas frases em inglês geralmente segue o padrão: *
     - "They will have finished by tomorrow." (Eles terão terminado até amanhã.)
 
 **Present Perfect Continuous (Presente Perfeito Contínuo)**
+
 - **Uso:** Ações iniciadas no passado e ainda em progresso no presente.
 - **Estrutura:** Sujeito + have/has been + Verbo com -ing
 - **Exemplos:**
@@ -341,6 +351,7 @@ A ordem básica das palavras nas frases em inglês geralmente segue o padrão: *
     - "She has been studying all day." (Ela está estudando o dia todo.)
 
 **Past Perfect Continuous (Passado Perfeito Contínuo)**
+
 - **Uso:** Ações que estavam acontecendo antes de outra ação no passado.
 - **Estrutura:** Sujeito + had been + Verbo com -ing
 - **Exemplos:**
@@ -348,6 +359,7 @@ A ordem básica das palavras nas frases em inglês geralmente segue o padrão: *
     - "He had been working there for years before he quit." (Ele estava trabalhando lá por anos antes de sair.)
         
 **Future Perfect Continuous (Futuro Perfeito Contínuo)**
+
 - **Uso:** Ações que estarão em progresso por um certo tempo antes de um ponto específico no futuro.
 - **Estrutura:** Sujeito + will have been + Verbo com -ing
 - **Exemplos:**
@@ -361,67 +373,78 @@ Esses tempos verbais ajudam a dar precisão e contexto sobre quando e como uma a
 Isso ajudará a entender como os tempos mudam conforme o contexto.
 
 **Simple Present (Presente Simples)**
+
 - **Afirmativa:** "He works every day." (Ele trabalha todos os dias.)
 - **Negativa:** "He does not work on Sundays." (Ele não trabalha aos domingos.)
 - **Interrogativa:** "Does he work here?" (Ele trabalha aqui?)
 
 **Simple Past (Passado Simples)**
+
 - **Afirmativa:** "She worked yesterday."(Ela trabalhou ontem.)
 - **Negativa:** "She did not work last night." (Ela não trabalhou ontem à noite.)
 - **Interrogativa:** "Did she work on the project?" (Ela trabalhou no projeto?)
 
 **Simple Future (Futuro Simples)**
+
 - **Afirmativa:** "He will work tomorrow." (Ele vai trabalhar amanhã.)
 - **Negativa:** "He will not work next week." (Ele não vai trabalhar na próxima semana.)
 - **Interrogativa:** "Will he work on Saturday?" (Ele vai trabalhar no sábado?)
 
 **Present Continuous (Presente Contínuo)**
+
 - **Afirmativa:** "She is working right now." (Ela está trabalhando agora.)
 - **Negativa:** "She is not working at the moment." (Ela não está trabalhando no momento.)
 - **Interrogativa:** "Is she working today?" (Ela está trabalhando hoje?)
 
 **Past Continuous (Passado Contínuo)**
+
 - **Afirmativa:** "He was working when I called." (Ele estava trabalhando quando eu liguei.)
 - **Negativa:** "He was not working at 8 PM." (Ele não estava trabalhando às 20h.)
 - **Interrogativa:** "Was he working last night?" (Ele estava trabalhando ontem à noite?)
 
 **Future Continuous (Futuro Contínuo)**
+
 - **Afirmativa:** "She will be working at 5 PM." (Ela estará trabalhando às 17h.)
 - **Negativa:** "She will not be working next Friday." (Ela não estará trabalhando na próxima sexta-feira.)
 - **Interrogativa:** "Will she be working this weekend?" (Ela estará trabalhando neste fim de semana?)
 
 **Present Perfect (Presente Perfeito)**
+
 - **Afirmativa:** "He has worked here for five years." (Ele trabalhou aqui por cinco anos.)
 - **Negativa:** "He has not worked on this project before." (Ele não trabalhou neste projeto antes.)
 - **Interrogativa:** "Has he worked in this company long?" (Ele trabalhou nesta empresa por muito tempo?)
 
-
 **Past Perfect (Passado Perfeito)**
+
 - **Afirmativa:** "She had worked there before moving." (Ela havia trabalhado lá antes de se mudar.)
 - **Negativa:** "She had not worked with him before." (Ela não havia trabalhado com ele antes.)
 - **Interrogativa:** "Had she worked there for a long time?" (Ela havia trabalhado lá por muito tempo?)
 
 **Future Perfect (Futuro Perfeito)**
+
 - **Afirmativa:** "He will have worked for ten years by next March." (Ele terá trabalhado por dez anos até março próximo.)
 - **Negativa:** "He will not have worked here long enough." (Ele não terá trabalhado aqui tempo suficiente.)
 - **Interrogativa:** "Will he have worked on this task by then?" (Ele terá trabalhado nesta tarefa até lá?)
 
 **Present Perfect Continuous (Presente Perfeito Contínuo)**
+
 - **Afirmativa:** "She has been working all day." (Ela está trabalhando o dia todo.)
 - **Negativa:** "She has not been working here recently." (Ela não está trabalhando aqui recentemente.)
 - **Interrogativa:** "Has she been working a lot lately?" (Ela está trabalhando muito ultimamente?)
 
 **Past Perfect Continuous (Passado Perfeito Contínuo)**
+
 - **Afirmativa:** "He had been working for hours before he took a break." (Ele estava trabalhando há horas antes de fazer uma pausa.)
 - **Negativa:** "He had not been working for very long." (Ele não estava trabalhando por muito tempo.)
 - **Interrogativa:** "Had he been working there for years?" (Ele estava trabalhando lá há anos?)
 
 **Future Perfect Continuous (Futuro Perfeito Contínuo)**
+
 - **Afirmativa:** "She will have been working here for six months by the end of the year." (Ela terá trabalhado aqui por seis meses até o final do ano.)
 - **Negativa:** "She will not have been working there long enough." (Ela não terá trabalhado lá tempo suficiente.)
 - **Interrogativa:** "Will she have been working in that role by next month?" (Ela estará trabalhando nesse cargo até o próximo mês?)
 
-### Vocabulário
+### Vocabul&aacute;rio
 
 **assignment** = tarefa
 **been** = estive
@@ -452,7 +475,276 @@ Isso ajudará a entender como os tempos mudam conforme o contexto.
 **whales** = baleias
 **wish** = desejo
 
-## Aula 20
+## Aula 20 - Verb forms II
+
+O `Simple Present (Presente Simples)` é um tempo verbal `usado para expressar ações habituais, fatos gerais, verdades universais, ou situações permanentes`. Ele é um dos tempos mais comuns em inglês e é usado tanto para `ações que ocorrem com frequência` quanto para `fatos que são sempre verdadeiros`.
+
+### Formação do Simple Present
+
+No `Simple Present`, a formação da frase depende do sujeito da oração (quem está realizando a ação).
+
+**Afirmativa:**
+
+Para os pronomes `I`, `you`, `we`, `they`, usamos o verbo na sua forma base:
+
+- I work every day. (Eu trabalho todos os dias.)
+- They live in New York. (Eles vivem em Nova York.)
+
+Para os pronomes `he`, `she`, `it`, adicionamos `-s` ou `-es` ao verbo, dependendo da sua terminação:
+
+- She works every day. (Ela trabalha todos os dias.)
+- He watches TV every night. (Ele assiste TV toda noite.)
+
+``` markdown
+Regras para a adição de `-s` ou `-es`:
+- Verbos que terminam em `-o`, `-ch`, `-sh`, `-ss`, `-x`, ou `-z` recebem `-es`:
+    - He goes (Ele vai)
+    - She watches (Ela assiste)
+- Verbos que terminam em `consoante + y` mudam o `-y` para `-ies`:
+    - He studies (Ele estuda)
+    - She tries (Ela tenta)
+- Verbos `regulares` recebem apenas `-s`:
+    - She plays (Ela joga)
+    - He walks (Ele anda)
+```
+
+**Negativa:**
+
+Usamos o auxiliar `do not` ou `don’t` para `I`, `you`, `we`, `they` e `does not` ou `doesn’t` para `he`, `she`, `it`:
+
+- I don’t like coffee. (Eu não gosto de café.)
+- He doesn’t play soccer. (Ele não joga futebol.)
+
+**Interrogativa:**
+
+Na forma interrogativa, colocamos do ou does no início da frase:
+
+- Do you work here? (Você trabalha aqui?)
+- Does she like ice cream? (Ela gosta de sorvete?)
+
+### Usos do Simple Present
+
+Hábitos ou Rotinas: Ações que ocorrem regularmente.
+
+- I wake up at 6 AM every day. (Eu acordo às 6 da manhã todos os dias.)
+- She reads the newspaper every morning. (Ela lê o jornal todas as manhãs.)
+
+Fatos Gerais ou Verdades Universais: Coisas que são sempre verdadeiras.
+
+- Water boils at 100 degrees Celsius. (A água ferve a 100 graus Celsius.)
+- The Earth orbits the Sun. (A Terra orbita o Sol.)
+
+Situações Permanentes: Descrições ou condições que não mudam com frequência.
+
+- He lives in Paris. (Ele mora em Paris.)
+- They work in a hospital. (Eles trabalham em um hospital.)
+
+Eventos Especiais: Para anunciar um evento que ocorrerá em um horário determinado no futuro, como em horários de transporte.
+
+- The train leaves at 9 PM. (O trem sai às 21h.)
+- The show starts at 8 PM. (O show começa às 20h.)
+
+### Exemplos de Simple Present em diferentes contextos
+
+Ações cotidianas (rotina)
+
+- Afirmativa: She drinks coffee every morning. (Ela toma café todas as manhãs.)
+- Negativa: She doesn’t drink coffee every morning. (Ela não toma café todas as manhãs.)
+- Interrogativa: Does she drink coffee every morning? (Ela toma café todas as manhãs?)
+
+Verdades universais
+
+- Afirmativa: The Sun rises in the east. (O Sol nasce no leste.)
+- Negativa: The Sun doesn’t rise in the west. (O Sol não nasce no oeste.)
+- Interrogativa: Does the Sun rise in the east? (O Sol nasce no leste?)
+
+Situações permanentes
+
+- Afirmativa: He works at a bank. (Ele trabalha em um banco.)
+- Negativa: He doesn’t work at a bank. (Ele não trabalha em um banco.)
+- Interrogativa: Does he work at a bank? (Ele trabalha em um banco?)
+
+### Observações Importantes
+
+No Simple Present, sempre usamos o verbo auxiliar `do/does` para formar perguntas e negativas, mas o verbo principal permanece em sua forma base (não recebe conjugação).
+
+`Does` é usado com `he`, `she`, `it` (terceira pessoa do singular), e o verbo principal não recebe -s na interrogativa ou na negativa, pois a conjugação já está no `does`:
+
+- She likes pizza. ➔ Does she like pizza?
+
+A estrutura é direta, o que facilita a criação de frases, mas as regras de ortografia para a terceira pessoa (como o uso de `-es` ou `-ies`) são importantes.
+
+### Vocabulário
+
+**ads** = anúncio
+**devoted** = devotado
+**each** =  cada
+**googling** = pesquisando no Google
+**halt** = parar
+**lot** = lote
+**noon** = meio-dia
+**smooth** = suave
+**trickles** = gotejamentos
+**turns** = voltas
+**whole** = inteiro
+**yet** = ainda
+
+## Aula 21
+
+### Vocabulário
+
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+X
+Y
+Z
+
+## Aula 22
+
+### Vocabulário
+
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+X
+Y
+Z
+
+## Aula 23
+
+### Vocabulário
+
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+X
+Y
+Z
+
+## Aula 24
+
+### Vocabulário
+
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+X
+Y
+Z
+
+## Aula 25
+
+### Vocabulário
+
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+X
+Y
+Z
+
+## Aula 26
 
 ### Vocabulário
 
