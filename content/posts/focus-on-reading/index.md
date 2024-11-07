@@ -151,6 +151,7 @@ Prefixos que expressam `negação ou oposição`:
 | a-      |         -         | amoral         | amoral          |
 | non-    |         -         | non-smoke      | não-fumante     |
 | mis-    | (incorreção/erro) | miscalculate   | calcular errado |
+
 ----------
 
 Prefixos que expressam `tamanho ou grau`:
@@ -166,6 +167,7 @@ Prefixos que expressam `tamanho ou grau`:
 | hyper-  | (extremamente)         | hypercritical    | hipercrítico    |
 | ultra-  | (extremamente/além de) | ultra-violete    | ultravioleta    |
 | mini-   | (pouco)                | miniskirt        | minissaia       |
+
 ----------
 
 Prefixos `locativos ou posição`:
@@ -176,6 +178,7 @@ Prefixos `locativos ou posição`:
 | sub-    | (abaixo, grau inferior)           | subconscious   | subconsciente  |
 | inter-  | (entre)                           | internacional  | internacional  |
 | trans-  | (através, de um lugar para outro) | transplant     | transplante    |
+
 ----------
 
 Prefixos de `tempo e ordem`:
@@ -187,6 +190,7 @@ Prefixos de `tempo e ordem`:
 | post-   | (depois)              | post-classical | pós-clássico   |
 | ex-     | (anterior)            | ex-husband     | ex-marido      |
 | re-     | (novamente, de volta) | re-evaluate    | reavaliar      |
+
 ----------
 
 Prefixos de `quantidade`:
@@ -196,6 +200,7 @@ Prefixos de `quantidade`:
 | bi-     | (dois)                | biannual       | bianual        |
 | tri-    | (três)                | triangle       | triângulo      |
 | multi-  | (vários)              | multitasking   | multitarefas   |
+
 ----------
 
 `Outros` prefixos:
@@ -206,6 +211,7 @@ Prefixos de `quantidade`:
 | neo-    | (novo)            | neo-gothic     | neogótico      |
 | pan-    | (todo, universal) | pan-African    | pan-africano   |
 | pro-    | (apoio)           | pro-democracy  | pró-democracia |
+
 ----------
 
 ### Vocabulário
@@ -219,7 +225,7 @@ Prefixos de `quantidade`:
 **overweight** =  excesso de peso
 **overwhelming** = muito pesado/esmagador
 **underestimate** =  subestimer
-**underage** = menor de idade 
+**underage** = menor de idade
 **underpaid** = mal pago
 **underdressed** = mal vestido
 **undo** = desfazer
@@ -239,33 +245,37 @@ Prefixos de `quantidade`:
 
 ## Aula 19 - Verb forms I
 
-Os `primary verb tenses` (tempos verbais primários) em inglês são os tempos verbais mais comuns e essenciais para comunicar ações no presente, passado e futuro. 
+Os `primary verb tenses` (tempos verbais primários) em inglês são os tempos verbais mais comuns e essenciais para comunicar ações no presente, passado e futuro.
 Esses são os tempos "primários" porque cobrem a maioria das situações em que se fala sobre passado, presente ou futuro de forma direta.
 Entender esses tempos é fundamental para descrever quando as ações ocorrem.
 
 Os principais:
-- **Simple Present (Presente Simples):** Usado para falar de fatos, hábitos e verdades gerais.
-    - "Whales **_are_** mammals, not fish." (Baleias **_são_** mamíferos, não peixes.)
-- **Simple Future (Futuro Simples):** Utilizado para falar sobre ações que vão acontecer no futuro.
-    - "We **_will visit_** Peru and Chile next year." ("Nós **_visitaremos_** o Peru e o Chile no ano que vem.")
-- **Simple Past (Passado Simples):** Indica ações que começaram e terminaram no passado.
-    - "She **_liked_** Jack as soon as she **_met_** him." ("Ela **_gostou_** de Jack assim que **_conheceu_** ele.")
-- **Present Continuous (presente contínuo):** é um tempo verbal em inglês que usamos para falar sobre ações que estão acontecendo agora ou em um período temporário.
-    - "You **_'re learning_** English." ("Você **_está aprendendo_** inglês.")
 
+- **Simple Present (Presente Simples):** Usado para falar de fatos, hábitos e verdades gerais.
+  - "Whales **_are_** mammals, not fish." (Baleias **_são_** mamíferos, não peixes.)
+- **Simple Future (Futuro Simples):** Utilizado para falar sobre ações que vão acontecer no futuro.
+  - "We **_will visit_** Peru and Chile next year." ("Nós **_visitaremos_** o Peru e o Chile no ano que vem.")
+- **Simple Past (Passado Simples):** Indica ações que começaram e terminaram no passado.
+  - "She **_liked_** Jack as soon as she **_met_** him." ("Ela **_gostou_** de Jack assim que **_conheceu_** ele.")
+- **Present Continuous (presente contínuo):** é um tempo verbal em inglês que usamos para falar sobre ações que estão acontecendo agora ou em um período temporário.
+  - "You **_'re learning_** English." ("Você **_está aprendendo_** inglês.")
 
 A ordem básica das palavras nas frases em inglês geralmente segue o padrão: **Sujeito + Verbo + Objeto (ou complemento)**
 
 1. **Whales are mammals, not fish.**
+
 - Sujeito (**Whales**) + Verbo (**are**) + Complemento (**mammals, not fish**)
 
 2. **We will visit Peru and Chile next year.**
+
 - Sujeito (**We**) + Verbo auxiliar (**will**) + Verbo principal (**visit**) + Objeto (**Peru and Chile**) + Tempo (**next year**)
 
 3. **She liked Jack as soon as she met him.**
+
 - Sujeito (**She**) + Verbo (**liked**) + Objeto (**Jack**) + Conjunção (**as soon as**) + Sujeito (**she**) + Verbo (**met**) + Objeto (**him**)
 
 4. **You're learning English.**
+
 - Sujeito (**You**) + Verbo auxiliar (**are**) + Verbo principal com -ing (**learning**) + Objeto (**English**)
 
 ### Visão Geral dos Tempos Verbais
@@ -275,96 +285,96 @@ A ordem básica das palavras nas frases em inglês geralmente segue o padrão: *
 - **Uso:** Expressa fatos, hábitos ou verdades gerais.
 - **Estrutura:** Sujeito + Verbo (3ª pessoa singular ganha um -s)
 - **Exemplos:**
-    - "I live in Brazil." (Eu moro no Brasil.)
-    - "She works every day." (Ela trabalha todos os dias.)
+  - "I live in Brazil." (Eu moro no Brasil.)
+  - "She works every day." (Ela trabalha todos os dias.)
 
 **Simple Past (Passado Simples)**
 
 - **Uso:** Refere-se a ações concluídas no passado.
 - **Estrutura:** Sujeito + Verbo no passado (em geral, adiciona-se -ed para verbos regulares)
 - **Exemplo:**
-    - "They visited Paris last year." (Eles visitaram Paris no ano passado.)
-    - "He studied hard for the test." (Ele estudou muito para a prova.)
+  - "They visited Paris last year." (Eles visitaram Paris no ano passado.)
+  - "He studied hard for the test." (Ele estudou muito para a prova.)
 
 **Simple Future (Futuro Simples)**
 
 - **Uso:** Ações futuras, previsões ou decisões tomadas no momento.
 - **Estrutura:** Sujeito + will + Verbo (forma base)
 - **Exemplos:**
-    - "We will travel next month." (Nós vamos viajar no próximo mês.)
-    - "She will call you tomorrow." (Ela vai te ligar amanhã.)
+  - "We will travel next month." (Nós vamos viajar no próximo mês.)
+  - "She will call you tomorrow." (Ela vai te ligar amanhã.)
 
 **Present Continuous (Presente Contínuo)**
 
 - **Uso:** Ações que estão acontecendo agora, no presente, ou ações temporárias.
 - **Estrutura:** Sujeito + am/is/are + Verbo com -ing
 - **Exemplos:**
-    - "I am reading a book." (Eu estou lendo um livro.)
-    - "They are watching TV right now." (Eles estão assistindo TV agora.)
+  - "I am reading a book." (Eu estou lendo um livro.)
+  - "They are watching TV right now." (Eles estão assistindo TV agora.)
 
 **Past Continuous (Passado Contínuo)**
 
 - **Uso:** Ações em progresso no passado, geralmente interrompidas por outra ação.
 - **Estrutura:** Sujeito + was/were + Verbo com -ing
 - **Exemplos:**
-    - "She was cooking when he arrived." (Ela estava cozinhando quando ele chegou.)
-    - "We were playing soccer at that time." (Nós estávamos jogando futebol naquela hora.)
+  - "She was cooking when he arrived." (Ela estava cozinhando quando ele chegou.)
+  - "We were playing soccer at that time." (Nós estávamos jogando futebol naquela hora.)
 
 **Future Continuous (Futuro Contínuo)**
 
 - **Uso:** Ações que estarão em progresso em um determinado momento no futuro.
 - **Estrutura:** Sujeito + will be + Verbo com -ing
 - **Exemplos:**
-    - "I will be studying at 8 PM." (Eu estarei estudando às 20h.)
-    - "They will be traveling next week." (Eles estarão viajando na próxima semana.)
+  - "I will be studying at 8 PM." (Eu estarei estudando às 20h.)
+  - "They will be traveling next week." (Eles estarão viajando na próxima semana.)
 
 **Present Perfect (Presente Perfeito)**
 
 - **Uso:** Ações passadas com relevância no presente ou experiências de vida.
 - **Estrutura:** Sujeito + have/has + Particípio passado do verbo
 - **Exemplos:**
-    - "I have visited London." (Eu visitei Londres.)
-    - "She has finished her homework." (Ela terminou o dever de casa.)
+  - "I have visited London." (Eu visitei Londres.)
+  - "She has finished her homework." (Ela terminou o dever de casa.)
 
 **Past Perfect (Passado Perfeito)**
 
 - **Uso:** Ações que ocorreram antes de outra ação no passado.
 - **Estrutura:** Sujeito + had + Particípio passado do verbo
 - **Exemplos:**
-    - "They had left before I arrived." (Eles tinham saído antes de eu chegar.)
-    - "She had already eaten when he called." (Ela já tinha comido quando ele ligou.)
-        
+  - "They had left before I arrived." (Eles tinham saído antes de eu chegar.)
+  - "She had already eaten when he called." (Ela já tinha comido quando ele ligou.)
+
 **Future Perfect (Futuro Perfeito)**
 
 - **Uso:** Ações que estarão completas antes de um determinado momento no futuro.
 - **Estrutura:** Sujeito + will have + Particípio passado do verbo
 - **Exemplos:**
-    - "By next year, I will have graduated." (No próximo ano, eu terei me formado.)
-    - "They will have finished by tomorrow." (Eles terão terminado até amanhã.)
+  - "By next year, I will have graduated." (No próximo ano, eu terei me formado.)
+  - "They will have finished by tomorrow." (Eles terão terminado até amanhã.)
 
 **Present Perfect Continuous (Presente Perfeito Contínuo)**
 
 - **Uso:** Ações iniciadas no passado e ainda em progresso no presente.
 - **Estrutura:** Sujeito + have/has been + Verbo com -ing
 - **Exemplos:**
-    - "I have been working here for five years." (Eu estou trabalhando aqui há cinco anos.)
-    - "She has been studying all day." (Ela está estudando o dia todo.)
+  - "I have been working here for five years." (Eu estou trabalhando aqui há cinco anos.)
+  - "She has been studying all day." (Ela está estudando o dia todo.)
 
 **Past Perfect Continuous (Passado Perfeito Contínuo)**
 
 - **Uso:** Ações que estavam acontecendo antes de outra ação no passado.
 - **Estrutura:** Sujeito + had been + Verbo com -ing
 - **Exemplos:**
-    - "They had been waiting for hours when the bus arrived." (Eles estavam esperando há horas quando o ônibus chegou.)
-    - "He had been working there for years before he quit." (Ele estava trabalhando lá por anos antes de sair.)
-        
+  - "They had been waiting for hours when the bus arrived." (Eles estavam esperando há horas quando o ônibus chegou.)
+  - "He had been working there for years before he quit." (Ele estava trabalhando lá por anos antes de sair.)
+
 **Future Perfect Continuous (Futuro Perfeito Contínuo)**
 
 - **Uso:** Ações que estarão em progresso por um certo tempo antes de um ponto específico no futuro.
 - **Estrutura:** Sujeito + will have been + Verbo com -ing
 - **Exemplos:**
-    - "By next year, I will have been living here for a decade." (No próximo ano, eu terei morado aqui por uma década.)
-    - "They will have been traveling for 24 hours by the time they arrive." (Eles terão viajado por 24 horas quando chegarem.)
+  - "By next year, I will have been living here for a decade." (No próximo ano, eu terei morado aqui por uma década.)
+  - "They will have been traveling for 24 hours by the time they arrive." (Eles terão viajado por 24 horas quando chegarem.)
 
 Esses tempos verbais ajudam a dar precisão e contexto sobre quando e como uma ação ocorre, se está em progresso, foi completada, ou se é um hábito.
 
