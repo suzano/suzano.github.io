@@ -161,7 +161,7 @@ Prefixos de `quantidade`:
 
 ## Aula 18
 
-## Aula 19 - Verb forms I
+## Aula 19: Verb forms I
 
 Os `primary verb tenses` (tempos verbais primários) em inglês são os tempos verbais mais comuns e essenciais para comunicar ações no presente, passado e futuro.
 Esses são os tempos "primários" porque cobrem a maioria das situações em que se fala sobre passado, presente ou futuro de forma direta.
@@ -372,7 +372,7 @@ Isso ajudará a entender como os tempos mudam conforme o contexto.
 - **Negativa:** "She will not have been working there long enough." (Ela não terá trabalhado lá tempo suficiente.)
 - **Interrogativa:** "Will she have been working in that role by next month?" (Ela estará trabalhando nesse cargo até o próximo mês?)
 
-## Aula 20 - Verb forms II
+## Aula 20: Verb forms II
 
 O `Simple Present (Presente Simples)` é um tempo verbal `usado para expressar ações habituais, fatos gerais, verdades universais, ou situações permanentes`. Ele é um dos tempos mais comuns em inglês e é usado tanto para `ações que ocorrem com frequência` quanto para `fatos que são sempre verdadeiros`.
 
@@ -471,36 +471,157 @@ No Simple Present, sempre usamos o verbo auxiliar `do/does` para formar pergunta
 
 A estrutura é direta, o que facilita a criação de frases, mas as regras de ortografia para a terceira pessoa (como o uso de `-es` ou `-ies`) são importantes.
 
-## Aula 21
+## Aula 21: Verb forms III
 
-## Aula 22
+O `Simple Future (Futuro Simples)` é `usado para expressar ações que ocorrerão no futuro`. Esse tempo verbal indica `algo que ainda não aconteceu`, mas `está planejado ou previsto para ocorrer`.
 
-## Aula 23
+### Formação do Simple Future
 
-## Aula 24
+A estrutura básica do `Simple Future` é bem simples, pois envolve o uso do auxiliar `will` (ou, em alguns casos, `shall`) seguido pelo verbo principal em sua forma base.
 
-## Aula 25
+**Afirmativa:**
 
-## Aula 26
+Estrutura: Sujeito + will + verbo principal + complemento.
+
+- I will (ou I'll) meet him later. (Eu vou encontrar com ele mais tarde.)
+- She will (ou She'll) travel next month. (Ela viajará no próximo mês.)
+
+**Negativa:**
+
+Estrutura: Sujeito + will not (ou won’t) + verbo principal + complemento
+
+- They will not (ou won’t) attend the meeting. (Eles não irão à reunião.)
+- He will not (ou won’t) pass the exam. (Ele não vai passar na prova.)
+
+**Interrogativa:**
+
+Estrutura: Will + sujeito + verbo principal? (Perguntas fechadas, cuja resposta podem ser yes/no)
+
+- Will you join us for dinner? (Você vai se juntar a nós para o jantar?)
+- Will she dance? (Ela vai dançar?)
+
+Estrutura: Wh-word + will + sujeito + verbo principal? (Perguntas abertas, cuja resposta são mais descritivas)
+Essas perguntas usam palavras que começam com `wh-` (como `what`, `where`, `when`, `why`, `who`, `whom`, `which`, e `how`).
+
+- What will they do tomorrow? (O que eles farão amanhã?)
+- Where will we stay during our trip? (Onde ficaremos durante a nossa viagem?)
+- Where will you go next summer? (Para onde você vai no próximo verão?)
+- When will she finish the report? (Quando ela terminará o relatório?)
+- Why will he leave early? (Por que ele sairá cedo?)
+- Who will you invite to the party? (Quem você convidará para a festa?)
+- Whom will they choose for the project? (Quem eles escolherão para o projeto?)
+- Which book will you read next? (Qual livro você lerá em seguida?)
+- How will we get there? (Como chegaremos lá?)
+
+### Exemplos de Simple Future em diferentes contextos
+
+- Previsão
+
+  - Afirmativa: The weather will be sunny tomorrow. (O tempo estará ensolarado amanhã.)
+  - Negativa: The weather will not (won’t) be rainy tomorrow. (O tempo não estará chuvoso amanhã.)
+  - Interrogativa: Will the weather be sunny tomorrow? (O tempo estará ensolarado amanhã?)
+
+- Decisão instantânea
+
+  - Afirmativa: I’ll call you later. (Eu vou te ligar mais tarde.)
+  - Negativa: I won’t call you later. (Eu não vou te ligar mais tarde.)
+  - Interrogativa: Will you call me later? (Você vai me ligar mais tarde?)
+
+- Promessa
+ ´- Afirmativa: We’ll finish the project on time. (Vamos terminar o projeto a tempo.)
+  - Negativa: We won’t finish the project late. (Nós não vamos terminar o projeto atrasado.)
+  - Interrogativa: Will you finish the project on time? (Vocês vão terminar o projeto a tempo?)
+
+- Pedido
+  - Afirmativa: You will bring the documents, right? (Você vai trazer os documentos, certo?)
+  - Negativa: You won’t forget the documents, right? (Você não vai esquecer os documentos, certo?)
+  - Interrogativa: Will you bring the documents, please? (Você vai trazer os documentos, por favor?)
+
+- Expressões Comuns no Simple Future para indicar que a ação ocorrerá posteriormente
+  - She will start her new job next month. (Ela começará seu novo trabalho no próximo mês.)
+
+```
+- Tomorrow (amanhã)
+- Next week/month/year (semana/mês/ano que vem)
+- In a few days (em alguns dias)
+- Soon (em breve)
+- Later (mais tarde)
+```
+
+### Diferença entre "Going to" e "Will"
+
+Embora o `Simple Future` com `will` seja a forma padrão para o futuro, também é possível usar `going to` para indicar intenções ou planos futuros, especialmente quando há uma certeza maior.
+
+**Will:** usado para `decisões espontâneas`, promessas ou `previsões sem evidência` clara.
+
+- I’ll help you with this task. (Eu vou te ajudar com essa tarefa.) – decisão feita na hora.
+
+**Going to:** usado para `planos que já estavam decididos` antes ou para `previsões com evidências`.
+
+- She is going to travel to Italy next summer. (Ela vai viajar para a Itália no próximo verão.) – plano já feito anteriormente.
+
+O Simple Future, então, é fundamental para indicar intenções, previsões e promessas em inglês, sendo usado de forma flexível em várias situações.
+
+### Observações Importantes
+
+`Will` é usado para todos os sujeitos, independentemente de ser primeira, segunda ou terceira pessoa (`I`, `you`, `he`, `she`, `it`, `we`, `they`).
+
+`Shall` é uma forma alternativa, tradicionalmente usada com `I` e `we` para indicar futuro, mas é menos comum no inglês moderno e geralmente usado em contextos mais formais ou literários.
+
+### Usos do Simple Future
+
+O `Simple Future` é usado em várias situações, incluindo:
+
+- Previsões sobre o futuro: Quando se faz uma previsão ou suposição sobre algo que provavelmente acontecerá.
+  - It will rain tomorrow. (Vai chover amanhã.)
+  - She will become a great artist one day. (Ela se tornará uma grande artista um dia.)
+
+- Decisões tomadas no momento da fala: Quando alguém decide fazer algo no instante em que fala.
+  - I’ll answer the phone. (Eu vou atender o telefone.)
+  - We’ll go to the party. (Nós vamos à festa.)
+  
+- Ofertas e promessas: Quando se oferece algo ou faz uma promessa.
+  - I’ll help you with your homework. (Eu vou te ajudar com sua lição de casa.)
+  - I’ll be there for you. (Eu estarei lá para você.)
+
+- Pedidos e sugestões: Para pedir algo ou sugerir uma ideia.
+  - Will you pass the salt, please? (Você pode passar o sal, por favor?)
+  - Shall we go to the beach? (Vamos à praia?)
+
+## Aula 21: Verb forms IIII
 
 ## Vocabulário
 
 ### A
 
+**ads** = anúncio
 **among** = entre (no sentido de "entre nós", diferente de between)
 **approach** = experiência, conhecimento, visão
 **assignment** = tarefa
+**across** = através
+**almost** = quase
+**arrive** = chegar
+**arrangements** = arranjos
+**aunt** = tia
 
 ### B
 
+**babble** = balbucio
 **background** = conjunto das condições
 **been** = estive
 **busy** = ocupado
 **brunch** = refeição entre o café da manhã e o almoço
+**beverages** = bebidas
+**brace** = apoiar
+**both** = ambos
 
 ### C
 
 **cool** = legal
+**challenge** = desafio
+**carry** = carregar
+**crew** = tripulação
+**cold** = frio
 
 ### D
 
@@ -509,27 +630,37 @@ A estrutura é direta, o que facilita a criação de frases, mas as regras de or
 **discover** = descobrir
 **dream team** = time dos sonhos
 **due** = devido
+**devoted** = devotado
+**develop** = desenvolver
+**differ** = difere
 
 ### E
 
+**each** =  cada
 **entire** = inteiro
 **enjoying** = aproveitando
 **ever since** = desde então
 **explaining** = explicando
+**ease** = facilidade
 
 ### F
 
 **ferryboat** = balsa/barco
 **forward** = encaminhar
+**few** = poucos
+**fulfill** = cumprir
 
 ### G
 
 **glad** = contente
 **glamping** = acampamento glamoroso (glamour + camping)
 **growth** = crescimento
+**googling** = pesquisando no Google
+**give** = dar
 
 ### H
 
+**halt** = parar
 **happy end** = final feliz
 **handed** = entregue
 **hear** = ouvir
@@ -554,6 +685,10 @@ A estrutura é direta, o que facilita a criação de frases, mas as regras de or
 **lunch** = almoço
 **lately** = ultimamente
 **least** = menos
+**lot** = muito
+**leave** = sair
+**lie down** = deitar-se
+
 
 ### M
 
@@ -567,6 +702,7 @@ A estrutura é direta, o que facilita a criação de frases, mas as regras de or
 
 **nearly** = quase
 **novel** = novela
+**noon** = meio-dia
 
 ### O
 
@@ -575,11 +711,13 @@ A estrutura é direta, o que facilita a criação de frases, mas as regras de or
 **overuse** =  uso excessivo
 **overweight** =  excesso de peso
 **overwhelming** = muito pesado/esmagador
+**often** = frequentemente
 
 ### P
 
 **place** = lugar
 **prevent** = prevenir
+**popping** = estourando
 
 ### Q
 
@@ -596,6 +734,13 @@ A estrutura é direta, o que facilita a criação de frases, mas as regras de or
 **stressful** = estressante
 **sex-appeal** = apelo sexual
 **supervise** = supervisionar
+**smooth** = suave
+**so far, so good** = até agora tudo bem
+**selling** = vendendo
+**shuttle** = ônibus espacial
+**soon** = logo
+**stick** = vara
+**schedules** = horários
 
 ### T
 
@@ -603,6 +748,9 @@ A estrutura é direta, o que facilita a criação de frases, mas as regras de or
 **take care** = tomar cuidado
 **tired** = cansado
 **trash** = lixo/ruim
+**trickles** = gotejamentos
+**turns** = voltas
+**thought** = pensamento
 
 ### U
 
@@ -618,48 +766,21 @@ A estrutura é direta, o que facilita a criação de frases, mas as regras de or
 
 ### W
 
+**warm-up** = aquecimento
 **whales** = baleias
 **wish** = desejo
 **wordcloud** = nuvem de palavras
+**whole** = inteiro
+**wear** = vestir
 
 ### X
 
 ### Y
 
-### Z
-
-
-**ads** = anúncio
-**devoted** = devotado
-**each** =  cada
-**googling** = pesquisando no Google
-**halt** = parar
-**lot** = lote
-**noon** = meio-dia
-**smooth** = suave
-**trickles** = gotejamentos
-**turns** = voltas
-**whole** = inteiro
 **yet** = ainda
+**you turn** = sua vez
 
-warm-up = 
-babble = 
-few =
-challenge = desafio
-you turn = sua vez
-so far, so good = até agora tudo bem
-across
-develop
-fulfill
-differ
-selling
-beverages
-ease
-among
-
-
-
-
+### Z
 
 ## Ilustrações
 
