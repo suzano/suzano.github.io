@@ -4,16 +4,15 @@ A Hugo theme, ported from [Webjeda-cards](http://webjeda.com/cards)
 
 ![Screenshot](/images/screenshot.png)
 
-## Features
+## Features/Recursos
 
-Responsive theme built on bootstrap. Great for showcasing content with featured images.
+Tema responsivo construído sobre o Bootstrap. Ótimo para exibir conteúdo com imagens destacadas.
+Adicione facilmente Disqus, Google Analytics, links sociais e uma caixa de curtidas do Facebook.
 
-Easily add disqus, google analytics, social links and a facebook like box.
+## Profile Sidebar/Barra Lateral do Perfil
 
-## Profile Sidebar
-
-You can change the default sidebar (Recent articles) to the profile sidebar.
-This only works on card posts and will not affect normal pages (e.g., About, Contact).
+Você pode alterar a barra lateral padrão (Artigos Recentes) para a barra lateral do perfil.
+Isso só funciona em postagens de cartão e não afetará páginas normais (por exemplo, Sobre, Contato).
 
 ```
 [params.post.sidebar]

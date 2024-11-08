@@ -1,6 +1,6 @@
 ---
 title:  "Superior de Tecnologia em Automação Industrial"
-date:   2024-01-01 09:00:00 +0530
+date:   2024-01-03 09:00:00 +0530
 img: "markdown.png"
 categories: [Linguagem]
 draft: "True"
@@ -20,10 +20,6 @@ Este artigo oferece uma amostra da sintaxe básica do Markdown que pode ser usad
 Este artigo é uma tradução vergonhosa da página do [Grav](https://learn.getgrav.org/17/content/markdown).
 
 ## Conceito
-
-## Parte 1: Organização Curricular
-
-M1:
 
 ## Sistemas de Automação da Manufatura
 
@@ -300,16 +296,16 @@ Bibliografia:
 
 **WIKIPEDIA**  
 Disponível em: <https://pt.m.wikipedia.org/wiki/Ficheiro:Markdown-mark.svg>  
-Acesso em: 01 jan. 2024.
+Acesso em: 03 jan. 2024.
 
 **GITHUB OCTODEX**  
 Disponível em: <https://octodex.github.com/images/minion.png>  
 Disponível em: <https://octodex.github.com/images/stormtroopocat.jpg>  
 Disponível em: <https://octodex.github.com/images/dojocat.jpg>  
-Acesso em: 01 jan. 2024.
+Acesso em: 03 jan. 2024.
 
 ## Referências
 
 **GRAV - Markdown Syntax**  
 Disponível em: <https://learn.getgrav.org/17/content/markdown>  
-Acesso em: 01 jan. 2024.
+Acesso em: 03 jan. 2024.

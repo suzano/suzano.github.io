@@ -12,8 +12,8 @@ theme = "hugo-cards"
   defaultImage = "gopher.jpg"
 
   facebook = ""
-  quora = ""
-  twitter = "http://twitter.com/bul_ikana"
+  twitter = ""
+  quora = "https://pt.quora.com/profile/suzano"
   github = "https://github.com/suzano"
   email = "suzanobitencourt@gmail.com"
 
@@ -22,7 +22,7 @@ theme = "hugo-cards"
   fbPageUrl = ""
   fbPageTitle = ""
 
-  disqus = ""
+  disqus = "http://disqus.com/by/suzanobitencourt"
   
   custom_css = ["css/custom.css"]
 
