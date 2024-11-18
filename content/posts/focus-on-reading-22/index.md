@@ -25,59 +25,70 @@ O `Simple Past (Passado Simples)` é utilizado em inglês `para expressar açõe
 
 ### Formação do Simple Past
 
-1.1 Ações Regulares (Verbos Regulares)
-Para verbos regulares no Simple Past, adicionamos -ed ao final do verbo na sua forma base.
+#### Ações Regulares (Verbos Regulares)
 
-Forma afirmativa:
-Sujeito + verbo regular (com -ed)
+Para `verbos regulares` no `Simple Past`, adicionamos `-ed` ao final do verbo na sua forma base.
 
-She worked yesterday. (Ela trabalhou ontem.)
-Forma negativa:
-Sujeito + did not (didn’t) + verbo base
+**Afirmativa:**
 
-They didn’t study last night. (Eles não estudaram ontem à noite.)
-Forma interrogativa:
-Did + sujeito + verbo base?
+Estrutura: Sujeito + verbo regular (com -ed)
 
-Did you watch the movie? (Você assistiu ao filme?)
-Exemplos com verbos regulares:
-Afirmativa: He played football yesterday. (Ele jogou futebol ontem.)
-Negativa: She didn’t visit her grandmother last weekend. (Ela não visitou a avó dela no último final de semana.)
-Interrogativa: Did you travel to Paris last year? (Você viajou para Paris no ano passado?)
+- She `worked` yesterday. (Ela trabalhou ontem.)
+- He `played` football yesterday. (Ele jogou futebol ontem.)
 
-1.2 Ações Irregulares (Verbos Irregulares)
-Os verbos irregulares têm formas próprias no Simple Past, e elas precisam ser memorizadas, pois não seguem a regra de adicionar -ed.
+**Negativa:**
 
-Forma afirmativa:
-Sujeito + verbo irregular no Simple Past
+Estrutura: Sujeito + did not (didn’t) + verbo base
 
-She went to the store. (Ela foi à loja.)
-Forma negativa:
-Sujeito + did not (didn’t) + verbo base
+- They `didn’t` study last night. (Eles não estudaram ontem à noite.)
+- She `didn’t` visit her grandmother last weekend. (Ela não visitou a avó dela no último final de semana.)
 
-They didn’t see the movie. (Eles não viram o filme.)
-Forma interrogativa:
-Did + sujeito + verbo base?
+**Interrogativa:**
 
-Did you eat breakfast this morning? (Você tomou café da manhã hoje?)
-Exemplos com verbos irregulares:
-Afirmativa: He wrote a letter yesterday. (Ele escreveu uma carta ontem.)
-Negativa: They didn’t come to the meeting. (Eles não vieram à reunião.)
-Interrogativa: Did she speak with her friend? (Ela falou com a amiga?)
+Estrutura: Did + sujeito + verbo base?
 
-### Usos do Simple Past
+- `Did` you watch the movie? (Você assistiu ao filme?)
+- `Did` you travel to Paris last year? (Você viajou para Paris no ano passado?)
 
-O Simple Past é usado em várias situações no inglês para indicar ações que ocorreram no passado:
+##### Regras para conjugação dos verbos que terminam com `y` no `Simple Past`.
 
-Ação concluída no passado: Quando algo aconteceu e já foi concluído.
+Quando o verbo termina com `y` e é `precedido por uma vogal` (a, e, i, o, u), o `y` não muda, e basta adicionar `ed` para formar o `Simple Past`.
 
-I visited my grandmother last weekend. (Eu visitei minha avó no último final de semana.)
-Eventos que ocorreram em um momento específico: Usamos o Simple Past quando mencionamos um tempo específico no passado.
+- Play (jogar) → Played (jogou): She played soccer yesterday. (Ela jogou futebol ontem.)
+- Enjoy (desfrutar) → Enjoyed (desfrutou): We enjoyed the concert. (Nós desfrutamos o concerto.)
+- Obey (obedecer) → Obeyed (obedeceu): They obeyed the rules. (Eles obedeceram as regras.)
 
-She moved to New York in 2010. (Ela se mudou para Nova York em 2010.)
-Histórias ou narrativas: É muito comum usar o Simple Past para contar histórias ou relatar eventos passados.
+Quando o verbo termina em `y` e é `precedido por uma consoante`, a letra `y` é trocada por `ied`.
 
-They traveled around the world last year. (Eles viajaram ao redor do mundo no ano passado.)
+- Cry (chorar) → Cried (chorou): She cried yesterday. (Ela chorou ontem.)
+- Carry (carregar) → Carried (carregou): He carried the box. (Ele carregou a caixa.)
+- Try (tentar) → Tried (tentou): They tried to solve the problem. (Eles tentaram resolver o problema.)
+- Study (estudar) → Studied (estudou): I studied for the exam. (Eu estudei para o exame.)
+
+#### Ações Irregulares (Verbos Irregulares).
+
+Os `verbos irregulares` têm formas próprias no `Simple Past`, e elas precisam ser memorizadas, pois `não seguem a regra de adicionar -ed`.
+
+**Afirmativa:**
+
+Estrutura: Sujeito + verbo irregular no Simple Past
+
+- She `went` to the store. (Ela foi à loja.)
+- He `wrote` a letter yesterday. (Ele escreveu uma carta ontem.)
+
+**Negativa:**
+
+Estrutura: Sujeito + did not (didn’t) + verbo base
+
+- They `didn’t` see the movie. (Eles não viram o filme.)
+- They `didn’t` come to the meeting. (Eles não vieram à reunião.)
+
+**Interrogativa:**
+
+Estrutura: Did + sujeito + verbo base?
+
+- `Did` you eat breakfast this morning? (Você tomou café da manhã hoje?)
+- `Did` she speak with her friend? (Ela falou com a amiga?)
 
 ## Ilustrações
 
