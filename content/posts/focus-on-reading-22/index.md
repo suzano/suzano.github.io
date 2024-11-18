@@ -50,7 +50,7 @@ Estrutura: Did + sujeito + verbo base?
 - `Did` you watch the movie? (Você assistiu ao filme?)
 - `Did` you travel to Paris last year? (Você viajou para Paris no ano passado?)
 
-##### Regras para conjugação dos verbos que terminam com `y` no `Simple Past`.
+##### Regras para conjugação dos verbos que terminam com `y` no `Simple Past`
 
 Quando o verbo termina com `y` e é `precedido por uma vogal` (a, e, i, o, u), o `y` não muda, e basta adicionar `ed` para formar o `Simple Past`.
 
@@ -65,7 +65,7 @@ Quando o verbo termina em `y` e é `precedido por uma consoante`, a letra `y` é
 - Try (tentar) → Tried (tentou): They tried to solve the problem. (Eles tentaram resolver o problema.)
 - Study (estudar) → Studied (estudou): I studied for the exam. (Eu estudei para o exame.)
 
-#### Ações Irregulares (Verbos Irregulares).
+#### Ações Irregulares (Verbos Irregulares)
 
 Os `verbos irregulares` têm formas próprias no `Simple Past`, e elas precisam ser memorizadas, pois `não seguem a regra de adicionar -ed`.
 
