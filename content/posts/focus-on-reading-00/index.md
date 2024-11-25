@@ -1,6 +1,6 @@
 ---
 title:  "Vocabulário - Focus On Reading"
-date:   2024-08-16 08:00:00 +0530
+date:   2024-08-16 00:00:00 +0530
 img: "english.png"
 categories: [English, Inglês]
 draft: "True"
