@@ -1,6 +1,6 @@
 ---
 title:  "Aula 27 - Focus On Reading"
-date:   2024-08-16 00:22:00 +0530
+date:   2024-08-16 00:27:00 +0530
 img: "english.png"
 categories: [English, Inglês]
 draft: "True"
@@ -164,7 +164,7 @@ O objeto sempre vem após a partícula.
 - **Get by**: Sobreviver / Se virar.
   - I don’t earn much, but I can `get by`. (Eu não ganho muito, mas consigo me virar.)
 - **Get out**: Sair.
-    - I told him to `get out` of my room. (Eu disse a ele para sair do meu quarto.)
+  - I told him to `get out` of my room. (Eu disse a ele para sair do meu quarto.)
 - **Get away with**: Sair impune.
   - He cheated on the test and `got away with` it. (Ele colou na prova e saiu impune.)
   - You can’t `get away with` breaking the rules. (Você não pode sair impune por quebrar as regras.)
@@ -195,15 +195,6 @@ O objeto sempre vem após a partícula.
   - Please `go on` with your story. Por favor, continue com sua história.)
 - **Go over**: Revisar.
   - Let’s `go over` the notes before the test. (Vamos revisar as anotações antes da prova.)
-
-## Vocabulário
-
-**may be** = pode ser
-**meanings** = significados
-**run** = correr (verbo no presente) / corrida (substantivo)
-**ran** = correu (verbo no passado)
-**together** = juntos / junto
-**wrong** = errado / incorreto
 
 ## Ilustrações
 

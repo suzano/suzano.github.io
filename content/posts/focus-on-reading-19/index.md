@@ -227,10 +227,10 @@ Isso ajudará a entender como os tempos mudam conforme o contexto.
 
 **PIXABAY**  
 Disponível em: <hhttps://pixabay.com/pt/illustrations/union-jack-brit%C3%A2nico-bandeira-1027898/>  
-Acesso em: 21 out. 2024.
+Acesso em: 16 ago. 2024.
 
 ## Referências
 
 **ENGLISH@USP - Focus On Reading**  
 Disponível em: <https://englishatusp.com/>  
-Acesso em: 21 out. 2024.
+Acesso em: 16 ago. 2024.

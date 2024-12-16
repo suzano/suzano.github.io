@@ -32,10 +32,10 @@ Algumas estratégias úteis que ajudam a compreender textos em inglês:
 
 **PIXABAY**  
 Disponível em: <hhttps://pixabay.com/pt/illustrations/union-jack-brit%C3%A2nico-bandeira-1027898/>  
-Acesso em: 21 ago. 2024.
+Acesso em: 16 ago. 2024.
 
 ## Referências
 
 **ENGLISH@USP - Focus On Reading**  
 Disponível em: <https://englishatusp.com/>  
-Acesso em: 21 ago. 2024.
+Acesso em: 16 ago. 2024.

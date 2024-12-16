@@ -21,7 +21,7 @@ Aprendendo a ler, em nível inicial, textos acadêmicos e da vida cotidiana em l
 
 ## Aulas revisadas
 
-~~01~~ - 02 - 03 - 04 - 05 - 06 - 07 - 08 - 09 - 10 - 11 - 12 - 13 - 14 - 15 - 16 - 17 - 18 - 19 - 20 - 21 - 22 - 23 - 24 - 25 - 26 - ~~27~~ - 28 - 29 - 30 - 31 - 32
+~~01~~ - ~~02~~ - 03 - 04 - 05 - 06 - 07 - 08 - 09 - 10 - 11 - 12 - 13 - 14 - 15 - ~~16~~ - 17 - 18 - ~~19~~ - ~~20~~ - ~~21~~ - ~~22~~ - 23 - 24 - 25 - 26 - ~~27~~ - 28 - 29 - 30 - 31 - 32
 
 ## Aulas complementares
 
@@ -128,11 +128,13 @@ Aprendendo a ler, em nível inicial, textos acadêmicos e da vida cotidiana em l
 
 ### M
 
+**may be** = pode ser
 **miscounted** =  mal contabilizado
 **misdirected** = mal direcionado
 **misconduct** = má conduta
 **mammals** = mamíferos
 **met** = conheceu
+**meanings** = significados
 
 ### N
 
@@ -161,6 +163,8 @@ Aprendendo a ler, em nível inicial, textos acadêmicos e da vida cotidiana em l
 
 **reclining** = reclinável
 **redo** = refazer
+**run** = correr (verbo no presente) / corrida (substantivo)
+**ran** = correu (verbo no passado)
 
 ### S
 
@@ -187,6 +191,7 @@ Aprendendo a ler, em nível inicial, textos acadêmicos e da vida cotidiana em l
 **trickles** = gotejamentos
 **turns** = voltas
 **thought** = pensamento
+**together** = juntos / junto
 
 ### U
 
@@ -208,6 +213,7 @@ Aprendendo a ler, em nível inicial, textos acadêmicos e da vida cotidiana em l
 **wordcloud** = nuvem de palavras
 **whole** = inteiro
 **wear** = vestir
+**wrong** = errado / incorreto
 
 ### X
 
@@ -217,6 +223,7 @@ Aprendendo a ler, em nível inicial, textos acadêmicos e da vida cotidiana em l
 **you turn** = sua vez
 
 ### Z
+
 
 ## Ilustrações
 
